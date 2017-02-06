@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.84
+ * Model version              : 1.88
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Wed Feb 01 12:14:34 2017
+ * C source code generated on : Mon Feb 06 10:56:32 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -390,6 +390,15 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<S2>/ArrowRight'
                                         */
+  -1.0,                                /* Expression: -1
+                                        * Referenced by: '<S2>/Gain'
+                                        */
+
+  /*  Expression: inv([1 0 0; 0 1 1; 0 -0.4575 0.3875])
+   * Referenced by: '<S2>/Inverse of T'
+   */
+  { 1.0, 0.0, 0.0, -0.0, 0.45857988165680474, 0.54142011834319526, -0.0,
+    -1.1834319526627219, 1.1834319526627219 },
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S3>/X_d'
                                         */
@@ -781,6 +790,10 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
   { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 9, 0 },
 
   { sizeof(real_T), 1, 0 },
 

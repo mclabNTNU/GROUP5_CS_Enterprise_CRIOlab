@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.84
+ * Model version              : 1.88
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Wed Feb 01 12:14:34 2017
+ * C source code generated on : Mon Feb 06 10:56:32 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -822,6 +822,7 @@ typedef struct {
   real_T ArrowUp;                      /* '<S2>/ArrowUp' */
   real_T ArrowLeft;                    /* '<S2>/ArrowLeft' */
   real_T ArrowRight;                   /* '<S2>/ArrowRight' */
+  real_T u[3];                         /* '<S2>/MATLAB Function' */
   real_T output[3];                    /* '<S5>/MATLAB Function1' */
   real_T count;                        /* '<S4>/MATLAB Function' */
 } B_ctrl_student_HIL_T;
@@ -1261,6 +1262,12 @@ struct P_ctrl_student_HIL_T_ {
   real_T ArrowRight_P6;                /* Expression: btype
                                         * Referenced by: '<S2>/ArrowRight'
                                         */
+  real_T Gain_Gain;                    /* Expression: -1
+                                        * Referenced by: '<S2>/Gain'
+                                        */
+  real_T InverseofT_Value[9];          /* Expression: inv([1 0 0; 0 1 1; 0 -0.4575 0.3875])
+                                        * Referenced by: '<S2>/Inverse of T'
+                                        */
   real_T X_d_P1;                       /* Expression: width
                                         * Referenced by: '<S3>/X_d'
                                         */
@@ -1560,6 +1567,7 @@ extern RT_MODEL_ctrl_student_HIL_T *const ctrl_student_HIL_M;
  * '<S9>'   : 'ctrl_student_HIL/Noise generator/noise generator/Band-limited white noise psi'
  * '<S10>'  : 'ctrl_student_HIL/Noise generator/noise generator/Band-limited white noise x'
  * '<S11>'  : 'ctrl_student_HIL/Noise generator/noise generator/Band-limited white noise y'
+ * '<S12>'  : 'ctrl_student_HIL/joystick/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_ctrl_student_HIL_h_ */
 
