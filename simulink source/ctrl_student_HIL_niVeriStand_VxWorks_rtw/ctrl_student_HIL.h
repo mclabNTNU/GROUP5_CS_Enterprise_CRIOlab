@@ -9,7 +9,7 @@
  *
  * Model version              : 1.97
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Feb 06 12:30:59 2017
+ * C source code generated on : Mon Feb 06 12:59:52 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -974,7 +974,7 @@ typedef struct {
 
 /* Parameters (auto storage) */
 struct P_ctrl_student_HIL_T_ {
-  real_T k_psi_Value;                  /* Expression: 2
+  real_T k_psi_Value;                  /* Expression: 0.7
                                         * Referenced by: '<S2>/k_psi'
                                         */
   real_T Stepsize_Value;               /* Expression: 0.01
