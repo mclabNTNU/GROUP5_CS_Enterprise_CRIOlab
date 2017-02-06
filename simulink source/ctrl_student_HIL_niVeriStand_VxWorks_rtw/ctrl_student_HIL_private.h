@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.88
+ * Model version              : 1.90
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Feb 06 10:56:32 2017
+ * C source code generated on : Mon Feb 06 11:27:25 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -27,5 +27,6 @@
 
 extern real_T rt_urand_Upu32_Yd_f_pw_snf(uint32_T *u);
 extern real_T rt_nrand_Upu32_Yd_f_pw_snf(uint32_T *u);
+extern real_T rt_atan2d_snf(real_T u0, real_T u1);
 
 #endif                                 /* RTW_HEADER_ctrl_student_HIL_private_h_ */

@@ -17,9 +17,9 @@
 <signal> id = "16" name = "ctrl_student_hil/joystick/ArrowUp" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "17" name = "ctrl_student_hil/joystick/ArrowLeft" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "18" name = "ctrl_student_hil/joystick/ArrowRight" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "19" name = "ctrl_student_hil/joystick/MATLAB Function" SignalName ="u(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "20" name = "ctrl_student_hil/joystick/MATLAB Function" SignalName ="u(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "21" name = "ctrl_student_hil/joystick/MATLAB Function" SignalName ="u(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "19" name = "ctrl_student_hil/Thrust allocation/MATLAB Function1" SignalName ="u_VSP" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "20" name = "ctrl_student_hil/Thrust allocation/MATLAB Function1" SignalName ="alpha_VSP" PortNum ="2" width = "1" datatype = "real_T"</signal>
+<signal> id = "21" name = "ctrl_student_hil/Thrust allocation/MATLAB Function1" SignalName ="u_BT" PortNum ="3" width = "1" datatype = "real_T"</signal>
 <signal> id = "22" name = "ctrl_student_hil/Noise generator/Sample & hold/MATLAB Function1" SignalName ="output(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "23" name = "ctrl_student_hil/Noise generator/Sample & hold/MATLAB Function1" SignalName ="output(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "24" name = "ctrl_student_hil/Noise generator/Sample & hold/MATLAB Function1" SignalName ="output(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
