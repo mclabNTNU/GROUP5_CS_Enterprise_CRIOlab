@@ -18,7 +18,11 @@
  * Model version              : 1.108
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
 <<<<<<< HEAD
+<<<<<<< HEAD
  * C source code generated on : Tue Feb 07 13:50:31 2017
+=======
+ * C source code generated on : Mon Feb 06 12:30:59 2017
+>>>>>>> parent of 984839e... Small changes to observer
 =======
  * C source code generated on : Mon Feb 06 12:30:59 2017
 >>>>>>> parent of 984839e... Small changes to observer
@@ -35,7 +39,10 @@
 /* Block parameters (auto storage) */
 P_ctrl_student_HIL_T ctrl_student_HIL_P = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 984839e... Small changes to observer
   2.0,                                 /* Expression: 2
                                         * Referenced by: '<S2>/k_psi'
                                         */
