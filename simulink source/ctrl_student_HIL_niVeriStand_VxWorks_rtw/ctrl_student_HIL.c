@@ -9,7 +9,11 @@
  *
  * Model version              : 1.108
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
+<<<<<<< HEAD
  * C source code generated on : Tue Feb 07 13:50:31 2017
+=======
+ * C source code generated on : Mon Feb 06 12:30:59 2017
+>>>>>>> parent of 984839e... Small changes to observer
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -1653,8 +1657,13 @@ NI_Task NI_TaskList[] DataSection(".NIVS.tasklist") =
 int NI_NumTasks DataSection(".NIVS.numtasks") = 1;
 static char* NI_CompiledModelName DataSection(".NIVS.compiledmodelname") =
   "ctrl_student_hil";
+<<<<<<< HEAD
 static char* NI_CompiledModelVersion = "1.108";
 static char* NI_CompiledModelDateTime = "Tue Feb 07 13:50:31 2017";
+=======
+static char* NI_CompiledModelVersion = "1.97";
+static char* NI_CompiledModelDateTime = "Mon Feb 06 12:30:59 2017";
+>>>>>>> parent of 984839e... Small changes to observer
 static char* NI_builder DataSection(".NIVS.builder") =
   "NI VeriStand 2014.0.0.82 (2014) RTW Build";
 static char* NI_BuilderVersion DataSection(".NIVS.builderversion") =
