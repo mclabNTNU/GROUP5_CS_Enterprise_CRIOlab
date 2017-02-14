@@ -1,12 +1,26 @@
+clear
 eta_0 = [0 0 0];
 nu_0 =[0 0 0];
-tau = [1.03 0 0];
+Par.tau_max = [1.03 0 0];
 Par.K_psi_init = 0.3;
+%% outside workspace
+Par.Workspace.origin = [0, 0];
+Par.Workspace.threshold = 0.2;
+Par.Workspace.x_min_limit = -1;
+Par.Workspace.x_max_limit = -Par.Workspace.x_min_limit;
+Par.Workspace.y_min_limit = Par.Workspace.x_min_limit;
+Par.Workspace.y_max_limit = -Par.Workspace.x_min_limit;
+
+Par.Workspace.x_min = Par.Workspace.x_min_limit + Par.Workspace.threshold;
+Par.Workspace.x_max = Par.Workspace.x_max_limit - Par.Workspace.threshold;
+Par.Workspace.y_min = Par.Workspace.y_min_limit + Par.Workspace.threshold;
+Par.Workspace.y_max = Par.Workspace.y_max_limit - Par.Workspace.threshold;
+
 %% noise and dropout
 Par.SensNoiseEnabled = 1;
-Par.Freeze.Enable = 1;
-Par.Freeze.length = 5;
-Par.Freeze.threshold = 3.0;
+Par.Freeze.Enable = 0;
+Par.Freeze.length = 2;
+Par.Freeze.threshold = 100;%3.0;
 
 Par.Step_size = 0.01;
 Par.Sample_time = 0.01;
