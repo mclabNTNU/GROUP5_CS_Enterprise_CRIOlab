@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.121
+ * Model version              : 1.126
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 14:34:24 2017
+ * C source code generated on : Tue Feb 14 15:04:34 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -865,8 +865,8 @@ typedef struct {
   real_T ArrowUp;                      /* '<S7>/ArrowUp' */
   real_T ArrowLeft;                    /* '<S7>/ArrowLeft' */
   real_T ArrowRight;                   /* '<S7>/ArrowRight' */
+  real_T Gain1[3];                     /* '<Root>/Gain1' */
   real_T v_in;                         /* '<Root>/v_in' */
-  real_T u[3];                         /* '<S6>/MATLAB Function' */
   real_T K_psi;                        /* '<S5>/k_psi' */
   real_T integral;                     /* '<S5>/inside of integral' */
   real_T u_VSP;                        /* '<S3>/MATLAB Function1' */
@@ -1524,6 +1524,9 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T Gain_Gain_d;                  /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
+                                        */
+  real_T Gain1_Gain[3];                /* Expression: [1 0 0]
+                                        * Referenced by: '<Root>/Gain1'
                                         */
   real_T alpha_VSP1_P1;                /* Expression: width
                                         * Referenced by: '<S3>/alpha_VSP1'

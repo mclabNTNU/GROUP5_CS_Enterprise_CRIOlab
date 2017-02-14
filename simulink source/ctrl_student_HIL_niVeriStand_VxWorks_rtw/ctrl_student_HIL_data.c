@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.121
+ * Model version              : 1.126
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 14:34:24 2017
+ * C source code generated on : Tue Feb 14 15:04:34 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -70,7 +70,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: NorthNoise_StdDev
                                         * Referenced by: '<S1>/North Noise'
                                         */
-  286779.0,                            /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  154833.0,                            /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S1>/North Noise'
                                         */
   0.12,                                /* Expression: 0.12
@@ -82,7 +82,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: EastNoise_StdDev
                                         * Referenced by: '<S1>/East Noise'
                                         */
-  460630.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  240725.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S1>/East Noise'
                                         */
   0.0,                                 /* Expression: 0
@@ -91,7 +91,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: HeadingNoise_StdDev
                                         * Referenced by: '<S1>/Heading Noise'
                                         */
-  1.026146E+6,                         /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  555104.0,                            /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S1>/Heading Noise'
                                         */
   0.0,                                 /* Expression: 0
@@ -121,7 +121,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: RandomNumber_StdDev
                                         * Referenced by: '<S11>/Random Number'
                                         */
-  163210.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  454895.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S11>/Random Number'
                                         */
   -1.0,                                /* Expression: width
@@ -166,7 +166,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: RandomNumber_StdDev_b
                                         * Referenced by: '<S12>/Random Number'
                                         */
-  192140.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  483825.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S12>/Random Number'
                                         */
   0.0,                                 /* Expression: 0
@@ -175,7 +175,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Computed Parameter: RandomNumber_StdDev_h
                                         * Referenced by: '<S13>/Random Number'
                                         */
-  221070.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+  12755.0,                             /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
                                         * Referenced by: '<S13>/Random Number'
                                         */
   0.0,                                 /* Expression: 0
@@ -520,6 +520,11 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   -1.0,                                /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
                                         */
+
+  /*  Expression: [1 0 0]
+   * Referenced by: '<Root>/Gain1'
+   */
+  { 1.0, 0.0, 0.0 },
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S3>/alpha_VSP1'
                                         */
@@ -1146,6 +1151,8 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
   { sizeof(real_T), 9, 0 },
 
   { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 3, 0 },
 
   { sizeof(real_T), 1, 0 },
 

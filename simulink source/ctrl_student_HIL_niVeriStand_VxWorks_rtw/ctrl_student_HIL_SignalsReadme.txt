@@ -34,10 +34,10 @@
 <signal> id = "33" name = "ctrl_student_hil/joystick/ArrowUp" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "34" name = "ctrl_student_hil/joystick/ArrowLeft" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "35" name = "ctrl_student_hil/joystick/ArrowRight" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "36" name = "ctrl_student_hil/v_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "37" name = "ctrl_student_hil/Thrust Allocation/MATLAB Function" SignalName ="u(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "38" name = "ctrl_student_hil/Thrust Allocation/MATLAB Function" SignalName ="u(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "39" name = "ctrl_student_hil/Thrust Allocation/MATLAB Function" SignalName ="u(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "36" name = "ctrl_student_hil/Gain1" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "37" name = "ctrl_student_hil/Gain1" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "38" name = "ctrl_student_hil/Gain1" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "39" name = "ctrl_student_hil/v_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "40" name = "ctrl_student_hil/Surge Observer/k_psi" SignalName ="K_psi" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "41" name = "ctrl_student_hil/Surge Observer/inside of integral" SignalName ="integral" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "42" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="u_VSP" PortNum ="1" width = "1" datatype = "real_T"</signal>
