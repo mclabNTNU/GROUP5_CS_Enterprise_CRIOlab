@@ -4,9 +4,9 @@ nu_0 =[0 0 0];
 Par.tau_max = [1.03 0 0];
 Par.K_psi_init = 0.3;
 %% outside workspace
-Par.Workspace.origin = [0, 0];
-Par.Workspace.threshold = 0.5;
-Par.Workspace.x_min_limit = -2;
+Par.Workspace.origin = [0, 0]';
+Par.Workspace.threshold = 1.5;
+Par.Workspace.x_min_limit = -5;
 Par.Workspace.x_max_limit = -Par.Workspace.x_min_limit;
 Par.Workspace.y_min_limit = Par.Workspace.x_min_limit;
 Par.Workspace.y_max_limit = -Par.Workspace.x_min_limit;
