@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.126
+ * Model version              : 1.128
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 15:04:34 2017
+ * C source code generated on : Tue Feb 14 15:58:29 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -836,22 +836,27 @@ typedef struct {
 
 /* Block signals (auto storage) */
 typedef struct {
-  real_T Switch[3];                    /* '<S1>/Switch' */
+  real_T K_psi_in;                     /* '<S5>/K_psi_in' */
+  real_T TransferFcn;                  /* '<S17>/Transfer Fcn' */
+  real_T Sum;                          /* '<S5>/Sum' */
   real_T y_in;                         /* '<Root>/y_in' */
+  real_T u_in;                         /* '<Root>/u_in' */
+  real_T psi_in;                       /* '<Root>/psi_in' */
+  real_T Sum1;                         /* '<Root>/Sum1' */
+  real_T x_in;                         /* '<Root>/x_in' */
+  real_T Switch[3];                    /* '<S1>/Switch' */
   real_T Clock;                        /* '<S11>/Clock' */
   real_T RandomNumber;                 /* '<S11>/Random Number' */
-  real_T x_in;                         /* '<Root>/x_in' */
-  real_T psi_in;                       /* '<Root>/psi_in' */
-  real_T Sum[3];                       /* '<Root>/Sum' */
+  real_T Sum_o[3];                     /* '<Root>/Sum' */
   real_T Clock_d;                      /* '<S12>/Clock' */
   real_T RandomNumber_o;               /* '<S12>/Random Number' */
   real_T Clock_n;                      /* '<S13>/Clock' */
   real_T RandomNumber_g;               /* '<S13>/Random Number' */
   real_T Switch_j[3];                  /* '<S4>/Switch' */
-  real_T K_psi_in;                     /* '<S5>/K_psi_in' */
-  real_T Sum_c;                        /* '<S5>/Sum' */
-  real_T u_in;                         /* '<Root>/u_in' */
-  real_T Sum1;                         /* '<Root>/Sum1' */
+  real_T Switch_o;                     /* '<S2>/Switch' */
+  real_T Switch2;                      /* '<S2>/Switch2' */
+  real_T Switch1;                      /* '<S2>/Switch1' */
+  real_T TmpSignalConversionAteta_mInpor[3];/* '<Root>/Signal Dropout detection' */
   real_T r_in;                         /* '<Root>/r_in' */
   real_T L2_continuous;                /* '<S7>/L2_continuous' */
   real_T PosXRight;                    /* '<S7>/PosXRight' */
@@ -880,20 +885,21 @@ typedef struct {
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
+  real_T K_psi_in_DWORK1;              /* '<S5>/K_psi_in' */
+  real_T u_hat_DWORK1;                 /* '<Root>/u_hat' */
+  real_T y_in_DWORK1;                  /* '<Root>/y_in' */
+  real_T u_in_DWORK1;                  /* '<Root>/u_in' */
+  real_T u_out_out_DWORK1;             /* '<Root>/u_out_out' */
+  real_T psi_in_DWORK1;                /* '<Root>/psi_in' */
+  real_T u_tilde_out_DWORK1;           /* '<Root>/u_tilde_out' */
+  real_T x_in_DWORK1;                  /* '<Root>/x_in' */
   real_T NextOutput;                   /* '<S1>/North Noise' */
   real_T NextOutput_j;                 /* '<S1>/East Noise' */
   real_T NextOutput_g;                 /* '<S1>/Heading Noise' */
-  real_T y_in_DWORK1;                  /* '<Root>/y_in' */
   real_T NextOutput_p;                 /* '<S11>/Random Number' */
-  real_T x_in_DWORK1;                  /* '<Root>/x_in' */
-  real_T psi_in_DWORK1;                /* '<Root>/psi_in' */
   real_T NextOutput_gm;                /* '<S12>/Random Number' */
   real_T NextOutput_f;                 /* '<S13>/Random Number' */
-  real_T K_psi_in_DWORK1;              /* '<S5>/K_psi_in' */
-  real_T u_hat_DWORK1;                 /* '<Root>/u_hat' */
-  real_T u_in_DWORK1;                  /* '<Root>/u_in' */
-  real_T u_out_out_DWORK1;             /* '<Root>/u_out_out' */
-  real_T u_tilde_out_DWORK1;           /* '<Root>/u_tilde_out' */
+  real_T eta_m_DWORK1[3];              /* '<Root>/eta_m' */
   real_T r_in_DWORK1;                  /* '<Root>/r_in' */
   real_T L2_continuous_DWORK1;         /* '<S7>/L2_continuous' */
   real_T PosXRight_DWORK1;             /* '<S7>/PosXRight' */
@@ -922,6 +928,7 @@ typedef struct {
   real_T y_0_DWORK1;                   /* '<S8>/y_0' */
   real_T integratorresetmodel_DWORK1;  /* '<S8>/integrator reset model' */
   real_T K_psi_out_DWORK1;             /* '<S5>/K_psi_out' */
+  real_T x_lowpass_DWORK1;             /* '<S5>/x_lowpass' */
   real_T v_in_DWORK1;                  /* '<Root>/v_in' */
   real_T eta_old[3];                   /* '<S2>/Detect droput' */
   struct {
@@ -937,24 +944,25 @@ typedef struct {
   uint32_T RandSeed_n;                 /* '<S13>/Random Number' */
   struct {
     int_T IcNeedsLoading;
-  } Integrator2_IWORK;                 /* '<S2>/Integrator2' */
-
-  struct {
-    int_T IcNeedsLoading;
   } Integrator_IWORK;                  /* '<S2>/Integrator' */
 
   struct {
     int_T IcNeedsLoading;
   } Integrator1_IWORK;                 /* '<S2>/Integrator1' */
 
-  uint8_T y_in_DWORK2[17];             /* '<Root>/y_in' */
-  uint8_T x_in_DWORK2[17];             /* '<Root>/x_in' */
-  uint8_T psi_in_DWORK2[17];           /* '<Root>/psi_in' */
+  struct {
+    int_T IcNeedsLoading;
+  } Integrator2_IWORK;                 /* '<S2>/Integrator2' */
+
   uint8_T K_psi_in_DWORK2[17];         /* '<S5>/K_psi_in' */
   uint8_T u_hat_DWORK2[17];            /* '<Root>/u_hat' */
+  uint8_T y_in_DWORK2[17];             /* '<Root>/y_in' */
   uint8_T u_in_DWORK2[17];             /* '<Root>/u_in' */
   uint8_T u_out_out_DWORK2[17];        /* '<Root>/u_out_out' */
+  uint8_T psi_in_DWORK2[17];           /* '<Root>/psi_in' */
   uint8_T u_tilde_out_DWORK2[17];      /* '<Root>/u_tilde_out' */
+  uint8_T x_in_DWORK2[17];             /* '<Root>/x_in' */
+  uint8_T eta_m_DWORK2[17];            /* '<Root>/eta_m' */
   uint8_T r_in_DWORK2[17];             /* '<Root>/r_in' */
   uint8_T L2_continuous_DWORK2[17];    /* '<S7>/L2_continuous' */
   uint8_T PosXRight_DWORK2[17];        /* '<S7>/PosXRight' */
@@ -983,6 +991,7 @@ typedef struct {
   uint8_T y_0_DWORK2[17];              /* '<S8>/y_0' */
   uint8_T integratorresetmodel_DWORK2[17];/* '<S8>/integrator reset model' */
   uint8_T K_psi_out_DWORK2[17];        /* '<S5>/K_psi_out' */
+  uint8_T x_lowpass_DWORK2[17];        /* '<S5>/x_lowpass' */
   uint8_T v_in_DWORK2[17];             /* '<Root>/v_in' */
   uint8_T NIVeriStandSignalProbe_DWORK1[17];/* '<Root>/NIVeriStandSignalProbe' */
   uint8_T NIVeriStandSignalProbe_DWORK3[60];/* '<Root>/NIVeriStandSignalProbe' */
@@ -994,33 +1003,42 @@ typedef struct {
 
 /* Continuous states (auto storage) */
 typedef struct {
-  real_T Integrator2_CSTATE;           /* '<S2>/Integrator2' */
-  real_T Integrator_CSTATE;            /* '<S2>/Integrator' */
+  real_T TransferFcn2_CSTATE;          /* '<S17>/Transfer Fcn2' */
+  real_T TransferFcn_CSTATE;           /* '<S17>/Transfer Fcn' */
+  real_T TransferFcn1_CSTATE;          /* '<S17>/Transfer Fcn1' */
+  real_T Integrator_CSTATE;            /* '<S5>/Integrator' */
+  real_T Integrator_CSTATE_l;          /* '<S2>/Integrator' */
   real_T Integrator1_CSTATE;           /* '<S2>/Integrator1' */
-  real_T Integrator_CSTATE_m;          /* '<S5>/Integrator' */
+  real_T Integrator2_CSTATE;           /* '<S2>/Integrator2' */
 } X_ctrl_student_HIL_T;
 
 /* State derivatives (auto storage) */
 typedef struct {
-  real_T Integrator2_CSTATE;           /* '<S2>/Integrator2' */
-  real_T Integrator_CSTATE;            /* '<S2>/Integrator' */
+  real_T TransferFcn2_CSTATE;          /* '<S17>/Transfer Fcn2' */
+  real_T TransferFcn_CSTATE;           /* '<S17>/Transfer Fcn' */
+  real_T TransferFcn1_CSTATE;          /* '<S17>/Transfer Fcn1' */
+  real_T Integrator_CSTATE;            /* '<S5>/Integrator' */
+  real_T Integrator_CSTATE_l;          /* '<S2>/Integrator' */
   real_T Integrator1_CSTATE;           /* '<S2>/Integrator1' */
-  real_T Integrator_CSTATE_m;          /* '<S5>/Integrator' */
+  real_T Integrator2_CSTATE;           /* '<S2>/Integrator2' */
 } XDot_ctrl_student_HIL_T;
 
 /* State disabled  */
 typedef struct {
-  boolean_T Integrator2_CSTATE;        /* '<S2>/Integrator2' */
-  boolean_T Integrator_CSTATE;         /* '<S2>/Integrator' */
+  boolean_T TransferFcn2_CSTATE;       /* '<S17>/Transfer Fcn2' */
+  boolean_T TransferFcn_CSTATE;        /* '<S17>/Transfer Fcn' */
+  boolean_T TransferFcn1_CSTATE;       /* '<S17>/Transfer Fcn1' */
+  boolean_T Integrator_CSTATE;         /* '<S5>/Integrator' */
+  boolean_T Integrator_CSTATE_l;       /* '<S2>/Integrator' */
   boolean_T Integrator1_CSTATE;        /* '<S2>/Integrator1' */
-  boolean_T Integrator_CSTATE_m;       /* '<S5>/Integrator' */
+  boolean_T Integrator2_CSTATE;        /* '<S2>/Integrator2' */
 } XDis_ctrl_student_HIL_T;
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState Integrator2_Reset_ZCE;    /* '<S2>/Integrator2' */
   ZCSigState Integrator_Reset_ZCE;     /* '<S2>/Integrator' */
   ZCSigState Integrator1_Reset_ZCE;    /* '<S2>/Integrator1' */
+  ZCSigState Integrator2_Reset_ZCE;    /* '<S2>/Integrator2' */
 } PrevZCX_ctrl_student_HIL_T;
 
 #ifndef ODE4_INTG
@@ -1052,7 +1070,7 @@ typedef struct {
 
 /* Parameters (auto storage) */
 struct P_ctrl_student_HIL_T_ {
-  struct_7nWQhuobG7WuDbLiQPONjG Par;   /* Variable: Par
+  struct_J8CQbjffsDnivVbE7QRY9 Par;    /* Variable: Par
                                         * Referenced by:
                                         *   '<S1>/Par.SensNoiseEnabled'
                                         *   '<S4>/Constant'
@@ -1072,122 +1090,11 @@ struct P_ctrl_student_HIL_T_ {
   real_T Ki4_Gain;                     /* Expression: pi/360
                                         * Referenced by: '<S1>/Ki4'
                                         */
-  real_T NorthNoise_Mean;              /* Expression: 0
-                                        * Referenced by: '<S1>/North Noise'
+  real_T TransferFcn2_A;               /* Computed Parameter: TransferFcn2_A
+                                        * Referenced by: '<S17>/Transfer Fcn2'
                                         */
-  real_T NorthNoise_StdDev;            /* Computed Parameter: NorthNoise_StdDev
-                                        * Referenced by: '<S1>/North Noise'
-                                        */
-  real_T NorthNoise_Seed;              /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S1>/North Noise'
-                                        */
-  real_T Ki2_Gain;                     /* Expression: 0.12
-                                        * Referenced by: '<S1>/Ki2'
-                                        */
-  real_T EastNoise_Mean;               /* Expression: 0
-                                        * Referenced by: '<S1>/East Noise'
-                                        */
-  real_T EastNoise_StdDev;             /* Computed Parameter: EastNoise_StdDev
-                                        * Referenced by: '<S1>/East Noise'
-                                        */
-  real_T EastNoise_Seed;               /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S1>/East Noise'
-                                        */
-  real_T HeadingNoise_Mean;            /* Expression: 0
-                                        * Referenced by: '<S1>/Heading Noise'
-                                        */
-  real_T HeadingNoise_StdDev;          /* Computed Parameter: HeadingNoise_StdDev
-                                        * Referenced by: '<S1>/Heading Noise'
-                                        */
-  real_T HeadingNoise_Seed;            /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S1>/Heading Noise'
-                                        */
-  real_T Switch_Threshold;             /* Expression: 0
-                                        * Referenced by: '<S1>/Switch'
-                                        */
-  real_T y_in_P1;                      /* Expression: width
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T y_in_P2;                      /* Expression: dtype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T y_in_P3;                      /* Expression: portnum
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T y_in_P4;                      /* Expression: stime
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T y_in_P5;                      /* Expression: stype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T y_in_P6;                      /* Expression: btype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  real_T RandomNumber_Mean;            /* Expression: 0
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  real_T RandomNumber_StdDev;          /* Computed Parameter: RandomNumber_StdDev
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  real_T RandomNumber_Seed;            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  real_T x_in_P1;                      /* Expression: width
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P2;                      /* Expression: dtype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P3;                      /* Expression: portnum
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P4;                      /* Expression: stime
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P5;                      /* Expression: stype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P6;                      /* Expression: btype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T psi_in_P1;                    /* Expression: width
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T psi_in_P2;                    /* Expression: dtype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T psi_in_P3;                    /* Expression: portnum
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T psi_in_P4;                    /* Expression: stime
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T psi_in_P5;                    /* Expression: stype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T psi_in_P6;                    /* Expression: btype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  real_T RandomNumber_Mean_g;          /* Expression: 0
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  real_T RandomNumber_StdDev_b;        /* Computed Parameter: RandomNumber_StdDev_b
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  real_T RandomNumber_Seed_c;          /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  real_T RandomNumber_Mean_a;          /* Expression: 0
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  real_T RandomNumber_StdDev_h;        /* Computed Parameter: RandomNumber_StdDev_h
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  real_T RandomNumber_Seed_f;          /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  real_T Switch_Threshold_f;           /* Expression: 0
-                                        * Referenced by: '<S4>/Switch'
+  real_T TransferFcn2_C;               /* Computed Parameter: TransferFcn2_C
+                                        * Referenced by: '<S17>/Transfer Fcn2'
                                         */
   real_T K_psi_in_P1;                  /* Expression: width
                                         * Referenced by: '<S5>/K_psi_in'
@@ -1210,6 +1117,18 @@ struct P_ctrl_student_HIL_T_ {
   real_T Gain_Gain;                    /* Expression: 0.1
                                         * Referenced by: '<S5>/Gain'
                                         */
+  real_T TransferFcn_A;                /* Computed Parameter: TransferFcn_A
+                                        * Referenced by: '<S17>/Transfer Fcn'
+                                        */
+  real_T TransferFcn_C;                /* Computed Parameter: TransferFcn_C
+                                        * Referenced by: '<S17>/Transfer Fcn'
+                                        */
+  real_T TransferFcn1_A;               /* Computed Parameter: TransferFcn1_A
+                                        * Referenced by: '<S17>/Transfer Fcn1'
+                                        */
+  real_T TransferFcn1_C;               /* Computed Parameter: TransferFcn1_C
+                                        * Referenced by: '<S17>/Transfer Fcn1'
+                                        */
   real_T Integrator_IC;                /* Expression: 0
                                         * Referenced by: '<S5>/Integrator'
                                         */
@@ -1230,6 +1149,24 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T u_hat_P6;                     /* Expression: btype
                                         * Referenced by: '<Root>/u_hat'
+                                        */
+  real_T y_in_P1;                      /* Expression: width
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  real_T y_in_P2;                      /* Expression: dtype
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  real_T y_in_P3;                      /* Expression: portnum
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  real_T y_in_P4;                      /* Expression: stime
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  real_T y_in_P5;                      /* Expression: stype
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  real_T y_in_P6;                      /* Expression: btype
+                                        * Referenced by: '<Root>/y_in'
                                         */
   real_T u_in_P1;                      /* Expression: width
                                         * Referenced by: '<Root>/u_in'
@@ -1267,6 +1204,24 @@ struct P_ctrl_student_HIL_T_ {
   real_T u_out_out_P6;                 /* Expression: btype
                                         * Referenced by: '<Root>/u_out_out'
                                         */
+  real_T psi_in_P1;                    /* Expression: width
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  real_T psi_in_P2;                    /* Expression: dtype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  real_T psi_in_P3;                    /* Expression: portnum
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  real_T psi_in_P4;                    /* Expression: stime
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  real_T psi_in_P5;                    /* Expression: stype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  real_T psi_in_P6;                    /* Expression: btype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
   real_T u_tilde_out_P1;               /* Expression: width
                                         * Referenced by: '<Root>/u_tilde_out'
                                         */
@@ -1284,6 +1239,105 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T u_tilde_out_P6;               /* Expression: btype
                                         * Referenced by: '<Root>/u_tilde_out'
+                                        */
+  real_T x_in_P1;                      /* Expression: width
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T x_in_P2;                      /* Expression: dtype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T x_in_P3;                      /* Expression: portnum
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T x_in_P4;                      /* Expression: stime
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T x_in_P5;                      /* Expression: stype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T x_in_P6;                      /* Expression: btype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  real_T NorthNoise_Mean;              /* Expression: 0
+                                        * Referenced by: '<S1>/North Noise'
+                                        */
+  real_T NorthNoise_StdDev;            /* Computed Parameter: NorthNoise_StdDev
+                                        * Referenced by: '<S1>/North Noise'
+                                        */
+  real_T NorthNoise_Seed;              /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S1>/North Noise'
+                                        */
+  real_T Ki2_Gain;                     /* Expression: 0.12
+                                        * Referenced by: '<S1>/Ki2'
+                                        */
+  real_T EastNoise_Mean;               /* Expression: 0
+                                        * Referenced by: '<S1>/East Noise'
+                                        */
+  real_T EastNoise_StdDev;             /* Computed Parameter: EastNoise_StdDev
+                                        * Referenced by: '<S1>/East Noise'
+                                        */
+  real_T EastNoise_Seed;               /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S1>/East Noise'
+                                        */
+  real_T HeadingNoise_Mean;            /* Expression: 0
+                                        * Referenced by: '<S1>/Heading Noise'
+                                        */
+  real_T HeadingNoise_StdDev;          /* Computed Parameter: HeadingNoise_StdDev
+                                        * Referenced by: '<S1>/Heading Noise'
+                                        */
+  real_T HeadingNoise_Seed;            /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S1>/Heading Noise'
+                                        */
+  real_T Switch_Threshold;             /* Expression: 0
+                                        * Referenced by: '<S1>/Switch'
+                                        */
+  real_T RandomNumber_Mean;            /* Expression: 0
+                                        * Referenced by: '<S11>/Random Number'
+                                        */
+  real_T RandomNumber_StdDev;          /* Computed Parameter: RandomNumber_StdDev
+                                        * Referenced by: '<S11>/Random Number'
+                                        */
+  real_T RandomNumber_Seed;            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S11>/Random Number'
+                                        */
+  real_T RandomNumber_Mean_g;          /* Expression: 0
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  real_T RandomNumber_StdDev_b;        /* Computed Parameter: RandomNumber_StdDev_b
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  real_T RandomNumber_Seed_c;          /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  real_T RandomNumber_Mean_a;          /* Expression: 0
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  real_T RandomNumber_StdDev_h;        /* Computed Parameter: RandomNumber_StdDev_h
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  real_T RandomNumber_Seed_f;          /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  real_T Switch_Threshold_f;           /* Expression: 0
+                                        * Referenced by: '<S4>/Switch'
+                                        */
+  real_T eta_m_P1;                     /* Expression: width
+                                        * Referenced by: '<Root>/eta_m'
+                                        */
+  real_T eta_m_P2;                     /* Expression: dtype
+                                        * Referenced by: '<Root>/eta_m'
+                                        */
+  real_T eta_m_P3;                     /* Expression: portnum
+                                        * Referenced by: '<Root>/eta_m'
+                                        */
+  real_T eta_m_P4;                     /* Expression: stime
+                                        * Referenced by: '<Root>/eta_m'
+                                        */
+  real_T eta_m_P5;                     /* Expression: stype
+                                        * Referenced by: '<Root>/eta_m'
+                                        */
+  real_T eta_m_P6;                     /* Expression: btype
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   real_T r_in_P1;                      /* Expression: width
                                         * Referenced by: '<Root>/r_in'
@@ -1810,6 +1864,24 @@ struct P_ctrl_student_HIL_T_ {
   real_T K_psi_out_P6;                 /* Expression: btype
                                         * Referenced by: '<S5>/K_psi_out'
                                         */
+  real_T x_lowpass_P1;                 /* Expression: width
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
+  real_T x_lowpass_P2;                 /* Expression: dtype
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
+  real_T x_lowpass_P3;                 /* Expression: portnum
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
+  real_T x_lowpass_P4;                 /* Expression: stime
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
+  real_T x_lowpass_P5;                 /* Expression: stype
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
+  real_T x_lowpass_P6;                 /* Expression: btype
+                                        * Referenced by: '<S5>/x_lowpass'
+                                        */
   real_T v_in_P1;                      /* Expression: width
                                         * Referenced by: '<Root>/v_in'
                                         */
@@ -1867,8 +1939,8 @@ struct tag_RTM_ctrl_student_HIL_T {
     boolean_T zCCacheNeedsReset;
     boolean_T derivCacheNeedsReset;
     boolean_T blkStateChange;
-    real_T odeY[4];
-    real_T odeF[4][4];
+    real_T odeY[7];
+    real_T odeF[4][7];
     ODE4_IntgData intgData;
     void *dwork;
   } ModelData;
@@ -2013,9 +2085,10 @@ extern RT_MODEL_ctrl_student_HIL_T *const ctrl_student_HIL_M;
  * '<S14>'  : 'ctrl_student_HIL/Subsystem1/Freeze Signal /Freeze signal'
  * '<S15>'  : 'ctrl_student_HIL/Subsystem1/Freeze Signal 1/Freeze signal'
  * '<S16>'  : 'ctrl_student_HIL/Subsystem1/Freeze Signal 2/Freeze signal'
- * '<S17>'  : 'ctrl_student_HIL/Surge Observer/inside of integral'
- * '<S18>'  : 'ctrl_student_HIL/Surge Observer/k_psi'
- * '<S19>'  : 'ctrl_student_HIL/Thrust Allocation/MATLAB Function'
+ * '<S17>'  : 'ctrl_student_HIL/Surge Observer/Lowpass filter'
+ * '<S18>'  : 'ctrl_student_HIL/Surge Observer/inside of integral'
+ * '<S19>'  : 'ctrl_student_HIL/Surge Observer/k_psi'
+ * '<S20>'  : 'ctrl_student_HIL/Thrust Allocation/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_ctrl_student_HIL_h_ */
 
