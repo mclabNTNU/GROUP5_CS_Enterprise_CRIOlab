@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.118
+ * Model version              : 1.121
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 13:05:50 2017
+ * C source code generated on : Tue Feb 14 13:58:00 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -28,6 +28,12 @@
 extern real_T rt_urand_Upu32_Yd_f_pw_snf(uint32_T *u);
 extern real_T rt_nrand_Upu32_Yd_f_pw_snf(uint32_T *u);
 extern real_T rt_atan2d_snf(real_T u0, real_T u1);
+extern void ctrl_student__Freezesignal_Init(DW_Freezesignal_ctrl_student__T
+  *localDW);
+extern void ctrl_student_HIL_Freezesignal(real_T rtu_eta_in, real_T rtu_time,
+  real_T rtu_random_value, real_T rtu_threshold, real_T rtu_length,
+  B_Freezesignal_ctrl_student_H_T *localB, DW_Freezesignal_ctrl_student__T
+  *localDW);
 
 /* private model entry point functions */
 extern void ctrl_student_HIL_derivatives(void);

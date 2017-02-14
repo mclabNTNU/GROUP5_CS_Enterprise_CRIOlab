@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.118
+ * Model version              : 1.121
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 13:05:50 2017
+ * C source code generated on : Tue Feb 14 13:58:00 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,6 +24,29 @@
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
 #include "zero_crossing_types.h"
+#ifndef _DEFINED_TYPEDEF_FOR_struct_WEndDd5z8WjUYRTCKDNizF_
+#define _DEFINED_TYPEDEF_FOR_struct_WEndDd5z8WjUYRTCKDNizF_
+
+typedef struct {
+  real_T Enable;
+  real_T length;
+  real_T threshold;
+} struct_WEndDd5z8WjUYRTCKDNizF;
+
+#endif
+
+#ifndef _DEFINED_TYPEDEF_FOR_struct_7nWQhuobG7WuDbLiQPONjG_
+#define _DEFINED_TYPEDEF_FOR_struct_7nWQhuobG7WuDbLiQPONjG_
+
+typedef struct {
+  real_T SensNoiseEnabled;
+  struct_WEndDd5z8WjUYRTCKDNizF Freeze;
+  real_T Step_size;
+  real_T Sample_time;
+  real_T Thrust_lim[3];
+} struct_7nWQhuobG7WuDbLiQPONjG;
+
+#endif
 
 /* Parameters (auto storage) */
 typedef struct P_ctrl_student_HIL_T_ P_ctrl_student_HIL_T;
