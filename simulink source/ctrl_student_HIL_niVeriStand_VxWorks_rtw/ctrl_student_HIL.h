@@ -9,7 +9,7 @@
  *
  * Model version              : 1.119
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 14:11:45 2017
+ * C source code generated on : Tue Feb 14 14:28:14 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -848,8 +848,8 @@ typedef struct {
   real_T Clock_n;                      /* '<S14>/Clock' */
   real_T RandomNumber_g;               /* '<S14>/Random Number' */
   real_T Switch_j[3];                  /* '<S5>/Switch' */
+  real_T K_psi_in;                     /* '<S6>/K_psi_in' */
   real_T Sum_c;                        /* '<S6>/Sum' */
-  real_T r_in1;                        /* '<Root>/r_in1' */
   real_T r_in;                         /* '<Root>/r_in' */
   real_T u_in;                         /* '<Root>/u_in' */
   real_T L2_continuous;                /* '<S8>/L2_continuous' */
@@ -887,8 +887,8 @@ typedef struct {
   real_T psi_in_DWORK1;                /* '<Root>/psi_in' */
   real_T NextOutput_gm;                /* '<S13>/Random Number' */
   real_T NextOutput_f;                 /* '<S14>/Random Number' */
+  real_T K_psi_in_DWORK1;              /* '<S6>/K_psi_in' */
   real_T u_hat_DWORK1;                 /* '<Root>/u_hat' */
-  real_T r_in1_DWORK1;                 /* '<Root>/r_in1' */
   real_T u_hat1_DWORK1;                /* '<Root>/u_hat1' */
   real_T r_in_DWORK1;                  /* '<Root>/r_in' */
   real_T u_in_DWORK1;                  /* '<Root>/u_in' */
@@ -946,8 +946,8 @@ typedef struct {
   uint8_T y_in_DWORK2[17];             /* '<Root>/y_in' */
   uint8_T x_in_DWORK2[17];             /* '<Root>/x_in' */
   uint8_T psi_in_DWORK2[17];           /* '<Root>/psi_in' */
+  uint8_T K_psi_in_DWORK2[17];         /* '<S6>/K_psi_in' */
   uint8_T u_hat_DWORK2[17];            /* '<Root>/u_hat' */
-  uint8_T r_in1_DWORK2[17];            /* '<Root>/r_in1' */
   uint8_T u_hat1_DWORK2[17];           /* '<Root>/u_hat1' */
   uint8_T r_in_DWORK2[17];             /* '<Root>/r_in' */
   uint8_T u_in_DWORK2[17];             /* '<Root>/u_in' */
@@ -1183,8 +1183,26 @@ struct P_ctrl_student_HIL_T_ {
   real_T Switch_Threshold_f;           /* Expression: 0
                                         * Referenced by: '<S5>/Switch'
                                         */
-  real_T K_psi_Value;                  /* Expression: 0.1
-                                        * Referenced by: '<S6>/K_psi'
+  real_T K_psi_in_P1;                  /* Expression: width
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T K_psi_in_P2;                  /* Expression: dtype
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T K_psi_in_P3;                  /* Expression: portnum
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T K_psi_in_P4;                  /* Expression: stime
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T K_psi_in_P5;                  /* Expression: stype
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T K_psi_in_P6;                  /* Expression: btype
+                                        * Referenced by: '<S6>/K_psi_in'
+                                        */
+  real_T Gain_Gain;                    /* Expression: 0.1
+                                        * Referenced by: '<S6>/Gain'
                                         */
   real_T Integrator_IC;                /* Expression: 0
                                         * Referenced by: '<S6>/Integrator'
@@ -1206,24 +1224,6 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T u_hat_P6;                     /* Expression: btype
                                         * Referenced by: '<Root>/u_hat'
-                                        */
-  real_T r_in1_P1;                     /* Expression: width
-                                        * Referenced by: '<Root>/r_in1'
-                                        */
-  real_T r_in1_P2;                     /* Expression: dtype
-                                        * Referenced by: '<Root>/r_in1'
-                                        */
-  real_T r_in1_P3;                     /* Expression: portnum
-                                        * Referenced by: '<Root>/r_in1'
-                                        */
-  real_T r_in1_P4;                     /* Expression: stime
-                                        * Referenced by: '<Root>/r_in1'
-                                        */
-  real_T r_in1_P5;                     /* Expression: stype
-                                        * Referenced by: '<Root>/r_in1'
-                                        */
-  real_T r_in1_P6;                     /* Expression: btype
-                                        * Referenced by: '<Root>/r_in1'
                                         */
   real_T u_hat1_P1;                    /* Expression: width
                                         * Referenced by: '<Root>/u_hat1'
@@ -1498,7 +1498,7 @@ struct P_ctrl_student_HIL_T_ {
   real_T InverseofT_Value[9];          /* Expression: inv([1 0 0; 0 1 1; 0 -0.4575 0.3875])
                                         * Referenced by: '<S7>/Inverse of T'
                                         */
-  real_T Gain_Gain;                    /* Expression: -1
+  real_T Gain_Gain_d;                  /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
                                         */
   real_T alpha_VSP1_P1;                /* Expression: width

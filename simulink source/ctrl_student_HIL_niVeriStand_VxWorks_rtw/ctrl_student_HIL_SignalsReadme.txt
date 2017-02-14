@@ -17,8 +17,8 @@
 <signal> id = "16" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "17" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "18" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "19" name = "ctrl_student_hil/Surge Observer/Sum" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "20" name = "ctrl_student_hil/r_in1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "19" name = "ctrl_student_hil/Surge Observer/K_psi_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "20" name = "ctrl_student_hil/Surge Observer/Sum" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "21" name = "ctrl_student_hil/r_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "22" name = "ctrl_student_hil/u_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "23" name = "ctrl_student_hil/joystick/L2_continuous" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
