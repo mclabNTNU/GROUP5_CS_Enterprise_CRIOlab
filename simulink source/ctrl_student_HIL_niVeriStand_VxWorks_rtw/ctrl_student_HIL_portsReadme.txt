@@ -3,8 +3,8 @@
 <inport> id="-1"  name = "x_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "psi_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Surge Observer/K_psi_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "r_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "u_in" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "r_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/L2_continuous" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosXRight" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosYRight" width = "1" datatype = "0"</inport>
@@ -19,7 +19,8 @@
 <inport> id="-1"  name = "joystick/ArrowRight" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "v_in" width = "1" datatype = "0"</inport>
 <outport> id = "-1" name = "u_hat" width = "1" datatype = "0"</outport>
-<outport> id = "-1" name = "u_hat1" width = "1" datatype = "18"</outport>
+<outport> id = "-1" name = "u_out_out" width = "1" datatype = "0"</outport>
+<outport> id = "-1" name = "u_tilde_out" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP1" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP2" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/omega_VSP1" width = "1" datatype = "0"</outport>
@@ -34,4 +35,5 @@
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/x_0" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/y_0" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/integrator reset model" width = "1" datatype = "18"</outport>
+<outport> id = "-1" name = "Surge Observer/K_psi_out" width = "1" datatype = "0"</outport>
 </portlist>
