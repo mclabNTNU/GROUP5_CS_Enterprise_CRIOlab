@@ -7,25 +7,25 @@
 <signal> id = "6" name = "ctrl_student_hil/psi_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "7" name = "ctrl_student_hil/Sum1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "8" name = "ctrl_student_hil/x_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "9" name = "ctrl_student_hil/Sensors Disturbances/Switch" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "10" name = "ctrl_student_hil/Sensors Disturbances/Switch" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "11" name = "ctrl_student_hil/Sensors Disturbances/Switch" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "12" name = "ctrl_student_hil/Subsystem1/Freeze Signal /Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "13" name = "ctrl_student_hil/Subsystem1/Freeze Signal /Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "14" name = "ctrl_student_hil/Sum" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "15" name = "ctrl_student_hil/Sum" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "16" name = "ctrl_student_hil/Sum" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "17" name = "ctrl_student_hil/Subsystem1/Freeze Signal 1/Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "18" name = "ctrl_student_hil/Subsystem1/Freeze Signal 1/Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "19" name = "ctrl_student_hil/Subsystem1/Freeze Signal 2/Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "20" name = "ctrl_student_hil/Subsystem1/Freeze Signal 2/Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "21" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "22" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "23" name = "ctrl_student_hil/Subsystem1/Switch" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "24" name = "ctrl_student_hil/Signal Dropout detection/Switch" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "25" name = "ctrl_student_hil/Signal Dropout detection/Switch2" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "26" name = "ctrl_student_hil/Signal Dropout detection/Switch1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "27" name = "ctrl_student_hil/r_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "9" name = "ctrl_student_hil/Noise and dropout generation/Sensors Disturbances/Switch" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "10" name = "ctrl_student_hil/Noise and dropout generation/Sensors Disturbances/Switch" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "11" name = "ctrl_student_hil/Noise and dropout generation/Sensors Disturbances/Switch" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "12" name = "ctrl_student_hil/Noise and dropout generation/Sum" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "13" name = "ctrl_student_hil/Noise and dropout generation/Sum" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "14" name = "ctrl_student_hil/Noise and dropout generation/Sum" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "15" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal /Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "16" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal /Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "17" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 1/Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "18" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 1/Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "19" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 2/Clock" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "20" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 2/Random Number" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "21" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Switch" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "22" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Switch" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "23" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Switch" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "24" name = "ctrl_student_hil/r_in" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "25" name = "ctrl_student_hil/Signal Dropout detection/Subsystem/Switch" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "26" name = "ctrl_student_hil/Signal Dropout detection/Switch2" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "27" name = "ctrl_student_hil/Signal Dropout detection/Switch1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "28" name = "ctrl_student_hil/joystick/L2_continuous" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "29" name = "ctrl_student_hil/joystick/PosXRight" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "30" name = "ctrl_student_hil/joystick/PosYRight" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
@@ -50,7 +50,7 @@
 <signal> id = "49" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="droput(1,1)" PortNum ="1" width = "1" datatype = "boolean_T"</signal>
 <signal> id = "50" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="droput(1,2)" PortNum ="1" width = "1" datatype = "boolean_T"</signal>
 <signal> id = "51" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="droput(1,3)" PortNum ="1" width = "1" datatype = "boolean_T"</signal>
-<signal> id = "52" name = "ctrl_student_hil/Subsystem1/Freeze Signal 2/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "53" name = "ctrl_student_hil/Subsystem1/Freeze Signal 1/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "54" name = "ctrl_student_hil/Subsystem1/Freeze Signal /Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "52" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 2/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "53" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 1/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "54" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
 </signallist>

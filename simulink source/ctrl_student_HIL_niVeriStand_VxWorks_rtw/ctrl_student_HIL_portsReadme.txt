@@ -22,6 +22,7 @@
 <outport> id = "-1" name = "u_out_out" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "u_tilde_out" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "eta_m" width = "3" datatype = "20"</outport>
+<outport> id = "-1" name = "eta_after_droput" width = "3" datatype = "20"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP1" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP2" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/omega_VSP1" width = "1" datatype = "0"</outport>

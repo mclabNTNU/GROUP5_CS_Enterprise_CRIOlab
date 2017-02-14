@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.128
+ * Model version              : 1.129
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 14 15:58:29 2017
+ * C source code generated on : Tue Feb 14 16:53:43 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -55,8 +55,8 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_J8CQbjffsDnivVbE7QRY9_
-#define _DEFINED_TYPEDEF_FOR_struct_J8CQbjffsDnivVbE7QRY9_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_T5K4FwSogrZY4OQtLmG9iH_
+#define _DEFINED_TYPEDEF_FOR_struct_T5K4FwSogrZY4OQtLmG9iH_
 
 typedef struct {
   real_T SensNoiseEnabled;
@@ -66,7 +66,8 @@ typedef struct {
   real_T Sample_rate;
   real_T Thrust_lim[3];
   struct_O1cG5VeM3Vq2W5nll3MmiD Lowpass;
-} struct_J8CQbjffsDnivVbE7QRY9;
+  real_T K_psi_init;
+} struct_T5K4FwSogrZY4OQtLmG9iH;
 
 #endif
 
