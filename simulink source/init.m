@@ -1,12 +1,12 @@
 clear
 eta_0 = [0 0 0];
 nu_0 =[0 0 0];
-Par.tau_max = [1.03 0 0];%[1.03 2.5 0.98];
+Par.tau_max = [1.03 0 0];
 Par.K_psi_init = 0.3;
 %% outside workspace
 Par.Workspace.origin = [0, 0]';
-Par.Workspace.threshold = 2.5;
-Par.Workspace.x_min_limit = -6;
+Par.Workspace.threshold = 1.5;
+Par.Workspace.x_min_limit = -5;
 Par.Workspace.x_max_limit = -Par.Workspace.x_min_limit;
 Par.Workspace.y_min_limit = Par.Workspace.x_min_limit;
 Par.Workspace.y_max_limit = -Par.Workspace.x_min_limit;

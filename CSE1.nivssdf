@@ -10,7 +10,7 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
-				<String>1.0.0.165</String>
+				<String>1.0.0.162</String>
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -5197,10 +5197,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>235927</I32>
+									<I32>236027</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3570018446.99612</Double>
+									<Double>3569942785.8958821</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5244,7 +5244,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\ctrl_student_HIL.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>14ebc140bf399e8c138859aa1ce1a835</MD5>
+										<MD5>54f6fa3cbcee92d52192a04503ad8a7f</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -5623,7 +5623,7 @@
 											<String>r_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>6</I32>
+											<I32>5</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/r" />
@@ -5641,7 +5641,7 @@
 											<String>v_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>5</I32>
+											<I32>6</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/v" />
@@ -5711,6 +5711,51 @@
 									<Description />
 									<Properties />
 									<Errors />
+									<Channel Name="eta_after_droput(1,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>eta_after_droput</String>
+											</Property>
+											<Property Name="Index">
+												<I32>23</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="eta_after_droput(2,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>eta_after_droput</String>
+											</Property>
+											<Property Name="Index">
+												<I32>23</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
+									<Channel Name="eta_after_droput(3,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>eta_after_droput</String>
+											</Property>
+											<Property Name="Index">
+												<I32>23</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
 								</Section>
 								<Section Name="Sixaxis2force" TypeGUID="cbfdde93-6581-4b7c-83b8-e88484f25b2e">
 									<Description />
@@ -6001,61 +6046,26 @@
 											<Elem>0</Elem>
 										</DefaultValue>
 									</Channel>
+									<Channel Name="x_lowpass" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+										<Description />
+										<Properties>
+											<Property Name="Model Path">
+												<String>Surge Observer/x_lowpass</String>
+											</Property>
+											<Property Name="Index">
+												<I32>40</I32>
+											</Property>
+										</Properties>
+										<Errors />
+										<DefaultValue>
+											<Elem>0</Elem>
+										</DefaultValue>
+									</Channel>
 								</Section>
 								<Section Name="scaled_vector" TypeGUID="cbfdde93-6581-4b7c-83b8-e88484f25b2e">
 									<Description />
 									<Properties />
 									<Errors />
-								</Section>
-								<Section Name="eta_lowpass" TypeGUID="cbfdde93-6581-4b7c-83b8-e88484f25b2e">
-									<Description />
-									<Properties />
-									<Errors />
-									<Channel Name="eta_lowpass(1,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
-										<Description />
-										<Properties>
-											<Property Name="Model Path">
-												<String>eta_lowpass</String>
-											</Property>
-											<Property Name="Index">
-												<I32>23</I32>
-											</Property>
-										</Properties>
-										<Errors />
-										<DefaultValue>
-											<Elem>0</Elem>
-										</DefaultValue>
-									</Channel>
-									<Channel Name="eta_lowpass(2,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
-										<Description />
-										<Properties>
-											<Property Name="Model Path">
-												<String>eta_lowpass</String>
-											</Property>
-											<Property Name="Index">
-												<I32>23</I32>
-											</Property>
-										</Properties>
-										<Errors />
-										<DefaultValue>
-											<Elem>0</Elem>
-										</DefaultValue>
-									</Channel>
-									<Channel Name="eta_lowpass(3,1)" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
-										<Description />
-										<Properties>
-											<Property Name="Model Path">
-												<String>eta_lowpass</String>
-											</Property>
-											<Property Name="Index">
-												<I32>23</I32>
-											</Property>
-										</Properties>
-										<Errors />
-										<DefaultValue>
-											<Elem>0</Elem>
-										</DefaultValue>
-									</Channel>
 								</Section>
 								<Channel Name="u_hat" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
 									<Description />
