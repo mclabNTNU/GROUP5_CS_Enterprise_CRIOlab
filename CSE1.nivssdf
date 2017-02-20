@@ -10,7 +10,7 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
-				<String>1.0.0.167</String>
+				<String>1.0.0.169</String>
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -5197,10 +5197,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>221850</I32>
+									<I32>271146</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3570433741.2299795</Double>
+									<Double>3570438587.3199744</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5244,7 +5244,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\ctrl_student_HIL.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>f634696e1085dc44dbae8e0fd69e1a41</MD5>
+										<MD5>e9667da1c1e230a866ca881e75e019dd</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -5314,7 +5314,7 @@
 												<String>Surge Observer/K_psi_in</String>
 											</Property>
 											<Property Name="Index">
-												<I32>3</I32>
+												<I32>4</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -5334,7 +5334,7 @@
 												<String>joystick/L2_continuous</String>
 											</Property>
 											<Property Name="Index">
-												<I32>6</I32>
+												<I32>7</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/L2_cont" />
@@ -5352,7 +5352,7 @@
 												<String>joystick/PosXRight</String>
 											</Property>
 											<Property Name="Index">
-												<I32>7</I32>
+												<I32>8</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/PosXRight" />
@@ -5370,7 +5370,7 @@
 												<String>joystick/PosYRight</String>
 											</Property>
 											<Property Name="Index">
-												<I32>8</I32>
+												<I32>9</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/PosYRight" />
@@ -5388,7 +5388,7 @@
 												<String>joystick/R2_continuous</String>
 											</Property>
 											<Property Name="Index">
-												<I32>9</I32>
+												<I32>10</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/R2_cont" />
@@ -5406,7 +5406,7 @@
 												<String>joystick/PosXLeft</String>
 											</Property>
 											<Property Name="Index">
-												<I32>10</I32>
+												<I32>11</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/PosXLeft" />
@@ -5424,7 +5424,7 @@
 												<String>joystick/PosYLeft</String>
 											</Property>
 											<Property Name="Index">
-												<I32>11</I32>
+												<I32>12</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/PosYLeft" />
@@ -5442,7 +5442,7 @@
 												<String>joystick/L1</String>
 											</Property>
 											<Property Name="Index">
-												<I32>12</I32>
+												<I32>13</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/L1" />
@@ -5460,7 +5460,7 @@
 												<String>joystick/R1</String>
 											</Property>
 											<Property Name="Index">
-												<I32>13</I32>
+												<I32>14</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/R1" />
@@ -5478,7 +5478,7 @@
 												<String>joystick/ArrowDown</String>
 											</Property>
 											<Property Name="Index">
-												<I32>14</I32>
+												<I32>15</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/ArrowDown" />
@@ -5496,7 +5496,7 @@
 												<String>joystick/ArrowUp</String>
 											</Property>
 											<Property Name="Index">
-												<I32>15</I32>
+												<I32>16</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/ArrowUP" />
@@ -5514,7 +5514,7 @@
 												<String>joystick/ArrowLeft</String>
 											</Property>
 											<Property Name="Index">
-												<I32>16</I32>
+												<I32>17</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/ArrowLeft" />
@@ -5532,7 +5532,7 @@
 												<String>joystick/ArrowRight</String>
 											</Property>
 											<Property Name="Index">
-												<I32>17</I32>
+												<I32>18</I32>
 											</Property>
 											<Property Name="DataSource">
 												<DataSourceNode Channel="Targets/Controller/Custom Devices/WL_Joystick/ArrowRight" />
@@ -5569,7 +5569,7 @@
 											<String>u_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>4</I32>
+											<I32>6</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/u" />
@@ -5623,7 +5623,7 @@
 											<String>r_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>5</I32>
+											<I32>3</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/r" />
@@ -5641,7 +5641,7 @@
 											<String>v_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>18</I32>
+											<I32>5</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/v" />
