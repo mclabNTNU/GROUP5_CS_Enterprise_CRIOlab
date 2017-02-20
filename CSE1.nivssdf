@@ -10,7 +10,11 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
+<<<<<<< HEAD
 				<String>1.0.0.159</String>
+=======
+				<String>1.0.0.166</String>
+>>>>>>> origin/master
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -31,7 +35,7 @@
 						<String>VxWorks</String>
 					</Property>
 					<Property Name="IP Address">
-						<String>192.168.0.71</String>
+						<String>192.168.0.73</String>
 					</Property>
 					<Property Name="Control Loop Processor">
 						<I32>-2</I32>
@@ -985,7 +989,7 @@
 									<I32>125060</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.154192</Double>
+									<Double>3568794376.2537794</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -1298,7 +1302,7 @@
 									<I32>136560</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.2994986</Double>
+									<Double>3568794376.5379591</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -1698,7 +1702,7 @@
 									<I32>124629</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.2707853</Double>
+									<Double>3568794376.4842482</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -2008,7 +2012,7 @@
 									<I32>250810</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.1959567</Double>
+									<Double>3568794376.3289747</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -3040,7 +3044,7 @@
 									<I32>173009</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.3943396</Double>
+									<Double>3568794376.7664747</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -3943,7 +3947,7 @@
 									<I32>149185</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.5387764</Double>
+									<Double>3568794377.1278028</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -4442,7 +4446,7 @@
 									<I32>140015</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.4648175</Double>
+									<Double>3568794376.8865919</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -4831,7 +4835,7 @@
 									<I32>144783</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.057611</Double>
+									<Double>3568794376.0311232</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5197,10 +5201,17 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
+<<<<<<< HEAD
 									<I32>237303</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
 									<Double>3569938143.7923331</Double>
+=======
+									<I32>233755</I32>
+								</Property>
+								<Property Name="DLL Timestamp">
+									<Double>3570429216.2357135</Double>
+>>>>>>> origin/master
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5244,7 +5255,11 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\ctrl_student_HIL.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
+<<<<<<< HEAD
 										<MD5>bfa7a4ad64c4ecb345f7f513b77dd260</MD5>
+=======
+										<MD5>e31963e3d917cfca82b4e2648187d7ef</MD5>
+>>>>>>> origin/master
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -5314,7 +5329,7 @@
 												<String>Surge Observer/K_psi_in</String>
 											</Property>
 											<Property Name="Index">
-												<I32>0</I32>
+												<I32>4</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -5551,7 +5566,7 @@
 											<String>y_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>1</I32>
+											<I32>0</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/y" />
@@ -5569,7 +5584,7 @@
 											<String>u_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>2</I32>
+											<I32>6</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/u" />
@@ -5587,7 +5602,7 @@
 											<String>psi_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>3</I32>
+											<I32>2</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/psi" />
@@ -5605,7 +5620,7 @@
 											<String>x_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>4</I32>
+											<I32>1</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/x" />
@@ -5623,7 +5638,7 @@
 											<String>r_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>5</I32>
+											<I32>3</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/r" />
@@ -5641,7 +5656,7 @@
 											<String>v_in</String>
 										</Property>
 										<Property Name="Index">
-											<I32>6</I32>
+											<I32>5</I32>
 										</Property>
 										<Property Name="DataSource">
 											<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/v" />
