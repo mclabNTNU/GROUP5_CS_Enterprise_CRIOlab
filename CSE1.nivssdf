@@ -10,7 +10,7 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
-				<String>1.0.0.162</String>
+				<String>1.0.0.163</String>
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -31,7 +31,7 @@
 						<String>VxWorks</String>
 					</Property>
 					<Property Name="IP Address">
-						<String>192.168.0.71</String>
+						<String>192.168.0.73</String>
 					</Property>
 					<Property Name="Control Loop Processor">
 						<I32>-2</I32>
@@ -985,7 +985,7 @@
 									<I32>125060</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.154192</Double>
+									<Double>3568794376.2537794</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -1298,7 +1298,7 @@
 									<I32>136560</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.2994986</Double>
+									<Double>3568794376.5379591</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -1698,7 +1698,7 @@
 									<I32>124629</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.2707853</Double>
+									<Double>3568794376.4842482</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -2008,7 +2008,7 @@
 									<I32>250810</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.1959567</Double>
+									<Double>3568794376.3289747</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -3040,7 +3040,7 @@
 									<I32>173009</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.3943396</Double>
+									<Double>3568794376.7664747</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -3943,7 +3943,7 @@
 									<I32>149185</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.5387764</Double>
+									<Double>3568794377.1278028</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -4442,7 +4442,7 @@
 									<I32>140015</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.4648175</Double>
+									<Double>3568794376.8865919</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -4831,7 +4831,7 @@
 									<I32>144783</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3568794603.057611</Double>
+									<Double>3568794376.0311232</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5197,10 +5197,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>236027</I32>
+									<I32>237515</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3569942785.8958821</Double>
+									<Double>3570428209.3670392</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5244,7 +5244,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\ctrl_student_HIL.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>54f6fa3cbcee92d52192a04503ad8a7f</MD5>
+										<MD5>e5748a4f094cd002a5125bb33d5181cb</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">

@@ -5,11 +5,11 @@ Par.tau_max = [1.03 0 0];
 Par.K_psi_init = 0.3;
 %% outside workspace
 Par.Workspace.origin = [0, 0]';
-Par.Workspace.threshold = 1.5;
-Par.Workspace.x_min_limit = -5;
-Par.Workspace.x_max_limit = -Par.Workspace.x_min_limit;
-Par.Workspace.y_min_limit = Par.Workspace.x_min_limit;
-Par.Workspace.y_max_limit = -Par.Workspace.x_min_limit;
+Par.Workspace.threshold = 2;
+Par.Workspace.x_max_limit = 10;
+Par.Workspace.x_min_limit = -Par.Workspace.x_max_limit;
+Par.Workspace.y_max_limit = Par.Workspace.x_max_limit;
+Par.Workspace.y_min_limit = -Par.Workspace.x_max_limit;
 
 Par.Workspace.x_min = Par.Workspace.x_min_limit + Par.Workspace.threshold;
 Par.Workspace.x_max = Par.Workspace.x_max_limit - Par.Workspace.threshold;
@@ -27,7 +27,7 @@ Par.Sample_time = 0.01;
 Par.Sample_rate = 1/Par.Sample_time;
 
 
-Par.Thrust_lim = [1.03 2.5 0.98]';
+Par.Thrust_lim = [1.03 2.5 0]; %[1.03 2.5 0.98]';
 
 %% Lowpass filter
 Par.Lowpass.omega.c_u = 100;
