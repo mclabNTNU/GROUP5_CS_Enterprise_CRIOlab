@@ -25,6 +25,7 @@ Par.Freeze.threshold = 100;%3.0;
 Par.Step_size = 0.01;
 Par.Sample_time = 0.01;
 Par.Sample_rate = 1/Par.Sample_time;
+Par.Noise.Power = 1e-4;
 
 
 Par.Thrust_lim = [1.03 2.5 0]; %[1.03 2.5 0.98]';
