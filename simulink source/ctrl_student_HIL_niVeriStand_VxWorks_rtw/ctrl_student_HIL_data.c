@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.171
+ * Model version              : 1.172
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 21 14:30:27 2017
+ * C source code generated on : Tue Feb 21 16:43:38 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -46,7 +46,6 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
       -3.0,
       3.0
     },
-    1.0,
 
     {
       0.0,
@@ -54,22 +53,8 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
       3.0
     },
     0.01,
-    0.01,
-    100.0,
 
-    {
-      1.0e-5
-    },
-
-    { 1.03, 0.0, 0.0 },
-
-    {
-      {
-        100.0,
-        100.0,
-        100.0
-      }
-    },
+    { 1.03, 2.5, 0.98 },
 
     {
       { 0.059559261465157838, 0.0, 0.0, 0.0, 0.063781377640431069,
@@ -80,33 +65,15 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   },                                   /* Variable: Par
                                         * Referenced by:
                                         *   '<Root>/Gain1'
+                                        *   '<S1>/Constant'
                                         *   '<S7>/Constant'
                                         *   '<S7>/Constant1'
                                         *   '<S7>/Constant2'
                                         *   '<S7>/Constant3'
                                         *   '<S7>/Constant4'
                                         *   '<S7>/Constant5'
-                                        *   '<S10>/Constant'
-                                        *   '<S11>/Par.SensNoiseEnabled'
-                                        *   '<S11>/East Noise'
-                                        *   '<S11>/Heading Noise'
-                                        *   '<S11>/North Noise'
-                                        *   '<S18>/Constant'
-                                        *   '<S18>/Integrator'
-                                        *   '<S12>/Constant'
-                                        *   '<S12>/Constant1'
-                                        *   '<S13>/Constant'
-                                        *   '<S13>/Constant1'
-                                        *   '<S14>/Constant'
-                                        *   '<S14>/Constant1'
-                                        */
-
-  /*  Expression: [0 0 0]
-   * Referenced by: '<S11>/Constant'
-   */
-  { 0.0, 0.0, 0.0 },
-  0.017453292519943295,                /* Expression: pi/180
-                                        * Referenced by: '<S11>/Ki4'
+                                        *   '<S26>/Constant'
+                                        *   '<S26>/Integrator'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/y_in'
@@ -126,44 +93,59 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<Root>/y_in'
                                         */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S11>/North Noise'
-                                        */
-  248622.0,                            /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S11>/North Noise'
+  0.01,                                /* Expression: 0.01
+                                        * Referenced by: '<S11>/Step size'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S11>/East Noise'
-                                        */
-  385435.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S11>/East Noise'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S11>/Heading Noise'
-                                        */
-  886094.0,                            /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S11>/Heading Noise'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S11>/Switch'
+                                        * Referenced by: '<S18>/counter'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<S1>/Noise_Power'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S24>/White Noise'
+                                        */
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev
+                                        * Referenced by: '<S24>/White Noise'
+                                        */
+  9024.0,                              /* Expression: 9024
+                                        * Referenced by: '<S24>/White Noise'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S25>/White Noise'
+                                        */
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_e
+                                        * Referenced by: '<S25>/White Noise'
+                                        */
+  123.0,                               /* Expression: 123
+                                        * Referenced by: '<S25>/White Noise'
+                                        */
+  0.017453292519943295,                /* Expression: pi/180
+                                        * Referenced by: '<S1>/Gain'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S23>/White Noise'
+                                        */
+  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_d
+                                        * Referenced by: '<S23>/White Noise'
+                                        */
+  9025.0,                              /* Expression: 9025
+                                        * Referenced by: '<S23>/White Noise'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/x_in'
@@ -183,35 +165,44 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<Root>/x_in'
                                         */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S12>/Random Number'
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/psi_in'
                                         */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev
-                                        * Referenced by: '<S12>/Random Number'
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/psi_in'
                                         */
-  258120.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S12>/Random Number'
+  2.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/psi_in'
                                         */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S13>/Random Number'
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/psi_in'
                                         */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_b
-                                        * Referenced by: '<S13>/Random Number'
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/psi_in'
                                         */
-  310180.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S14>/Random Number'
-                                        */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_h
-                                        * Referenced by: '<S14>/Random Number'
-                                        */
-  362245.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S14>/Random Number'
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S10>/Switch'
+                                        * Referenced by: '<S19>/Hold'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S1>/Enable_Noise'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S1>/Enable_Noise'
+                                        */
+  1.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S1>/Enable_Noise'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S1>/Enable_Noise'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S1>/Enable_Noise'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S1>/Enable_Noise'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/eta_m'
@@ -893,166 +884,166 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         * Referenced by: '<S2>/nu_tilde'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_1_1 '
+                                        * Referenced by: '<S28>/L_1_1 '
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_1_2'
+                                        * Referenced by: '<S28>/L_1_2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_1_3'
+                                        * Referenced by: '<S28>/L_1_3'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_2_2'
+                                        * Referenced by: '<S28>/L_2_2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_2_1'
+                                        * Referenced by: '<S28>/L_2_1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_2_3'
+                                        * Referenced by: '<S28>/L_2_3'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_3_1'
+                                        * Referenced by: '<S28>/L_3_1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   8.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_3_2'
+                                        * Referenced by: '<S28>/L_3_2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   9.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S20>/L_3_3'
+                                        * Referenced by: '<S28>/L_3_3'
                                         */
   1.0                                  /* Expression: 1
                                         * Referenced by: '<Root>/NIVeriStandSignalProbe'
@@ -1073,7 +1064,19 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
-  { sizeof(real_T), 3, 0 },
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 

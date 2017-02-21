@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.171
+ * Model version              : 1.172
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 21 14:30:27 2017
+ * C source code generated on : Tue Feb 21 16:43:38 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -32,12 +32,6 @@ int_T rt_WriteMat4FileHeader(FILE *fp,
   int32_T m,
   int32_T n,
   const char_T *name);
-extern void ctrl_student__Freezesignal_Init(DW_Freezesignal_ctrl_student__T
-  *localDW);
-extern void ctrl_student_HIL_Freezesignal(real_T rtu_eta_in, real_T rtu_time,
-  real_T rtu_random_value, real_T rtu_threshold, real_T rtu_length,
-  B_Freezesignal_ctrl_student_H_T *localB, DW_Freezesignal_ctrl_student__T
-  *localDW);
 extern void ctrl_student_HIL_to_diag(real_T rtu_L_1, real_T rtu_L_2, real_T
   rtu_L_3, B_to_diag_ctrl_student_HIL_T *localB);
 

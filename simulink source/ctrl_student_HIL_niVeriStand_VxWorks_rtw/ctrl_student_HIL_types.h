@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.171
+ * Model version              : 1.172
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 21 14:30:27 2017
+ * C source code generated on : Tue Feb 21 16:43:38 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -54,35 +54,6 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_F5jpQk0SqNXWbjvSxP6eo_
-#define _DEFINED_TYPEDEF_FOR_struct_F5jpQk0SqNXWbjvSxP6eo_
-
-typedef struct {
-  real_T Power;
-} struct_F5jpQk0SqNXWbjvSxP6eo;
-
-#endif
-
-#ifndef _DEFINED_TYPEDEF_FOR_struct_iTdVtkn32GXKLcWyghsjmG_
-#define _DEFINED_TYPEDEF_FOR_struct_iTdVtkn32GXKLcWyghsjmG_
-
-typedef struct {
-  real_T c_u;
-  real_T c_v;
-  real_T c_psi;
-} struct_iTdVtkn32GXKLcWyghsjmG;
-
-#endif
-
-#ifndef _DEFINED_TYPEDEF_FOR_struct_O1cG5VeM3Vq2W5nll3MmiD_
-#define _DEFINED_TYPEDEF_FOR_struct_O1cG5VeM3Vq2W5nll3MmiD_
-
-typedef struct {
-  struct_iTdVtkn32GXKLcWyghsjmG omega;
-} struct_O1cG5VeM3Vq2W5nll3MmiD;
-
-#endif
-
 #ifndef _DEFINED_TYPEDEF_FOR_struct_DWUTGWKNBPtk9cG3B8wRwC_
 #define _DEFINED_TYPEDEF_FOR_struct_DWUTGWKNBPtk9cG3B8wRwC_
 
@@ -93,22 +64,17 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_Tua5AtG6X91aH63nvtg47G_
-#define _DEFINED_TYPEDEF_FOR_struct_Tua5AtG6X91aH63nvtg47G_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_FSsBvEVK8AhCsBqw22fikF_
+#define _DEFINED_TYPEDEF_FOR_struct_FSsBvEVK8AhCsBqw22fikF_
 
 typedef struct {
   real_T K_psi_init;
   struct_CEDELhVBNVS20OOZKu6U0B Workspace;
-  real_T SensNoiseEnabled;
   struct_WEndDd5z8WjUYRTCKDNizF Freeze;
-  real_T Step_size;
-  real_T Sample_time;
-  real_T Sample_rate;
-  struct_F5jpQk0SqNXWbjvSxP6eo Noise;
+  real_T Sample_freq;
   real_T Thrust_lim[3];
-  struct_O1cG5VeM3Vq2W5nll3MmiD Lowpass;
   struct_DWUTGWKNBPtk9cG3B8wRwC Observer;
-} struct_Tua5AtG6X91aH63nvtg47G;
+} struct_FSsBvEVK8AhCsBqw22fikF;
 
 #endif
 
