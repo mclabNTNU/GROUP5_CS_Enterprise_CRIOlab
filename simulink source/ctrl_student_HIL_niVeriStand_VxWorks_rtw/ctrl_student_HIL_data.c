@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.162
+ * Model version              : 1.168
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Feb 20 13:48:54 2017
+ * C source code generated on : Tue Feb 21 14:21:54 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -69,862 +69,888 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
         100.0,
         100.0
       }
+    },
+
+    {
+      { 0.059559261465157838, 0.0, 0.0, 0.0, 0.063781377640431069,
+        -0.012816359434559084, 0.0, -0.012816359434559084, 0.36489418584869804 },
+
+      { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
     }
   },                                   /* Variable: Par
                                         * Referenced by:
                                         *   '<Root>/Gain1'
-                                        *   '<S4>/Constant'
-                                        *   '<S6>/Constant'
-                                        *   '<S6>/Constant1'
-                                        *   '<S6>/Constant2'
-                                        *   '<S6>/Constant3'
-                                        *   '<S6>/Constant4'
-                                        *   '<S6>/Constant5'
-                                        *   '<S9>/Constant'
-                                        *   '<S10>/Par.SensNoiseEnabled'
-                                        *   '<S10>/East Noise'
-                                        *   '<S10>/Heading Noise'
-                                        *   '<S10>/North Noise'
-                                        *   '<S11>/Constant'
-                                        *   '<S11>/Constant1'
+                                        *   '<S7>/Constant'
+                                        *   '<S7>/Constant1'
+                                        *   '<S7>/Constant2'
+                                        *   '<S7>/Constant3'
+                                        *   '<S7>/Constant4'
+                                        *   '<S7>/Constant5'
+                                        *   '<S10>/Constant'
+                                        *   '<S11>/Par.SensNoiseEnabled'
+                                        *   '<S11>/East Noise'
+                                        *   '<S11>/Heading Noise'
+                                        *   '<S11>/North Noise'
+                                        *   '<S18>/Constant'
+                                        *   '<S18>/Integrator'
                                         *   '<S12>/Constant'
                                         *   '<S12>/Constant1'
                                         *   '<S13>/Constant'
                                         *   '<S13>/Constant1'
+                                        *   '<S14>/Constant'
+                                        *   '<S14>/Constant1'
                                         */
 
   /*  Expression: [0 0 0]
-   * Referenced by: '<S10>/Constant'
+   * Referenced by: '<S11>/Constant'
    */
   { 0.0, 0.0, 0.0 },
   0.017453292519943295,                /* Expression: pi/180
-                                        * Referenced by: '<S10>/Ki4'
+                                        * Referenced by: '<S11>/Ki4'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  1.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/y_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/y_in'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S10>/North Noise'
+                                        * Referenced by: '<S11>/North Noise'
                                         */
-  264588.0,                            /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S10>/North Noise'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S10>/East Noise'
-                                        */
-  412050.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S10>/East Noise'
+  19446.0,                             /* Expression: ceil(abs(3*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S11>/North Noise'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S10>/Heading Noise'
+                                        * Referenced by: '<S11>/East Noise'
                                         */
-  932019.0,                            /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S10>/Heading Noise'
+  491945.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S11>/East Noise'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S11>/Heading Noise'
+                                        */
+  7656.0,                              /* Expression: ceil(abs(11*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S11>/Heading Noise'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S11>/Switch'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  2.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/psi_in'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  3.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/x_in'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  1.0,                                 /* Computed Parameter: RandomNumber_StdDev
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  358765.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S12>/Random Number'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_b
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  416625.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S13>/Random Number'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S14>/Random Number'
+                                        */
+  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_h
+                                        * Referenced by: '<S14>/Random Number'
+                                        */
+  468750.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
+                                        * Referenced by: '<S14>/Random Number'
                                         */
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<S10>/Switch'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/y_in'
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/y_in'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/psi_in'
+                                        * Referenced by: '<Root>/eta_m'
                                         */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  331055.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S11>/Random Number'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_b
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  365725.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S12>/Random Number'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  1.0,                                 /* Computed Parameter: RandomNumber_StdDev_h
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  394715.0,                            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S13>/Random Number'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S9>/Switch'
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/eta_m'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/r_in'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/r_in'
-                                        */
-  4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/r_in'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/r_in'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/r_in'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/r_in'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/K_psi_in'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/K_psi_in'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/K_psi_in'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/K_psi_in'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/K_psi_in'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/K_psi_in'
-                                        */
-  0.1,                                 /* Expression: 0.1
-                                        * Referenced by: '<S4>/Gain'
+                                        * Referenced by: '<S8>/L2_continuous'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/v_in'
+                                        * Referenced by: '<S8>/PosXRight'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/v_in'
+                                        * Referenced by: '<S8>/PosXRight'
+                                        */
+  2.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/PosXRight'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/PosXRight'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/PosXRight'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/PosXRight'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  3.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/PosYRight'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  4.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/R2_continuous'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  5.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S8>/PosXLeft'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S8>/PosYLeft'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S8>/PosYLeft'
                                         */
   6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/v_in'
+                                        * Referenced by: '<S8>/PosYLeft'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/v_in'
+                                        * Referenced by: '<S8>/PosYLeft'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/v_in'
+                                        * Referenced by: '<S8>/PosYLeft'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/v_in'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S4>/Integrator'
+                                        * Referenced by: '<S8>/PosYLeft'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/u_hat'
+                                        * Referenced by: '<S8>/L1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/u_hat'
-                                        */
-  1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/u_hat'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/u_hat'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/u_hat'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/u_hat'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/u_in'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/u_out_out'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/u_tilde_out'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/eta_m'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/eta_after_droput'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/L2_continuous'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/PosXRight'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/PosYRight'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/R2_continuous'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/PosXLeft'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/PosYLeft'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/L1'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/L1'
+                                        * Referenced by: '<S8>/L1'
                                         */
   7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/L1'
+                                        * Referenced by: '<S8>/L1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/L1'
+                                        * Referenced by: '<S8>/L1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/L1'
+                                        * Referenced by: '<S8>/L1'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/L1'
+                                        * Referenced by: '<S8>/L1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   8.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/R1'
+                                        * Referenced by: '<S8>/R1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   9.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/ArrowDown'
+                                        * Referenced by: '<S8>/ArrowDown'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   10.0,                                /* Expression: portnum
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/ArrowUp'
+                                        * Referenced by: '<S8>/ArrowUp'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   11.0,                                /* Expression: portnum
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/ArrowLeft'
+                                        * Referenced by: '<S8>/ArrowLeft'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   12.0,                                /* Expression: portnum
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/ArrowRight'
+                                        * Referenced by: '<S8>/ArrowRight'
                                         */
   -1.0,                                /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
                                         */
 
   /*  Expression: [1 1 1]
-   * Referenced by: '<S6>/Saturation'
+   * Referenced by: '<S7>/Saturation'
    */
   { 1.0, 1.0, 1.0 },
 
   /*  Expression: [-1 -1 -1]
-   * Referenced by: '<S6>/Saturation'
+   * Referenced by: '<S7>/Saturation'
    */
   { -1.0, -1.0, -1.0 },
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  3.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/tau_out'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  4.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/r_in'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<Root>/u_in'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<Root>/u_in'
+                                        */
+  5.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/u_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/u_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/u_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/u_in'
+                                        */
 
   /*  Expression: inv([1 0 0; 0 1 1; 0 -0.4575 0.3875])
-   * Referenced by: '<S5>/Inverse of T'
+   * Referenced by: '<S6>/Inverse of T'
    */
   { 1.0, 0.0, 0.0, -0.0, 0.45857988165680474, 0.54142011834319526, -0.0,
     -1.1834319526627219, 1.1834319526627219 },
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/alpha_VSP1'
+                                        * Referenced by: '<S4>/alpha_VSP1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/alpha_VSP2'
+                                        * Referenced by: '<S4>/alpha_VSP2'
                                         */
   0.3,                                 /* Expression: 0.3
-                                        * Referenced by: '<S3>/Constant'
+                                        * Referenced by: '<S4>/Constant'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/omega_VSP1'
+                                        * Referenced by: '<S4>/omega_VSP1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/omega_VSP2'
+                                        * Referenced by: '<S4>/omega_VSP2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/u_BT'
+                                        * Referenced by: '<S4>/u_BT'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/u_VSP1'
+                                        * Referenced by: '<S4>/u_VSP1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S3>/u_VSP2'
+                                        * Referenced by: '<S4>/u_VSP2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<Root>/v_in'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<Root>/v_in'
+                                        */
+  6.0,                                 /* Expression: portnum
+                                        * Referenced by: '<Root>/v_in'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<Root>/v_in'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<Root>/v_in'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<Root>/v_in'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S9>/X_d'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S9>/X_d'
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<S9>/X_d'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<S9>/X_d'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<S9>/X_d'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/X_d'
+                                        * Referenced by: '<S9>/X_d'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/N_d'
+                                        * Referenced by: '<S9>/N_d'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   3.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/Y_d'
+                                        * Referenced by: '<S9>/Y_d'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S8>/Constant2'
+                                        * Referenced by: '<S9>/Constant2'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/psi_0 '
+                                        * Referenced by: '<S9>/psi_0 '
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S8>/Constant'
+                                        * Referenced by: '<S9>/Constant'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/x_0'
+                                        * Referenced by: '<S9>/x_0'
                                         */
   0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S8>/Constant1'
+                                        * Referenced by: '<S9>/Constant1'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/y_0'
+                                        * Referenced by: '<S9>/y_0'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S8>/integrator reset model'
+                                        * Referenced by: '<S9>/integrator reset model'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/tau_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/tau_out'
-                                        */
-  6.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/tau_out'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/tau_out'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/tau_out'
-                                        */
-  0.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/tau_out'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/K_psi_out'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/K_psi_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/K_psi_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/K_psi_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/K_psi_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/K_psi_out'
+                                        * Referenced by: '<S2>/nu_hat'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S4>/x_lowpass'
+                                        * Referenced by: '<S2>/eta_hat'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S4>/x_lowpass'
+                                        * Referenced by: '<S2>/eta_hat'
                                         */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S4>/x_lowpass'
+  4.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S2>/eta_hat'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S4>/x_lowpass'
+                                        * Referenced by: '<S2>/eta_hat'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S4>/x_lowpass'
+                                        * Referenced by: '<S2>/eta_hat'
                                         */
   0.0,                                 /* Expression: btype
-                                        * Referenced by: '<S4>/x_lowpass'
+                                        * Referenced by: '<S2>/eta_hat'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  5.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S2>/b_hat'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  6.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S2>/eta_tilde'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+  7.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+  0.0,                                 /* Expression: btype
+                                        * Referenced by: '<S2>/nu_tilde'
+                                        */
+
+  /*  Expression: width
+   * Referenced by: '<S18>/L_1'
+   */
+  { 3.0, 3.0 },
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S18>/L_1'
+                                        */
+  1.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S18>/L_1'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S18>/L_1'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S18>/L_1'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S18>/L_1'
+                                        */
+
+  /*  Expression: width
+   * Referenced by: '<S18>/L_2'
+   */
+  { 3.0, 3.0 },
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S18>/L_2'
+                                        */
+  2.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S18>/L_2'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S18>/L_2'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S18>/L_2'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S18>/L_2'
+                                        */
+
+  /*  Expression: width
+   * Referenced by: '<S18>/L_3'
+   */
+  { 3.0, 3.0 },
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S18>/L_3'
+                                        */
+  3.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S18>/L_3'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S18>/L_3'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S18>/L_3'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S18>/L_3'
                                         */
   1.0                                  /* Expression: 1
                                         * Referenced by: '<Root>/NIVeriStandSignalProbe'
@@ -1177,109 +1203,45 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
   { sizeof(real_T), 3, 0 },
 
   { sizeof(real_T), 3, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 9, 0 },
 
@@ -1484,6 +1446,78 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
   { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 2, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 2, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 2, 0 },
 
   { sizeof(real_T), 1, 0 },
 

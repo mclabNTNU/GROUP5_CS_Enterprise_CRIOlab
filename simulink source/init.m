@@ -35,3 +35,8 @@ Par.Lowpass.omega.c_u = 100;
 Par.Lowpass.omega.c_v = Par.Lowpass.omega.c_u;
 Par.Lowpass.omega.c_psi = Par.Lowpass.omega.c_u;
 
+%% Observer
+Par.Observer.M_inv = inv([16.79 0 0; ...
+                      0 15.79 0.5546; ...
+                      0 0.5546 2.76]);
+Par.Observer.x_hat_0 = zeros(9, 1);

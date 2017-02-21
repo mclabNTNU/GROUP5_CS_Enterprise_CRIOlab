@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.162
+ * Model version              : 1.168
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Feb 20 13:48:54 2017
+ * C source code generated on : Tue Feb 21 14:21:54 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -83,8 +83,18 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_wViSY2mbLHYu3C5WjokrGB_
-#define _DEFINED_TYPEDEF_FOR_struct_wViSY2mbLHYu3C5WjokrGB_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_DWUTGWKNBPtk9cG3B8wRwC_
+#define _DEFINED_TYPEDEF_FOR_struct_DWUTGWKNBPtk9cG3B8wRwC_
+
+typedef struct {
+  real_T M_inv[9];
+  real_T x_hat_0[9];
+} struct_DWUTGWKNBPtk9cG3B8wRwC;
+
+#endif
+
+#ifndef _DEFINED_TYPEDEF_FOR_struct_Tua5AtG6X91aH63nvtg47G_
+#define _DEFINED_TYPEDEF_FOR_struct_Tua5AtG6X91aH63nvtg47G_
 
 typedef struct {
   real_T K_psi_init;
@@ -97,7 +107,8 @@ typedef struct {
   struct_F5jpQk0SqNXWbjvSxP6eo Noise;
   real_T Thrust_lim[3];
   struct_O1cG5VeM3Vq2W5nll3MmiD Lowpass;
-} struct_wViSY2mbLHYu3C5WjokrGB;
+  struct_DWUTGWKNBPtk9cG3B8wRwC Observer;
+} struct_Tua5AtG6X91aH63nvtg47G;
 
 #endif
 
