@@ -17,9 +17,15 @@
 <inport> id="-1"  name = "r_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "u_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "v_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "Observer/Luenbergen/L_1" width = "9" datatype = "20"</inport>
-<inport> id="-1"  name = "Observer/Luenbergen/L_2" width = "9" datatype = "20"</inport>
-<inport> id="-1"  name = "Observer/Luenbergen/L_3" width = "9" datatype = "20"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_1_1 " width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_1_2" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_1_3" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_2_2" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_2_1" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_2_3" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_3_1" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_3_2" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Observer/Luenbergen/Subsystem/L_3_3" width = "1" datatype = "0"</inport>
 <outport> id = "-1" name = "eta_m" width = "3" datatype = "30"</outport>
 <outport> id = "-1" name = "tau_out" width = "3" datatype = "30"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP1" width = "1" datatype = "0"</outport>

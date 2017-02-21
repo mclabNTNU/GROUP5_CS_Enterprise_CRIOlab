@@ -50,52 +50,61 @@
 <signal> id = "49" name = "ctrl_student_hil/Observer/Sum1" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "50" name = "ctrl_student_hil/Observer/Sum1" SignalName ="(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
 <signal> id = "51" name = "ctrl_student_hil/Observer/Sum1" SignalName ="(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "52" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "53" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "54" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "55" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "56" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "57" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "58" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "59" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "60" name = "ctrl_student_hil/Observer/Luenbergen/L_1" SignalName ="(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "61" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "62" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "63" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "64" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "65" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "66" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "67" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "68" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "69" name = "ctrl_student_hil/Observer/Luenbergen/L_2" SignalName ="(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "70" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "71" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "72" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "73" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "74" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "75" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "76" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "77" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "78" name = "ctrl_student_hil/Observer/Luenbergen/L_3" SignalName ="(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "79" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="u_VSP" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "80" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="alpha_VSP" PortNum ="2" width = "1" datatype = "real_T"</signal>
-<signal> id = "81" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="u_BT" PortNum ="3" width = "1" datatype = "real_T"</signal>
-<signal> id = "82" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "83" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "84" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "85" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "86" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "87" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "88" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,4)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "89" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,5)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "90" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,6)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "91" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,7)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "92" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,8)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "93" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,9)" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "94" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,1)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
-<signal> id = "95" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,2)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
-<signal> id = "96" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,3)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
-<signal> id = "97" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 2/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "98" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 1/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
-<signal> id = "99" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "52" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_1_1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "53" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_1_2" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "54" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_1_3" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "55" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_2_2" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "56" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_2_1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "57" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_2_3" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "58" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_3_1" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "59" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_3_2" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "60" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/L_3_3" SignalName ="" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "61" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="u_VSP" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "62" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="alpha_VSP" PortNum ="2" width = "1" datatype = "real_T"</signal>
+<signal> id = "63" name = "ctrl_student_hil/Sixaxis2force/MATLAB Function1" SignalName ="u_BT" PortNum ="3" width = "1" datatype = "real_T"</signal>
+<signal> id = "64" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "65" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "66" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout_log(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "67" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "68" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "69" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "70" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,4)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "71" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,5)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "72" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,6)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "73" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,7)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "74" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,8)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "75" name = "ctrl_student_hil/Observer/Luenbergen/MATLAB Function" SignalName ="x_hat_dot(1,9)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "76" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,1)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
+<signal> id = "77" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,2)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
+<signal> id = "78" name = "ctrl_student_hil/Signal Dropout detection/Detect droput" SignalName ="dropout(1,3)" PortNum ="2" width = "1" datatype = "boolean_T"</signal>
+<signal> id = "79" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "80" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "81" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "82" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "83" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "84" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "85" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "86" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "87" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag2" SignalName ="L_out(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "88" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "89" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "90" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "91" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "92" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "93" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "94" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "95" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "96" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag1" SignalName ="L_out(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "97" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(1,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "98" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(2,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "99" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(3,1)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "100" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(1,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "101" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(2,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "102" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(3,2)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "103" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(1,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "104" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(2,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "105" name = "ctrl_student_hil/Observer/Luenbergen/Subsystem/to_diag" SignalName ="L_out(3,3)" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "106" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 2/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "107" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal 1/Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
+<signal> id = "108" name = "ctrl_student_hil/Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal" SignalName ="eta_out" PortNum ="1" width = "1" datatype = "real_T"</signal>
 </signallist>
