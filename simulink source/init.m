@@ -23,7 +23,7 @@ Par.Freeze.length = 2;
 Par.Freeze.threshold = 3;%3.0;
 
 %Par.Step_size = 0.01;
-Par.Sample_freq = 0.01;
+Par.Sample_freq = 100;
 %Par.Sample_rate = 1/Par.Sample_time;
 %Par.Noise.Power = 1e-5;
 
