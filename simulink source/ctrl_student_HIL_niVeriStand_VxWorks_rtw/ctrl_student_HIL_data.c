@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.173
+ * Model version              : 1.177
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 21 16:49:40 2017
+ * C source code generated on : Mon Feb 27 13:46:36 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -37,14 +37,14 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
       { 0.0, 0.0 },
       2.0,
       5.0,
-      5.0,
-      -5.0,
-      5.0,
-      -5.0,
-      -3.0,
-      3.0,
-      -3.0,
-      3.0
+      100.0,
+      -100.0,
+      100.0,
+      -100.0,
+      -98.0,
+      98.0,
+      -98.0,
+      98.0
     },
 
     {
@@ -54,7 +54,7 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
     },
     100.0,
 
-    { 1.03, 2.5, 0.98 },
+    { 1.03, 0.0, 0.0 },
 
     {
       { 0.059559261465157838, 0.0, 0.0, 0.0, 0.063781377640431069,
@@ -65,13 +65,6 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   },                                   /* Variable: Par
                                         * Referenced by:
                                         *   '<Root>/Gain1'
-                                        *   '<S1>/Constant'
-                                        *   '<S7>/Constant'
-                                        *   '<S7>/Constant1'
-                                        *   '<S7>/Constant2'
-                                        *   '<S7>/Constant3'
-                                        *   '<S7>/Constant4'
-                                        *   '<S7>/Constant5'
                                         *   '<S26>/Constant'
                                         *   '<S26>/Integrator'
                                         */
@@ -93,59 +86,23 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<Root>/y_in'
                                         */
-  0.01,                                /* Expression: 0.01
-                                        * Referenced by: '<S11>/Step size'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S18>/counter'
-                                        */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S1>/Noise_Power'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S1>/Noise_Power'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S1>/Noise_Power'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S1>/Noise_Power'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S1>/Noise_Power'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  9024.0,                              /* Expression: 9024
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_e
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  123.0,                               /* Expression: 123
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  0.017453292519943295,                /* Expression: pi/180
-                                        * Referenced by: '<S1>/Gain'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S23>/White Noise'
-                                        */
-  1.0,                                 /* Computed Parameter: WhiteNoise_StdDev_d
-                                        * Referenced by: '<S23>/White Noise'
-                                        */
-  9025.0,                              /* Expression: 9025
-                                        * Referenced by: '<S23>/White Noise'
+                                        * Referenced by: '<Root>/psi_in'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/x_in'
@@ -164,45 +121,6 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         */
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<Root>/x_in'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  2.0,                                 /* Expression: portnum
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<Root>/psi_in'
-                                        */
-  0.0,                                 /* Expression: 0
-                                        * Referenced by: '<S19>/Hold'
-                                        */
-  -1.0,                                /* Expression: width
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  1.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S1>/Enable_Noise'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/eta_m'
@@ -441,16 +359,6 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   -1.0,                                /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
                                         */
-
-  /*  Expression: [1 1 1]
-   * Referenced by: '<S7>/Saturation'
-   */
-  { 1.0, 1.0, 1.0 },
-
-  /*  Expression: [-1 -1 -1]
-   * Referenced by: '<S7>/Saturation'
-   */
-  { -1.0, -1.0, -1.0 },
   -1.0,                                /* Expression: width
                                         * Referenced by: '<Root>/tau_out'
                                         */
@@ -792,6 +700,9 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         */
   0.0,                                 /* Expression: btype
                                         * Referenced by: '<S9>/integrator reset model'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S26>/Constant1'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S2>/nu_hat'
@@ -1294,61 +1205,9 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 3, 0 },
-
-  { sizeof(real_T), 3, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
-  { sizeof(real_T), 1, 0 },
-
   { sizeof(real_T), 9, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 

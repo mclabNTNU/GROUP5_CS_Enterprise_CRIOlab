@@ -6,7 +6,7 @@ Par.K_psi_init = 1;
 Par.Workspace.origin = [0, 0];
 Par.Workspace.threshold = 2;
 Par.Workspace.gain = 5;
-Par.Workspace.x_max_limit = 5;
+Par.Workspace.x_max_limit = 100;
 Par.Workspace.x_min_limit = -Par.Workspace.x_max_limit;
 Par.Workspace.y_max_limit = Par.Workspace.x_max_limit;
 Par.Workspace.y_min_limit = -Par.Workspace.x_max_limit;
@@ -28,7 +28,7 @@ Par.Sample_freq = 100;
 %Par.Noise.Power = 1e-5;
 
 
-Par.Thrust_lim = [1.03 2.5 0.98]';
+Par.Thrust_lim = [1.03 0 0];%[1.03 2.5 0.98]';
 
 %% Observer
 Par.Observer.M_inv = inv([16.79 0 0; ...

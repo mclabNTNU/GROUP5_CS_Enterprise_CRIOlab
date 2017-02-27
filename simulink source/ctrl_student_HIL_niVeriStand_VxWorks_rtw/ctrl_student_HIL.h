@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.173
+ * Model version              : 1.177
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Tue Feb 21 16:49:40 2017
+ * C source code generated on : Mon Feb 27 13:46:36 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -38,6 +38,7 @@
 
 /* Shared type includes */
 #include "multiword_types.h"
+#include "rt_zcfcn.h"
 #include "rt_defines.h"
 #include "rt_nonfinite.h"
 
@@ -139,11 +140,11 @@
 #endif
 
 #ifndef rtmGetFirstInitCondFlag
-# define rtmGetFirstInitCondFlag(rtm)  ((rtm)->Timing.firstInitCondFlag)
+# define rtmGetFirstInitCondFlag(rtm)  ()
 #endif
 
 #ifndef rtmSetFirstInitCondFlag
-# define rtmSetFirstInitCondFlag(rtm, val) ((rtm)->Timing.firstInitCondFlag = (val))
+# define rtmSetFirstInitCondFlag(rtm, val) ()
 #endif
 
 #ifndef rtmGetIntgData
@@ -734,14 +735,6 @@
 # define rtmSetErrorStatus(rtm, val)   ((rtm)->errorStatus = (val))
 #endif
 
-#ifndef rtmSetFirstInitCond
-# define rtmSetFirstInitCond(rtm, val) ((rtm)->Timing.firstInitCondFlag = (val))
-#endif
-
-#ifndef rtmIsFirstInitCond
-# define rtmIsFirstInitCond(rtm)       ((rtm)->Timing.firstInitCondFlag)
-#endif
-
 #ifndef rtmIsMajorTimeStep
 # define rtmIsMajorTimeStep(rtm)       (((rtm)->Timing.simTimeStep) == MAJOR_TIME_STEP)
 #endif
@@ -827,16 +820,9 @@ typedef struct {
 /* Block signals (auto storage) */
 typedef struct {
   real_T y_in;                         /* '<Root>/y_in' */
-  real_T Noise_Power;                  /* '<S1>/Noise_Power' */
-  real_T WhiteNoise;                   /* '<S24>/White Noise' */
-  real_T WhiteNoise_l;                 /* '<S25>/White Noise' */
-  real_T WhiteNoise_i;                 /* '<S23>/White Noise' */
-  real_T x_in;                         /* '<Root>/x_in' */
   real_T psi_in;                       /* '<Root>/psi_in' */
-  real_T Hold[3];                      /* '<S19>/Hold' */
-  real_T Enable_Noise;                 /* '<S1>/Enable_Noise' */
-  real_T Switch[3];                    /* '<S11>/Switch' */
-  real_T Integrator[9];                /* '<S26>/Integrator' */
+  real_T x_in;                         /* '<Root>/x_in' */
+  real_T eta[3];
   real_T L2_continuous;                /* '<S8>/L2_continuous' */
   real_T PosXRight;                    /* '<S8>/PosXRight' */
   real_T PosYRight;                    /* '<S8>/PosYRight' */
@@ -853,6 +839,7 @@ typedef struct {
   real_T r_in;                         /* '<Root>/r_in' */
   real_T u_in;                         /* '<Root>/u_in' */
   real_T v_in;                         /* '<Root>/v_in' */
+  real_T Integrator[9];                /* '<S26>/Integrator' */
   real_T Sum[3];                       /* '<S2>/Sum' */
   real_T Sum1[3];                      /* '<S2>/Sum1' */
   real_T L_1_1;                        /* '<S28>/L_1_1 ' */
@@ -867,11 +854,7 @@ typedef struct {
   real_T u_VSP;                        /* '<S4>/MATLAB Function1' */
   real_T alpha_VSP;                    /* '<S4>/MATLAB Function1' */
   real_T u_BT;                         /* '<S4>/MATLAB Function1' */
-  real_T dropout_log[3];               /* '<S3>/Detect droput' */
   real_T x_hat_dot[9];                 /* '<S26>/MATLAB Function' */
-  real_T output[3];                    /* '<S19>/MATLAB Function1' */
-  real_T count;                        /* '<S18>/MATLAB Function' */
-  boolean_T dropout[3];                /* '<S3>/Detect droput' */
   B_to_diag_ctrl_student_HIL_T sf_to_diag2;/* '<S28>/to_diag2' */
   B_to_diag_ctrl_student_HIL_T sf_to_diag1;/* '<S28>/to_diag1' */
   B_to_diag_ctrl_student_HIL_T sf_to_diag;/* '<S28>/to_diag' */
@@ -880,15 +863,8 @@ typedef struct {
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
   real_T y_in_DWORK1;                  /* '<Root>/y_in' */
-  real_T counter_PreviousInput;        /* '<S18>/counter' */
-  real_T Noise_Power_DWORK1;           /* '<S1>/Noise_Power' */
-  real_T NextOutput;                   /* '<S24>/White Noise' */
-  real_T NextOutput_a;                 /* '<S25>/White Noise' */
-  real_T NextOutput_f;                 /* '<S23>/White Noise' */
-  real_T x_in_DWORK1;                  /* '<Root>/x_in' */
   real_T psi_in_DWORK1;                /* '<Root>/psi_in' */
-  real_T Hold_PreviousInput[3];        /* '<S19>/Hold' */
-  real_T Enable_Noise_DWORK1;          /* '<S1>/Enable_Noise' */
+  real_T x_in_DWORK1;                  /* '<Root>/x_in' */
   real_T eta_m_DWORK1[3];              /* '<Root>/eta_m' */
   real_T L2_continuous_DWORK1;         /* '<S8>/L2_continuous' */
   real_T PosXRight_DWORK1;             /* '<S8>/PosXRight' */
@@ -934,7 +910,6 @@ typedef struct {
   real_T L_3_1_DWORK1;                 /* '<S28>/L_3_1' */
   real_T L_3_2_DWORK1;                 /* '<S28>/L_3_2' */
   real_T L_3_3_DWORK1;                 /* '<S28>/L_3_3' */
-  real_T eta_old[3];                   /* '<S3>/Detect droput' */
   struct {
     void *FilePtr;
   } ToFile1_PWORK;                     /* '<Root>/To File1' */
@@ -955,14 +930,7 @@ typedef struct {
     void *FilePtr;
   } ToFile5_PWORK;                     /* '<S26>/To File5' */
 
-  struct {
-    void *FilePtr;
-  } ToFile_PWORK;                      /* '<S3>/To File' */
-
   int32_T NIVeriStandSignalProbe_DWORK2;/* '<Root>/NIVeriStandSignalProbe' */
-  uint32_T RandSeed;                   /* '<S24>/White Noise' */
-  uint32_T RandSeed_c;                 /* '<S25>/White Noise' */
-  uint32_T RandSeed_o;                 /* '<S23>/White Noise' */
   struct {
     int_T Count;
     int_T Decimation;
@@ -988,28 +956,9 @@ typedef struct {
     int_T Decimation;
   } ToFile5_IWORK;                     /* '<S26>/To File5' */
 
-  struct {
-    int_T IcNeedsLoading;
-  } Integrator_IWORK;                  /* '<S34>/Integrator' */
-
-  struct {
-    int_T IcNeedsLoading;
-  } Integrator_IWORK_o;                /* '<S35>/Integrator' */
-
-  struct {
-    int_T IcNeedsLoading;
-  } Integrator_IWORK_e;                /* '<S33>/Integrator' */
-
-  struct {
-    int_T Count;
-    int_T Decimation;
-  } ToFile_IWORK;                      /* '<S3>/To File' */
-
   uint8_T y_in_DWORK2[17];             /* '<Root>/y_in' */
-  uint8_T Noise_Power_DWORK2[17];      /* '<S1>/Noise_Power' */
-  uint8_T x_in_DWORK2[17];             /* '<Root>/x_in' */
   uint8_T psi_in_DWORK2[17];           /* '<Root>/psi_in' */
-  uint8_T Enable_Noise_DWORK2[17];     /* '<S1>/Enable_Noise' */
+  uint8_T x_in_DWORK2[17];             /* '<Root>/x_in' */
   uint8_T eta_m_DWORK2[17];            /* '<Root>/eta_m' */
   uint8_T L2_continuous_DWORK2[17];    /* '<S8>/L2_continuous' */
   uint8_T PosXRight_DWORK2[17];        /* '<S8>/PosXRight' */
@@ -1057,38 +1006,26 @@ typedef struct {
   uint8_T L_3_3_DWORK2[17];            /* '<S28>/L_3_3' */
   uint8_T NIVeriStandSignalProbe_DWORK1[17];/* '<Root>/NIVeriStandSignalProbe' */
   uint8_T NIVeriStandSignalProbe_DWORK3[60];/* '<Root>/NIVeriStandSignalProbe' */
-  boolean_T eta_old_not_empty;         /* '<S3>/Detect droput' */
 } DW_ctrl_student_HIL_T;
 
 /* Continuous states (auto storage) */
 typedef struct {
   real_T Integrator_CSTATE[9];         /* '<S26>/Integrator' */
-  real_T Integrator_CSTATE_l;          /* '<S34>/Integrator' */
-  real_T Integrator_CSTATE_m;          /* '<S35>/Integrator' */
-  real_T Integrator_CSTATE_n;          /* '<S33>/Integrator' */
 } X_ctrl_student_HIL_T;
 
 /* State derivatives (auto storage) */
 typedef struct {
   real_T Integrator_CSTATE[9];         /* '<S26>/Integrator' */
-  real_T Integrator_CSTATE_l;          /* '<S34>/Integrator' */
-  real_T Integrator_CSTATE_m;          /* '<S35>/Integrator' */
-  real_T Integrator_CSTATE_n;          /* '<S33>/Integrator' */
 } XDot_ctrl_student_HIL_T;
 
 /* State disabled  */
 typedef struct {
   boolean_T Integrator_CSTATE[9];      /* '<S26>/Integrator' */
-  boolean_T Integrator_CSTATE_l;       /* '<S34>/Integrator' */
-  boolean_T Integrator_CSTATE_m;       /* '<S35>/Integrator' */
-  boolean_T Integrator_CSTATE_n;       /* '<S33>/Integrator' */
 } XDis_ctrl_student_HIL_T;
 
 /* Zero-crossing (trigger) state */
 typedef struct {
-  ZCSigState Integrator_Reset_ZCE;     /* '<S34>/Integrator' */
-  ZCSigState Integrator_Reset_ZCE_n;   /* '<S35>/Integrator' */
-  ZCSigState Integrator_Reset_ZCE_g;   /* '<S33>/Integrator' */
+  ZCSigState Integrator_Reset_ZCE;     /* '<S26>/Integrator' */
 } PrevZCX_ctrl_student_HIL_T;
 
 #ifndef ODE4_INTG
@@ -1120,16 +1057,9 @@ typedef struct {
 
 /* Parameters (auto storage) */
 struct P_ctrl_student_HIL_T_ {
-  struct_FSsBvEVK8AhCsBqw22fikF Par;   /* Variable: Par
+  struct_hSafzAbfUHi5hGb8R3LaL Par;    /* Variable: Par
                                         * Referenced by:
                                         *   '<Root>/Gain1'
-                                        *   '<S1>/Constant'
-                                        *   '<S7>/Constant'
-                                        *   '<S7>/Constant1'
-                                        *   '<S7>/Constant2'
-                                        *   '<S7>/Constant3'
-                                        *   '<S7>/Constant4'
-                                        *   '<S7>/Constant5'
                                         *   '<S26>/Constant'
                                         *   '<S26>/Integrator'
                                         */
@@ -1151,78 +1081,6 @@ struct P_ctrl_student_HIL_T_ {
   real_T y_in_P6;                      /* Expression: btype
                                         * Referenced by: '<Root>/y_in'
                                         */
-  real_T Stepsize_Value;               /* Expression: 0.01
-                                        * Referenced by: '<S11>/Step size'
-                                        */
-  real_T counter_X0;                   /* Expression: 0
-                                        * Referenced by: '<S18>/counter'
-                                        */
-  real_T Noise_Power_P1;               /* Expression: width
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T Noise_Power_P2;               /* Expression: dtype
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T Noise_Power_P3;               /* Expression: portnum
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T Noise_Power_P4;               /* Expression: stime
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T Noise_Power_P5;               /* Expression: stype
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T Noise_Power_P6;               /* Expression: btype
-                                        * Referenced by: '<S1>/Noise_Power'
-                                        */
-  real_T WhiteNoise_Mean;              /* Expression: 0
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  real_T WhiteNoise_StdDev;            /* Computed Parameter: WhiteNoise_StdDev
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  real_T WhiteNoise_Seed;              /* Expression: 9024
-                                        * Referenced by: '<S24>/White Noise'
-                                        */
-  real_T WhiteNoise_Mean_g;            /* Expression: 0
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  real_T WhiteNoise_StdDev_e;          /* Computed Parameter: WhiteNoise_StdDev_e
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  real_T WhiteNoise_Seed_b;            /* Expression: 123
-                                        * Referenced by: '<S25>/White Noise'
-                                        */
-  real_T Gain_Gain;                    /* Expression: pi/180
-                                        * Referenced by: '<S1>/Gain'
-                                        */
-  real_T WhiteNoise_Mean_n;            /* Expression: 0
-                                        * Referenced by: '<S23>/White Noise'
-                                        */
-  real_T WhiteNoise_StdDev_d;          /* Computed Parameter: WhiteNoise_StdDev_d
-                                        * Referenced by: '<S23>/White Noise'
-                                        */
-  real_T WhiteNoise_Seed_o;            /* Expression: 9025
-                                        * Referenced by: '<S23>/White Noise'
-                                        */
-  real_T x_in_P1;                      /* Expression: width
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P2;                      /* Expression: dtype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P3;                      /* Expression: portnum
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P4;                      /* Expression: stime
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P5;                      /* Expression: stype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
-  real_T x_in_P6;                      /* Expression: btype
-                                        * Referenced by: '<Root>/x_in'
-                                        */
   real_T psi_in_P1;                    /* Expression: width
                                         * Referenced by: '<Root>/psi_in'
                                         */
@@ -1241,26 +1099,23 @@ struct P_ctrl_student_HIL_T_ {
   real_T psi_in_P6;                    /* Expression: btype
                                         * Referenced by: '<Root>/psi_in'
                                         */
-  real_T Hold_X0;                      /* Expression: 0
-                                        * Referenced by: '<S19>/Hold'
+  real_T x_in_P1;                      /* Expression: width
+                                        * Referenced by: '<Root>/x_in'
                                         */
-  real_T Enable_Noise_P1;              /* Expression: width
-                                        * Referenced by: '<S1>/Enable_Noise'
+  real_T x_in_P2;                      /* Expression: dtype
+                                        * Referenced by: '<Root>/x_in'
                                         */
-  real_T Enable_Noise_P2;              /* Expression: dtype
-                                        * Referenced by: '<S1>/Enable_Noise'
+  real_T x_in_P3;                      /* Expression: portnum
+                                        * Referenced by: '<Root>/x_in'
                                         */
-  real_T Enable_Noise_P3;              /* Expression: portnum
-                                        * Referenced by: '<S1>/Enable_Noise'
+  real_T x_in_P4;                      /* Expression: stime
+                                        * Referenced by: '<Root>/x_in'
                                         */
-  real_T Enable_Noise_P4;              /* Expression: stime
-                                        * Referenced by: '<S1>/Enable_Noise'
+  real_T x_in_P5;                      /* Expression: stype
+                                        * Referenced by: '<Root>/x_in'
                                         */
-  real_T Enable_Noise_P5;              /* Expression: stype
-                                        * Referenced by: '<S1>/Enable_Noise'
-                                        */
-  real_T Enable_Noise_P6;              /* Expression: btype
-                                        * Referenced by: '<S1>/Enable_Noise'
+  real_T x_in_P6;                      /* Expression: btype
+                                        * Referenced by: '<Root>/x_in'
                                         */
   real_T eta_m_P1;                     /* Expression: width
                                         * Referenced by: '<Root>/eta_m'
@@ -1496,14 +1351,8 @@ struct P_ctrl_student_HIL_T_ {
   real_T ArrowRight_P6;                /* Expression: btype
                                         * Referenced by: '<S8>/ArrowRight'
                                         */
-  real_T Gain_Gain_d;                  /* Expression: -1
+  real_T Gain_Gain;                    /* Expression: -1
                                         * Referenced by: '<Root>/Gain'
-                                        */
-  real_T Saturation_UpperSat[3];       /* Expression: [1 1 1]
-                                        * Referenced by: '<S7>/Saturation'
-                                        */
-  real_T Saturation_LowerSat[3];       /* Expression: [-1 -1 -1]
-                                        * Referenced by: '<S7>/Saturation'
                                         */
   real_T tau_out_P1;                   /* Expression: width
                                         * Referenced by: '<Root>/tau_out'
@@ -1844,6 +1693,9 @@ struct P_ctrl_student_HIL_T_ {
   real_T integratorresetmodel_P6;      /* Expression: btype
                                         * Referenced by: '<S9>/integrator reset model'
                                         */
+  real_T Constant1_Value_f;            /* Expression: 0
+                                        * Referenced by: '<S26>/Constant1'
+                                        */
   real_T nu_hat_P1;                    /* Expression: width
                                         * Referenced by: '<S2>/nu_hat'
                                         */
@@ -2135,8 +1987,8 @@ struct tag_RTM_ctrl_student_HIL_T {
     boolean_T zCCacheNeedsReset;
     boolean_T derivCacheNeedsReset;
     boolean_T blkStateChange;
-    real_T odeY[12];
-    real_T odeF[4][12];
+    real_T odeY[9];
+    real_T odeF[4][9];
     ODE4_IntgData intgData;
     void *dwork;
   } ModelData;
@@ -2191,7 +2043,6 @@ struct tag_RTM_ctrl_student_HIL_T {
     uint32_T clockTick1;
     uint32_T clockTickH1;
     time_T stepSize1;
-    boolean_T firstInitCondFlag;
     time_T tStart;
     time_T tFinal;
     time_T timeOfLastOutput;
