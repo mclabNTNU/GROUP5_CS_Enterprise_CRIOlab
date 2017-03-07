@@ -23,12 +23,12 @@ Par.Freeze.length = 2;
 Par.Freeze.threshold = 3;%3.0;
 
 %Par.Step_size = 0.01;
-Par.Sample_freq = 100;
+Par.Sample_freq = 50;
 %Par.Sample_rate = 1/Par.Sample_time;
 %Par.Noise.Power = 1e-5;
+omega = 1;
 
-
-Par.Thrust_lim = [1.03 0 0];%[1.03 2.5 0.98]';
+Par.Thrust_lim = [1.03 2.5 0.98]';
 
 %% Observer
 Par.Observer.M_inv = inv([16.79 0 0; ...
