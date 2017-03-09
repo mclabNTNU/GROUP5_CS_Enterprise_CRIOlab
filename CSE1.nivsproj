@@ -286,20 +286,20 @@
 				</Properties>
 				<Errors />
 			</Section>
-			<Section Name="CSE1_HIL_tau.out (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666">
-				<Description />
-				<Properties>
-					<Property Name="Path">
-						<String>C:\Users\MCLab\Documents\GitHub\GROUP5_CS_Enterprise_CRIOlab\simulink source\CSE1_HIL_tau.out</String>
-					</Property>
-				</Properties>
-				<Errors />
-			</Section>
 			<Section Name="ctrl_student_HIL.out (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666">
 				<Description />
 				<Properties>
 					<Property Name="Path">
 						<String>C:\Users\MCLab\Documents\GitHub\GROUP5_CS_Enterprise_CRIOlab\simulink source\ctrl_student_HIL_niVeriStand_VxWorks_rtw\ctrl_student_HIL.out</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="CSE1_HIL_tau.out (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\Users\MCLab\Documents\GitHub\GROUP5_CS_Enterprise_CRIOlab\simulink source\CSE1_HIL_tau.out</String>
 					</Property>
 				</Properties>
 				<Errors />

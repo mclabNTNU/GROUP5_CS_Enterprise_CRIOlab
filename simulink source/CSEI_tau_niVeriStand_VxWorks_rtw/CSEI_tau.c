@@ -1,11 +1,15 @@
 /*
  * CSEI_tau.c
  *
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
  * Code generation for model "CSEI_tau".
  *
- * Model version              : 1.154
- * Simulink Coder version : 8.6 (R2014a) 27-Dec-2013
- * C source code generated on : Tue Mar 08 19:35:06 2016
+ * Model version              : 1.156
+ * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
+ * C source code generated on : Thu Mar 09 17:03:57 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -13,6 +17,7 @@
  * Code generation objectives: Unspecified
  * Validation result: Not run
  */
+
 #include "CSEI_tau.h"
 #include "CSEI_tau_private.h"
 
@@ -639,6 +644,7 @@ RT_MODEL_CSEI_tau_T *CSEI_tau(void)
 
   /* Initialize Sizes */
   CSEI_tau_M->Sizes.numContStates = (6);/* Number of continuous states */
+  CSEI_tau_M->Sizes.numPeriodicContStates = (0);/* Number of periodic continuous states */
   CSEI_tau_M->Sizes.numY = (0);        /* Number of model outputs */
   CSEI_tau_M->Sizes.numU = (0);        /* Number of model inputs */
   CSEI_tau_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
@@ -719,10 +725,10 @@ double NIRT_GetValueByDataType(void* ptr,int subindex, int type, int Complex)
     return NIRT_GetValueByDataType(ptr,subindex,3,Complex);
 
    case 19:
-    return NIRT_GetValueByDataType(ptr,subindex,8,Complex);
-
-   case 27:
     return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
+
+   case 20:
+    return NIRT_GetValueByDataType(ptr,subindex,8,Complex);
 
    case 28:
     return NIRT_GetValueByDataType(ptr,subindex,0,Complex);
@@ -782,7 +788,7 @@ long NIRT_SetValueByDataType(void* ptr,int subindex, double value, int type, int
     return NIRT_SetValueByDataType(ptr,subindex,value,6,Complex);
 
    case 13:
-    //Type is array. Call SetValueByDataType on its contained type
+    //Type is matrix. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr,subindex,value,7,Complex);
 
    case 15:
@@ -803,11 +809,11 @@ long NIRT_SetValueByDataType(void* ptr,int subindex, double value, int type, int
 
    case 19:
     //Type is matrix. Call SetValueByDataType on its contained type
-    return NIRT_SetValueByDataType(ptr,subindex,value,8,Complex);
-
-   case 27:
-    //Type is matrix. Call SetValueByDataType on its contained type
     return NIRT_SetValueByDataType(ptr,subindex,value,0,Complex);
+
+   case 20:
+    //Type is matrix. Call SetValueByDataType on its contained type
+    return NIRT_SetValueByDataType(ptr,subindex,value,8,Complex);
 
    case 28:
     //Type is matrix. Call SetValueByDataType on its contained type
@@ -966,25 +972,25 @@ int NI_InitExternalOutputs()
 // by default, all elements (inclulding	scalars) have 2 dimensions [1,1]
 static NI_Parameter NI_ParamList[] DataSection(".NIVS.paramlist") =
 {
-  { 0, "csei_tau/eta_0/Memory3/X0", offsetof(P_CSEI_tau_T, Memory3_X0), 27, 1, 2,
+  { 0, "csei_tau/eta_0/Memory3/X0", offsetof(P_CSEI_tau_T, Memory3_X0), 28, 1, 2,
     0, 0 },
 
-  { 1, "csei_tau/eta_0/Memory4/X0", offsetof(P_CSEI_tau_T, Memory4_X0), 27, 1, 2,
+  { 1, "csei_tau/eta_0/Memory4/X0", offsetof(P_CSEI_tau_T, Memory4_X0), 28, 1, 2,
     2, 0 },
 
-  { 2, "csei_tau/eta_0/Memory5/X0", offsetof(P_CSEI_tau_T, Memory5_X0), 27, 1, 2,
+  { 2, "csei_tau/eta_0/Memory5/X0", offsetof(P_CSEI_tau_T, Memory5_X0), 28, 1, 2,
     4, 0 },
 
   { 3, "csei_tau/Integrator/InitialCondition", offsetof(P_CSEI_tau_T,
-    Integrator_IC), 28, 3, 2, 6, 0 },
+    Integrator_IC), 19, 3, 2, 6, 0 },
 
-  { 4, "csei_tau/tau/Memory/X0", offsetof(P_CSEI_tau_T, Memory_X0), 27, 1, 2, 8,
+  { 4, "csei_tau/tau/Memory/X0", offsetof(P_CSEI_tau_T, Memory_X0), 28, 1, 2, 8,
     0 },
 
-  { 5, "csei_tau/tau/Memory1/X0", offsetof(P_CSEI_tau_T, Memory1_X0), 27, 1, 2,
+  { 5, "csei_tau/tau/Memory1/X0", offsetof(P_CSEI_tau_T, Memory1_X0), 28, 1, 2,
     10, 0 },
 
-  { 6, "csei_tau/tau/Memory2/X0", offsetof(P_CSEI_tau_T, Memory2_X0), 27, 1, 2,
+  { 6, "csei_tau/tau/Memory2/X0", offsetof(P_CSEI_tau_T, Memory2_X0), 28, 1, 2,
     12, 0 },
 };
 
@@ -1134,8 +1140,8 @@ NI_Task NI_TaskList[] DataSection(".NIVS.tasklist") =
 int NI_NumTasks DataSection(".NIVS.numtasks") = 1;
 static char* NI_CompiledModelName DataSection(".NIVS.compiledmodelname") =
   "csei_tau";
-static char* NI_CompiledModelVersion = "1.154";
-static char* NI_CompiledModelDateTime = "Tue Mar 08 19:35:06 2016";
+static char* NI_CompiledModelVersion = "1.156";
+static char* NI_CompiledModelDateTime = "Thu Mar 09 17:03:57 2017";
 static char* NI_builder DataSection(".NIVS.builder") =
   "NI VeriStand 2014.0.0.82 (2014) RTW Build";
 static char* NI_BuilderVersion DataSection(".NIVS.builderversion") =
