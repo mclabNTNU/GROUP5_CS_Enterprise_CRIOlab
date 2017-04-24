@@ -9,7 +9,7 @@
  *
  * Model version              : 1.171
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Apr 24 11:21:56 2017
+ * C source code generated on : Mon Apr 24 12:18:43 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
