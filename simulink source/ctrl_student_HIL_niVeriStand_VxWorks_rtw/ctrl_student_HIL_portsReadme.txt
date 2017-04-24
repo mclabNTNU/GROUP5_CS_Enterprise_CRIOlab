@@ -1,23 +1,22 @@
 	<portlist>
-<inport> id="-1"  name = "Noise and dropout/Noise_power" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "x_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "y_in" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "x_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "psi_in" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Noise and dropout/Enable_noise" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Noise and dropout/Dropout generation/Enable_dropout" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Control/K_p" width = "9" datatype = "18"</inport>
-<inport> id="-1"  name = "Guidance and control/Control/C_2" width = "1" datatype = "61"</inport>
 <inport> id="-1"  name = "Model_reset" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/mu" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/u_ref" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_r" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_c" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_constant_heading_on_off" width = "1" datatype = "61"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_heading" width = "1" datatype = "61"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_eta_0" width = "3" datatype = "25"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_0" width = "2" datatype = "14"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_1" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/switch_straight_ellipsoid" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_0" width = "2" datatype = "14"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/mu" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/u_ref" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Guidance and control/Control/C_2" width = "1" datatype = "61"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_1" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "joystick/L2_continuous" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosXRight" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosYRight" width = "1" datatype = "0"</inport>
@@ -37,7 +36,10 @@
 <inport> id="-1"  name = "Luenberger Observer/L_1" width = "9" datatype = "18"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_2" width = "9" datatype = "18"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_3" width = "9" datatype = "18"</inport>
+<inport> id="-1"  name = "Noise and dropout/Noise_power" width = "1" datatype = "0"</inport>
 <outport> id = "-1" name = "eta_m" width = "3" datatype = "32"</outport>
+<outport> id = "-1" name = "Guidance and control/Control/alpha" width = "3" datatype = "25"</outport>
+<outport> id = "-1" name = "Guidance and control/Guidance/s" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "tau_out" width = "3" datatype = "32"</outport>
 <outport> id = "-1" name = "eta" width = "3" datatype = "32"</outport>
 <outport> id = "-1" name = "nu" width = "3" datatype = "32"</outport>
