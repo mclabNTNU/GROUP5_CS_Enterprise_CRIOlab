@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.162
+ * Model version              : 1.170
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon Feb 20 13:48:54 2017
+ * C source code generated on : Mon Apr 24 10:44:57 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -24,80 +24,105 @@
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
 #include "zero_crossing_types.h"
-#ifndef _DEFINED_TYPEDEF_FOR_struct_CEDELhVBNVS20OOZKu6U0B_
-#define _DEFINED_TYPEDEF_FOR_struct_CEDELhVBNVS20OOZKu6U0B_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_O2L20z72exSZsAYx6iSa3F_
+#define _DEFINED_TYPEDEF_FOR_struct_O2L20z72exSZsAYx6iSa3F_
 
 typedef struct {
   real_T origin[2];
   real_T threshold;
-  real_T gain;
+  real_T scale;
   real_T x_max_limit;
   real_T x_min_limit;
-  real_T y_max_limit;
   real_T y_min_limit;
+  real_T y_max_limit;
   real_T x_min;
   real_T x_max;
   real_T y_min;
   real_T y_max;
-} struct_CEDELhVBNVS20OOZKu6U0B;
+} struct_O2L20z72exSZsAYx6iSa3F;
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_WEndDd5z8WjUYRTCKDNizF_
-#define _DEFINED_TYPEDEF_FOR_struct_WEndDd5z8WjUYRTCKDNizF_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_FIFD4OBMD9VWlACOsEb4SC_
+#define _DEFINED_TYPEDEF_FOR_struct_FIFD4OBMD9VWlACOsEb4SC_
+
+typedef struct {
+  real_T Enable;
+  real_T power;
+  real_T Sample_freq;
+} struct_FIFD4OBMD9VWlACOsEb4SC;
+
+#endif
+
+#ifndef _DEFINED_TYPEDEF_FOR_struct_UqjEawrvuS8Txm2V5QOEXC_
+#define _DEFINED_TYPEDEF_FOR_struct_UqjEawrvuS8Txm2V5QOEXC_
 
 typedef struct {
   real_T Enable;
   real_T length;
   real_T threshold;
-} struct_WEndDd5z8WjUYRTCKDNizF;
-
-#endif
-
-#ifndef _DEFINED_TYPEDEF_FOR_struct_F5jpQk0SqNXWbjvSxP6eo_
-#define _DEFINED_TYPEDEF_FOR_struct_F5jpQk0SqNXWbjvSxP6eo_
-
-typedef struct {
   real_T Power;
-} struct_F5jpQk0SqNXWbjvSxP6eo;
+} struct_UqjEawrvuS8Txm2V5QOEXC;
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_iTdVtkn32GXKLcWyghsjmG_
-#define _DEFINED_TYPEDEF_FOR_struct_iTdVtkn32GXKLcWyghsjmG_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_m5RSTwsTQK5soBPAz6vCR_
+#define _DEFINED_TYPEDEF_FOR_struct_m5RSTwsTQK5soBPAz6vCR_
 
 typedef struct {
-  real_T c_u;
-  real_T c_v;
-  real_T c_psi;
-} struct_iTdVtkn32GXKLcWyghsjmG;
+  real_T M_inv[9];
+  real_T L_1[9];
+  real_T L_2[9];
+  real_T L_3[9];
+  real_T x_0[9];
+} struct_m5RSTwsTQK5soBPAz6vCR;
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_O1cG5VeM3Vq2W5nll3MmiD_
-#define _DEFINED_TYPEDEF_FOR_struct_O1cG5VeM3Vq2W5nll3MmiD_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_yOlW1NNwA91Ojwjtwi6OcE_
+#define _DEFINED_TYPEDEF_FOR_struct_yOlW1NNwA91Ojwjtwi6OcE_
 
 typedef struct {
-  struct_iTdVtkn32GXKLcWyghsjmG omega;
-} struct_O1cG5VeM3Vq2W5nll3MmiD;
+  real_T Eta_0[3];
+} struct_yOlW1NNwA91Ojwjtwi6OcE;
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_wViSY2mbLHYu3C5WjokrGB_
-#define _DEFINED_TYPEDEF_FOR_struct_wViSY2mbLHYu3C5WjokrGB_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_dG7PRX1V63dlz6vAPmePvC_
+#define _DEFINED_TYPEDEF_FOR_struct_dG7PRX1V63dlz6vAPmePvC_
 
 typedef struct {
-  real_T K_psi_init;
-  struct_CEDELhVBNVS20OOZKu6U0B Workspace;
-  real_T SensNoiseEnabled;
-  struct_WEndDd5z8WjUYRTCKDNizF Freeze;
-  real_T Step_size;
+  real_T mu;
+  real_T U_ref;
+  real_T U_ref_dot;
+  real_T s_0;
+  real_T eta_d_0[3];
+  real_T eta_d_1[3];
+  real_T K_p[9];
+  real_T c_2;
+  real_T M[9];
+  real_T Ellipsoid;
+  real_T r[2];
+  real_T c[2];
+  real_T constant_heading;
+  real_T heading;
+} struct_dG7PRX1V63dlz6vAPmePvC;
+
+#endif
+
+#ifndef _DEFINED_TYPEDEF_FOR_struct_ugpof3UgEA54frSa7owjeE_
+#define _DEFINED_TYPEDEF_FOR_struct_ugpof3UgEA54frSa7owjeE_
+
+typedef struct {
+  struct_O2L20z72exSZsAYx6iSa3F Workspace;
+  struct_FIFD4OBMD9VWlACOsEb4SC Noise;
+  struct_UqjEawrvuS8Txm2V5QOEXC Freeze;
   real_T Sample_time;
-  real_T Sample_rate;
-  struct_F5jpQk0SqNXWbjvSxP6eo Noise;
   real_T Thrust_lim[3];
-  struct_O1cG5VeM3Vq2W5nll3MmiD Lowpass;
-} struct_wViSY2mbLHYu3C5WjokrGB;
+  struct_m5RSTwsTQK5soBPAz6vCR Observer;
+  struct_yOlW1NNwA91Ojwjtwi6OcE Model;
+  struct_dG7PRX1V63dlz6vAPmePvC Guidance;
+} struct_ugpof3UgEA54frSa7owjeE;
 
 #endif
 
