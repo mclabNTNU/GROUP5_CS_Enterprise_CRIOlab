@@ -15,9 +15,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.225
+ * Model version              : 1.238
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Thu Apr 27 12:04:05 2017
+ * C source code generated on : Fri Apr 28 05:58:56 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -396,6 +396,24 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
   1.0,                                 /* Expression: btype
                                         * Referenced by: '<S15>/ellipsoid_heading'
                                         */
+  3.0,                                 /* Expression: width
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  7.0,                                 /* Expression: portnum
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S15>/switch_straight_ellipsoid'
                                         */
@@ -452,6 +470,24 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         */
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<S15>/Constant1'
+                                        */
+  -1.0,                                /* Expression: width
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  1.0,                                 /* Expression: dtype
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  13.0,                                /* Expression: portnum
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  -1.0,                                /* Expression: stime
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  1.0,                                 /* Expression: stype
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  1.0,                                 /* Expression: btype
+                                        * Referenced by: '<S15>/stop_at_pos'
                                         */
   -1.0,                                /* Expression: width
                                         * Referenced by: '<S15>/mu'
@@ -548,24 +584,6 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         */
   0.0,                                 /* Expression: btype
                                         * Referenced by: '<S15>/s'
-                                        */
-  3.0,                                 /* Expression: width
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  7.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
                                         */
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<S15>/Constant2'
@@ -841,40 +859,40 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         * Referenced by: '<S7>/y_MAX'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   4.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/THRESHOLD'
+                                        * Referenced by: '<S7>/scale'
                                         */
   -1.0,                                /* Expression: width
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   1.0,                                 /* Expression: dtype
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   5.0,                                 /* Expression: portnum
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   -1.0,                                /* Expression: stime
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   1.0,                                 /* Expression: stype
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   1.0,                                 /* Expression: btype
-                                        * Referenced by: '<S7>/scale'
+                                        * Referenced by: '<S7>/x_min'
                                         */
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<Root>/Switch'
@@ -1394,6 +1412,15 @@ P_ctrl_student_HIL_T ctrl_student_HIL_P = {
                                         */
   0.0,                                 /* Expression: btype
                                         * Referenced by: '<S53>/u_VSP2'
+                                        */
+  1.0,                                 /* Expression: 1
+                                        * Referenced by: '<S10>/Constant'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<S10>/Constant1'
+                                        */
+  5.0,                                 /* Expression: 5
+                                        * Referenced by: '<S10>/Switch'
                                         */
 
   /*  Expression: width
@@ -2168,7 +2195,25 @@ NI_ParamSizeWidth P_ctrl_student_HIL_T_sizes[] DataSection(
 
   { sizeof(real_T), 1, 0 },
 
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
   { sizeof(real_T), 9, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
+
+  { sizeof(real_T), 1, 0 },
 
   { sizeof(real_T), 1, 0 },
 

@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.223
+ * Model version              : 1.244
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Thu Apr 27 11:57:44 2017
+ * C source code generated on : Fri Apr 28 07:28:23 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -842,15 +842,16 @@ typedef struct {
   real_T ellipsoid_c[2];               /* '<S15>/ellipsoid_c' */
   real_T ellipsoid_constant_heading_on_o;/* '<S15>/ellipsoid_constant_heading_on_off' */
   real_T ellipsoid_heading;            /* '<S15>/ellipsoid_heading' */
+  real_T ellipsoid_eta_0[3];           /* '<S15>/ellipsoid_eta_0' */
   real_T switch_straight_ellipsoid;    /* '<S15>/switch_straight_ellipsoid' */
   real_T straight_eta_d_0[2];          /* '<S15>/straight_eta_d_0' */
   real_T straight_eta_d_1[2];          /* '<S15>/straight_eta_d_1' */
   real_T Switch1[9];                   /* '<S15>/Switch1' */
+  real_T stop_at_pos;                  /* '<S15>/stop_at_pos' */
   real_T mu;                           /* '<S15>/mu' */
   real_T u_ref;                        /* '<S15>/u_ref' */
   real_T Switch2;                      /* '<S15>/Switch2' */
   real_T C_2;                          /* '<S14>/C_2' */
-  real_T ellipsoid_eta_0[3];           /* '<S15>/ellipsoid_eta_0' */
   real_T Derivative;                   /* '<S14>/Derivative' */
   real_T L2_continuous;                /* '<S11>/L2_continuous' */
   real_T PosXRight;                    /* '<S11>/PosXRight' */
@@ -867,10 +868,11 @@ typedef struct {
   real_T Enable_W_sat;                 /* '<S7>/Enable_W_sat' */
   real_T x_max;                        /* '<S7>/x_max' */
   real_T y_MAX;                        /* '<S7>/y_MAX' */
-  real_T THRESHOLD;                    /* '<S7>/THRESHOLD' */
   real_T scale;                        /* '<S7>/scale' */
+  real_T x_min;                        /* '<S7>/x_min' */
   real_T Switch1_p[3];                 /* '<S7>/Switch1' */
   real_T TmpSignalConversionAtx_hatInpor[9];/* '<Root>/conversion to deg and mm' */
+  real_T VSP_speed;                    /* '<S13>/VSP_speed' */
   real_T L_1[9];                       /* '<S2>/L_1' */
   real_T L_2[9];                       /* '<S2>/L_2' */
   real_T L_3[9];                       /* '<S2>/L_3' */
@@ -880,10 +882,10 @@ typedef struct {
   real_T r_in;                         /* '<S9>/r_in' */
   real_T u_in;                         /* '<S9>/u_in' */
   real_T v_in;                         /* '<S9>/v_in' */
-  real_T u_BT;                         /* '<S13>/Full thrust allocation' */
-  real_T u_VSP;                        /* '<S13>/Full thrust allocation' */
-  real_T alpha_VSP;                    /* '<S13>/Full thrust allocation' */
-  real_T omega_VSP;                    /* '<S13>/Full thrust allocation' */
+  real_T u_BT;                         /* '<S13>/Full thrust allocation1' */
+  real_T u_VSP;                        /* '<S13>/Full thrust allocation1' */
+  real_T alpha_VSP;                    /* '<S13>/Full thrust allocation1' */
+  real_T omega_VSP;                    /* '<S13>/Full thrust allocation1' */
   real_T u_VSP_l;                      /* '<S5>/MATLAB Function1' */
   real_T alpha_VSP_k;                  /* '<S5>/MATLAB Function1' */
   real_T u_BT_a;                       /* '<S5>/MATLAB Function1' */
@@ -892,7 +894,7 @@ typedef struct {
   real_T s_dot;                        /* '<S15>/update law' */
   real_T tau[3];                       /* '<S14>/tau' */
   real_T alfa1[3];                     /* '<S14>/alfa1' */
-  boolean_T fault;                     /* '<S51>/control limit checking' */
+  boolean_T fault;                     /* '<S52>/control limit checking' */
 } B_ctrl_student_HIL_T;
 
 /* Block states (auto storage) for system '<Root>' */
@@ -911,15 +913,16 @@ typedef struct {
   real_T ellipsoid_c_DWORK1[2];        /* '<S15>/ellipsoid_c' */
   real_T ellipsoid_constant_heading_on_o;/* '<S15>/ellipsoid_constant_heading_on_off' */
   real_T ellipsoid_heading_DWORK1;     /* '<S15>/ellipsoid_heading' */
+  real_T ellipsoid_eta_0_DWORK1[3];    /* '<S15>/ellipsoid_eta_0' */
   real_T switch_straight_ellipsoid_DWORK;/* '<S15>/switch_straight_ellipsoid' */
   real_T straight_eta_d_0_DWORK1[2];   /* '<S15>/straight_eta_d_0' */
   real_T straight_eta_d_1_DWORK1[2];   /* '<S15>/straight_eta_d_1' */
+  real_T stop_at_pos_DWORK1;           /* '<S15>/stop_at_pos' */
   real_T mu_DWORK1;                    /* '<S15>/mu' */
   real_T u_ref_DWORK1;                 /* '<S15>/u_ref' */
   real_T alpha_DWORK1[3];              /* '<S14>/alpha' */
   real_T C_2_DWORK1;                   /* '<S14>/C_2' */
   real_T s_DWORK1;                     /* '<S15>/s' */
-  real_T ellipsoid_eta_0_DWORK1[3];    /* '<S15>/ellipsoid_eta_0' */
   real_T TimeStampA;                   /* '<S14>/Derivative' */
   real_T LastUAtTimeA;                 /* '<S14>/Derivative' */
   real_T TimeStampB;                   /* '<S14>/Derivative' */
@@ -939,8 +942,8 @@ typedef struct {
   real_T Enable_W_sat_DWORK1;          /* '<S7>/Enable_W_sat' */
   real_T x_max_DWORK1;                 /* '<S7>/x_max' */
   real_T y_MAX_DWORK1;                 /* '<S7>/y_MAX' */
-  real_T THRESHOLD_DWORK1;             /* '<S7>/THRESHOLD' */
   real_T scale_DWORK1;                 /* '<S7>/scale' */
+  real_T x_min_DWORK1;                 /* '<S7>/x_min' */
   real_T tau_out_DWORK1[3];            /* '<Root>/tau_out' */
   real_T x_hat_DWORK1[9];              /* '<Root>/x_hat' */
   real_T tau_control_DWORK1[3];        /* '<Root>/tau_control' */
@@ -959,14 +962,15 @@ typedef struct {
   real_T x_0_DWORK1;                   /* '<S12>/x_0' */
   real_T y_0_DWORK1;                   /* '<S12>/y_0' */
   real_T integratorresetmodel_DWORK1;  /* '<S12>/integrator reset model' */
-  real_T controlinputuexceedsbounds_DWOR;/* '<S51>/control input u exceeds bounds' */
-  real_T alpha_VSP1_DWORK1_g;          /* '<S53>/alpha_VSP1' */
-  real_T alpha_VSP2_DWORK1_i;          /* '<S53>/alpha_VSP2' */
-  real_T omega_VSP1_DWORK1_c;          /* '<S53>/omega_VSP1' */
-  real_T omega_VSP2_DWORK1_k;          /* '<S53>/omega_VSP2' */
-  real_T u_BT_DWORK1_c;                /* '<S53>/u_BT' */
-  real_T u_VSP1_DWORK1_i;              /* '<S53>/u_VSP1' */
-  real_T u_VSP2_DWORK1_o;              /* '<S53>/u_VSP2' */
+  real_T VSP_speed_DWORK1;             /* '<S13>/VSP_speed' */
+  real_T controlinputuexceedsbounds_DWOR;/* '<S52>/control input u exceeds bounds' */
+  real_T alpha_VSP1_DWORK1_g;          /* '<S54>/alpha_VSP1' */
+  real_T alpha_VSP2_DWORK1_i;          /* '<S54>/alpha_VSP2' */
+  real_T omega_VSP1_DWORK1_c;          /* '<S54>/omega_VSP1' */
+  real_T omega_VSP2_DWORK1_k;          /* '<S54>/omega_VSP2' */
+  real_T u_BT_DWORK1_c;                /* '<S54>/u_BT' */
+  real_T u_VSP1_DWORK1_i;              /* '<S54>/u_VSP1' */
+  real_T u_VSP2_DWORK1_o;              /* '<S54>/u_VSP2' */
   real_T L_1_DWORK1[9];                /* '<S2>/L_1' */
   real_T L_2_DWORK1[9];                /* '<S2>/L_2' */
   real_T L_3_DWORK1[9];                /* '<S2>/L_3' */
@@ -980,6 +984,7 @@ typedef struct {
   real_T v_in_DWORK1;                  /* '<S9>/v_in' */
   real_T last_psi;                     /* '<S10>/MATLAB Function' */
   real_T eta_old[3];                   /* '<S4>/Detect droput' */
+  real_T backwards;                    /* '<S15>/update law' */
   real_T psi_old;                      /* '<S15>/eta_d_ellipsoid' */
   struct {
     void *FilePtr;
@@ -1013,15 +1018,16 @@ typedef struct {
   uint8_T ellipsoid_c_DWORK2[17];      /* '<S15>/ellipsoid_c' */
   uint8_T ellipsoid_constant_heading_on_a[17];/* '<S15>/ellipsoid_constant_heading_on_off' */
   uint8_T ellipsoid_heading_DWORK2[17];/* '<S15>/ellipsoid_heading' */
+  uint8_T ellipsoid_eta_0_DWORK2[17];  /* '<S15>/ellipsoid_eta_0' */
   uint8_T switch_straight_ellipsoid_DWO_b[17];/* '<S15>/switch_straight_ellipsoid' */
   uint8_T straight_eta_d_0_DWORK2[17]; /* '<S15>/straight_eta_d_0' */
   uint8_T straight_eta_d_1_DWORK2[17]; /* '<S15>/straight_eta_d_1' */
+  uint8_T stop_at_pos_DWORK2[17];      /* '<S15>/stop_at_pos' */
   uint8_T mu_DWORK2[17];               /* '<S15>/mu' */
   uint8_T u_ref_DWORK2[17];            /* '<S15>/u_ref' */
   uint8_T alpha_DWORK2[17];            /* '<S14>/alpha' */
   uint8_T C_2_DWORK2[17];              /* '<S14>/C_2' */
   uint8_T s_DWORK2[17];                /* '<S15>/s' */
-  uint8_T ellipsoid_eta_0_DWORK2[17];  /* '<S15>/ellipsoid_eta_0' */
   uint8_T L2_continuous_DWORK2[17];    /* '<S11>/L2_continuous' */
   uint8_T PosXRight_DWORK2[17];        /* '<S11>/PosXRight' */
   uint8_T PosYRight_DWORK2[17];        /* '<S11>/PosYRight' */
@@ -1037,8 +1043,8 @@ typedef struct {
   uint8_T Enable_W_sat_DWORK2[17];     /* '<S7>/Enable_W_sat' */
   uint8_T x_max_DWORK2[17];            /* '<S7>/x_max' */
   uint8_T y_MAX_DWORK2[17];            /* '<S7>/y_MAX' */
-  uint8_T THRESHOLD_DWORK2[17];        /* '<S7>/THRESHOLD' */
   uint8_T scale_DWORK2[17];            /* '<S7>/scale' */
+  uint8_T x_min_DWORK2[17];            /* '<S7>/x_min' */
   uint8_T tau_out_DWORK2[17];          /* '<Root>/tau_out' */
   uint8_T x_hat_DWORK2[17];            /* '<Root>/x_hat' */
   uint8_T tau_control_DWORK2[17];      /* '<Root>/tau_control' */
@@ -1057,14 +1063,15 @@ typedef struct {
   uint8_T x_0_DWORK2[17];              /* '<S12>/x_0' */
   uint8_T y_0_DWORK2[17];              /* '<S12>/y_0' */
   uint8_T integratorresetmodel_DWORK2[17];/* '<S12>/integrator reset model' */
-  uint8_T controlinputuexceedsbounds_DW_h[17];/* '<S51>/control input u exceeds bounds' */
-  uint8_T alpha_VSP1_DWORK2_b[17];     /* '<S53>/alpha_VSP1' */
-  uint8_T alpha_VSP2_DWORK2_l[17];     /* '<S53>/alpha_VSP2' */
-  uint8_T omega_VSP1_DWORK2_p[17];     /* '<S53>/omega_VSP1' */
-  uint8_T omega_VSP2_DWORK2_h[17];     /* '<S53>/omega_VSP2' */
-  uint8_T u_BT_DWORK2_e[17];           /* '<S53>/u_BT' */
-  uint8_T u_VSP1_DWORK2_k[17];         /* '<S53>/u_VSP1' */
-  uint8_T u_VSP2_DWORK2_l[17];         /* '<S53>/u_VSP2' */
+  uint8_T VSP_speed_DWORK2[17];        /* '<S13>/VSP_speed' */
+  uint8_T controlinputuexceedsbounds_DW_h[17];/* '<S52>/control input u exceeds bounds' */
+  uint8_T alpha_VSP1_DWORK2_b[17];     /* '<S54>/alpha_VSP1' */
+  uint8_T alpha_VSP2_DWORK2_l[17];     /* '<S54>/alpha_VSP2' */
+  uint8_T omega_VSP1_DWORK2_p[17];     /* '<S54>/omega_VSP1' */
+  uint8_T omega_VSP2_DWORK2_h[17];     /* '<S54>/omega_VSP2' */
+  uint8_T u_BT_DWORK2_e[17];           /* '<S54>/u_BT' */
+  uint8_T u_VSP1_DWORK2_k[17];         /* '<S54>/u_VSP1' */
+  uint8_T u_VSP2_DWORK2_l[17];         /* '<S54>/u_VSP2' */
   uint8_T L_1_DWORK2[17];              /* '<S2>/L_1' */
   uint8_T L_2_DWORK2[17];              /* '<S2>/L_2' */
   uint8_T L_3_DWORK2[17];              /* '<S2>/L_3' */
@@ -1422,6 +1429,24 @@ struct P_ctrl_student_HIL_T_ {
   real_T ellipsoid_heading_P6;         /* Expression: btype
                                         * Referenced by: '<S15>/ellipsoid_heading'
                                         */
+  real_T ellipsoid_eta_0_P1;           /* Expression: width
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  real_T ellipsoid_eta_0_P2;           /* Expression: dtype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  real_T ellipsoid_eta_0_P3;           /* Expression: portnum
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  real_T ellipsoid_eta_0_P4;           /* Expression: stime
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  real_T ellipsoid_eta_0_P5;           /* Expression: stype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
+  real_T ellipsoid_eta_0_P6;           /* Expression: btype
+                                        * Referenced by: '<S15>/ellipsoid_eta_0'
+                                        */
   real_T switch_straight_ellipsoid_P1; /* Expression: width
                                         * Referenced by: '<S15>/switch_straight_ellipsoid'
                                         */
@@ -1478,6 +1503,24 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T Constant1_Value;              /* Expression: 0
                                         * Referenced by: '<S15>/Constant1'
+                                        */
+  real_T stop_at_pos_P1;               /* Expression: width
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  real_T stop_at_pos_P2;               /* Expression: dtype
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  real_T stop_at_pos_P3;               /* Expression: portnum
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  real_T stop_at_pos_P4;               /* Expression: stime
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  real_T stop_at_pos_P5;               /* Expression: stype
+                                        * Referenced by: '<S15>/stop_at_pos'
+                                        */
+  real_T stop_at_pos_P6;               /* Expression: btype
+                                        * Referenced by: '<S15>/stop_at_pos'
                                         */
   real_T mu_P1;                        /* Expression: width
                                         * Referenced by: '<S15>/mu'
@@ -1574,24 +1617,6 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T s_P6;                         /* Expression: btype
                                         * Referenced by: '<S15>/s'
-                                        */
-  real_T ellipsoid_eta_0_P1;           /* Expression: width
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  real_T ellipsoid_eta_0_P2;           /* Expression: dtype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  real_T ellipsoid_eta_0_P3;           /* Expression: portnum
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  real_T ellipsoid_eta_0_P4;           /* Expression: stime
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  real_T ellipsoid_eta_0_P5;           /* Expression: stype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
-                                        */
-  real_T ellipsoid_eta_0_P6;           /* Expression: btype
-                                        * Referenced by: '<S15>/ellipsoid_eta_0'
                                         */
   real_T Constant2_Value_l;            /* Expression: 0
                                         * Referenced by: '<S15>/Constant2'
@@ -1866,24 +1891,6 @@ struct P_ctrl_student_HIL_T_ {
   real_T y_MAX_P6;                     /* Expression: btype
                                         * Referenced by: '<S7>/y_MAX'
                                         */
-  real_T THRESHOLD_P1;                 /* Expression: width
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
-  real_T THRESHOLD_P2;                 /* Expression: dtype
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
-  real_T THRESHOLD_P3;                 /* Expression: portnum
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
-  real_T THRESHOLD_P4;                 /* Expression: stime
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
-  real_T THRESHOLD_P5;                 /* Expression: stype
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
-  real_T THRESHOLD_P6;                 /* Expression: btype
-                                        * Referenced by: '<S7>/THRESHOLD'
-                                        */
   real_T scale_P1;                     /* Expression: width
                                         * Referenced by: '<S7>/scale'
                                         */
@@ -1901,6 +1908,24 @@ struct P_ctrl_student_HIL_T_ {
                                         */
   real_T scale_P6;                     /* Expression: btype
                                         * Referenced by: '<S7>/scale'
+                                        */
+  real_T x_min_P1;                     /* Expression: width
+                                        * Referenced by: '<S7>/x_min'
+                                        */
+  real_T x_min_P2;                     /* Expression: dtype
+                                        * Referenced by: '<S7>/x_min'
+                                        */
+  real_T x_min_P3;                     /* Expression: portnum
+                                        * Referenced by: '<S7>/x_min'
+                                        */
+  real_T x_min_P4;                     /* Expression: stime
+                                        * Referenced by: '<S7>/x_min'
+                                        */
+  real_T x_min_P5;                     /* Expression: stype
+                                        * Referenced by: '<S7>/x_min'
+                                        */
+  real_T x_min_P6;                     /* Expression: btype
+                                        * Referenced by: '<S7>/x_min'
                                         */
   real_T Switch_Threshold;             /* Expression: 0
                                         * Referenced by: '<Root>/Switch'
@@ -2256,149 +2281,179 @@ struct P_ctrl_student_HIL_T_ {
   real_T Constant_Value_o;             /* Expression: 1
                                         * Referenced by: '<S13>/Constant'
                                         */
+  real_T VSP_speed_P1;                 /* Expression: width
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
+  real_T VSP_speed_P2;                 /* Expression: dtype
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
+  real_T VSP_speed_P3;                 /* Expression: portnum
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
+  real_T VSP_speed_P4;                 /* Expression: stime
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
+  real_T VSP_speed_P5;                 /* Expression: stype
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
+  real_T VSP_speed_P6;                 /* Expression: btype
+                                        * Referenced by: '<S13>/VSP_speed'
+                                        */
   real_T controlinputuexceedsbounds_P1;/* Expression: width
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T controlinputuexceedsbounds_P2;/* Expression: dtype
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T controlinputuexceedsbounds_P3;/* Expression: portnum
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T controlinputuexceedsbounds_P4;/* Expression: stime
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T controlinputuexceedsbounds_P5;/* Expression: stype
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T controlinputuexceedsbounds_P6;/* Expression: btype
-                                        * Referenced by: '<S51>/control input u exceeds bounds'
+                                        * Referenced by: '<S52>/control input u exceeds bounds'
                                         */
   real_T alpha_VSP1_P1_i;              /* Expression: width
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP1_P2_b;              /* Expression: dtype
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP1_P3_o;              /* Expression: portnum
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP1_P4_c;              /* Expression: stime
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP1_P5_d;              /* Expression: stype
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP1_P6_i;              /* Expression: btype
-                                        * Referenced by: '<S53>/alpha_VSP1'
+                                        * Referenced by: '<S54>/alpha_VSP1'
                                         */
   real_T alpha_VSP2_P1_f;              /* Expression: width
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T alpha_VSP2_P2_o;              /* Expression: dtype
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T alpha_VSP2_P3_b;              /* Expression: portnum
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T alpha_VSP2_P4_o;              /* Expression: stime
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T alpha_VSP2_P5_o;              /* Expression: stype
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T alpha_VSP2_P6_m;              /* Expression: btype
-                                        * Referenced by: '<S53>/alpha_VSP2'
+                                        * Referenced by: '<S54>/alpha_VSP2'
                                         */
   real_T omega_VSP1_P1_g;              /* Expression: width
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP1_P2_e;              /* Expression: dtype
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP1_P3_c;              /* Expression: portnum
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP1_P4_i;              /* Expression: stime
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP1_P5_m;              /* Expression: stype
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP1_P6_m;              /* Expression: btype
-                                        * Referenced by: '<S53>/omega_VSP1'
+                                        * Referenced by: '<S54>/omega_VSP1'
                                         */
   real_T omega_VSP2_P1_i;              /* Expression: width
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T omega_VSP2_P2_j;              /* Expression: dtype
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T omega_VSP2_P3_k;              /* Expression: portnum
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T omega_VSP2_P4_d;              /* Expression: stime
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T omega_VSP2_P5_i;              /* Expression: stype
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T omega_VSP2_P6_d;              /* Expression: btype
-                                        * Referenced by: '<S53>/omega_VSP2'
+                                        * Referenced by: '<S54>/omega_VSP2'
                                         */
   real_T u_BT_P1_a;                    /* Expression: width
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_BT_P2_e;                    /* Expression: dtype
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_BT_P3_c;                    /* Expression: portnum
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_BT_P4_j;                    /* Expression: stime
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_BT_P5_f;                    /* Expression: stype
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_BT_P6_a;                    /* Expression: btype
-                                        * Referenced by: '<S53>/u_BT'
+                                        * Referenced by: '<S54>/u_BT'
                                         */
   real_T u_VSP1_P1_n;                  /* Expression: width
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP1_P2_e;                  /* Expression: dtype
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP1_P3_j;                  /* Expression: portnum
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP1_P4_l;                  /* Expression: stime
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP1_P5_d;                  /* Expression: stype
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP1_P6_i;                  /* Expression: btype
-                                        * Referenced by: '<S53>/u_VSP1'
+                                        * Referenced by: '<S54>/u_VSP1'
                                         */
   real_T u_VSP2_P1_o;                  /* Expression: width
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
                                         */
   real_T u_VSP2_P2_o;                  /* Expression: dtype
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
                                         */
   real_T u_VSP2_P3_g;                  /* Expression: portnum
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
                                         */
   real_T u_VSP2_P4_p;                  /* Expression: stime
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
                                         */
   real_T u_VSP2_P5_a;                  /* Expression: stype
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
                                         */
   real_T u_VSP2_P6_p;                  /* Expression: btype
-                                        * Referenced by: '<S53>/u_VSP2'
+                                        * Referenced by: '<S54>/u_VSP2'
+                                        */
+  real_T Constant_Value_f[3];          /* Expression: [0 0 0]'
+                                        * Referenced by: '<Root>/Constant'
+                                        */
+  real_T Constant_Value_k;             /* Expression: 1
+                                        * Referenced by: '<S10>/Constant'
+                                        */
+  real_T Constant1_Value_c;            /* Expression: 0
+                                        * Referenced by: '<S10>/Constant1'
+                                        */
+  real_T Switch_Threshold_m;           /* Expression: 5
+                                        * Referenced by: '<S10>/Switch'
                                         */
   real_T L_1_P1[2];                    /* Expression: width
                                         * Referenced by: '<S2>/L_1'
@@ -2811,12 +2866,13 @@ extern RT_MODEL_ctrl_student_HIL_T *const ctrl_student_HIL_M;
  * '<S45>'  : 'ctrl_student_HIL/Thrust Allocation/MATLAB Function'
  * '<S46>'  : 'ctrl_student_HIL/Workspace saturation1/MATLAB Function'
  * '<S47>'  : 'ctrl_student_HIL/from ship/MATLAB Function'
- * '<S48>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation'
- * '<S49>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation1'
- * '<S50>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Limited allocation: VSP only  in surge and BT only in yaw'
- * '<S51>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship'
- * '<S52>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/control limit checking'
- * '<S53>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/u'
+ * '<S48>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation1'
+ * '<S49>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation2'
+ * '<S50>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation3'
+ * '<S51>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Limited allocation: VSP only  in surge and BT only in yaw'
+ * '<S52>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship'
+ * '<S53>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/control limit checking'
+ * '<S54>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/u'
  */
 #endif                                 /* RTW_HEADER_ctrl_student_HIL_h_ */
 

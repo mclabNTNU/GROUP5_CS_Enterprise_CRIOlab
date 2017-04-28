@@ -12,13 +12,14 @@
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_c" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_constant_heading_on_off" width = "1" datatype = "55"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_heading" width = "1" datatype = "55"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_eta_0" width = "3" datatype = "25"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/switch_straight_ellipsoid" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_0" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_1" width = "2" datatype = "14"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/stop_at_pos" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/mu" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/u_ref" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Control/C_2" width = "1" datatype = "55"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_eta_0" width = "3" datatype = "25"</inport>
 <inport> id="-1"  name = "joystick/L2_continuous" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosXRight" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosYRight" width = "1" datatype = "0"</inport>
@@ -34,8 +35,8 @@
 <inport> id="-1"  name = "Workspace saturation1/Enable_W_sat" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Workspace saturation1/x_max" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Workspace saturation1/y_MAX" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "Workspace saturation1/THRESHOLD" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Workspace saturation1/scale" width = "1" datatype = "0"</inport>
+<inport> id="-1"  name = "Workspace saturation1/x_min" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "tau to real ship (only use in MCLab)/VSP_speed" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_1" width = "9" datatype = "18"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_2" width = "9" datatype = "18"</inport>

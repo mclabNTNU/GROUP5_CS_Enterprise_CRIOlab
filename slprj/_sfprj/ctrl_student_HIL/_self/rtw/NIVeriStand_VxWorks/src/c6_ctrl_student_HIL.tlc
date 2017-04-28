@@ -7,11 +7,17 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   0 \
+    NumChartData   1 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "backwards"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
     }\
   }
   %return ChartDataElements
