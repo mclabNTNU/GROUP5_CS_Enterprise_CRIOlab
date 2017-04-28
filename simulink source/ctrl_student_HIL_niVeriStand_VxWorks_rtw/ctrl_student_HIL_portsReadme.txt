@@ -1,5 +1,4 @@
 	<portlist>
-<inport> id="-1"  name = "enableController" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "from ship/X_pos" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "from ship/Y_pos" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "from ship/Psi_pos" width = "1" datatype = "0"</inport>
@@ -10,8 +9,8 @@
 <inport> id="-1"  name = "Guidance and control/Guidance/switch_keep_pos" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_r" width = "2" datatype = "14"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_c" width = "2" datatype = "14"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_constant_heading_on_off" width = "1" datatype = "55"</inport>
-<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_heading" width = "1" datatype = "55"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_constant_heading_on_off" width = "1" datatype = "52"</inport>
+<inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_heading" width = "1" datatype = "52"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/ellipsoid_eta_0" width = "3" datatype = "25"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/switch_straight_ellipsoid" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/straight_eta_d_0" width = "2" datatype = "14"</inport>
@@ -19,7 +18,8 @@
 <inport> id="-1"  name = "Guidance and control/Guidance/stop_at_pos" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/mu" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "Guidance and control/Guidance/u_ref" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "Guidance and control/Control/C_2" width = "1" datatype = "55"</inport>
+<inport> id="-1"  name = "Guidance and control/Control/C_2" width = "1" datatype = "52"</inport>
+<inport> id="-1"  name = "enableController" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/L2_continuous" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosXRight" width = "1" datatype = "0"</inport>
 <inport> id="-1"  name = "joystick/PosYRight" width = "1" datatype = "0"</inport>
@@ -41,18 +41,15 @@
 <inport> id="-1"  name = "Luenberger Observer/L_1" width = "9" datatype = "18"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_2" width = "9" datatype = "18"</inport>
 <inport> id="-1"  name = "Luenberger Observer/L_3" width = "9" datatype = "18"</inport>
-<inport> id="-1"  name = "from model/y_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "from model/psi_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "from model/x_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "from model/r_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "from model/u_in" width = "1" datatype = "0"</inport>
-<inport> id="-1"  name = "from model/v_in" width = "1" datatype = "0"</inport>
 <outport> id = "-1" name = "from ship/meas_out" width = "3" datatype = "32"</outport>
 <outport> id = "-1" name = "Guidance and control/Control/alpha" width = "3" datatype = "25"</outport>
+<outport> id = "-1" name = "Guidance and control/Control/Z_1" width = "3" datatype = "25"</outport>
+<outport> id = "-1" name = "Guidance and control/Control/Z_2" width = "3" datatype = "25"</outport>
 <outport> id = "-1" name = "Guidance and control/Guidance/s" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "tau_out" width = "3" datatype = "25"</outport>
-<outport> id = "-1" name = "x_hat" width = "9" datatype = "30"</outport>
+<outport> id = "-1" name = "alpha" width = "3" datatype = "25"</outport>
 <outport> id = "-1" name = "tau_control" width = "3" datatype = "25"</outport>
+<outport> id = "-1" name = "x_hat" width = "9" datatype = "30"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP1" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP2" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/omega_VSP1" width = "1" datatype = "0"</outport>
