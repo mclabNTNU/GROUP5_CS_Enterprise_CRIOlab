@@ -15,11 +15,11 @@ Par.Workspace.y_max = Par.Workspace.y_max_limit - Par.Workspace.threshold;
 
 %% noise and dropout
 Par.Noise.Enable = 1;
-Par.Noise.power = 1e-4;
+Par.Noise.Power = 1e-4;
 Par.Noise.Sample_freq = 100;
 
 Par.Freeze.Enable = 0;
-Par.Freeze.length = 1.5;
+Par.Freeze.length = 2;
 Par.Freeze.threshold = 8;%3.0;
 Par.Freeze.Power = 1;
 Par.Sample_time = 1/Par.Noise.Sample_freq;

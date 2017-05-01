@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.271
+ * Model version              : 1.278
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Fri Apr 28 12:01:18 2017
+ * C source code generated on : Mon May 01 10:07:39 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -43,14 +43,14 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_FIFD4OBMD9VWlACOsEb4SC_
-#define _DEFINED_TYPEDEF_FOR_struct_FIFD4OBMD9VWlACOsEb4SC_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_W7bGe9hrFlvilVo92SnI2F_
+#define _DEFINED_TYPEDEF_FOR_struct_W7bGe9hrFlvilVo92SnI2F_
 
 typedef struct {
   real_T Enable;
-  real_T power;
+  real_T Power;
   real_T Sample_freq;
-} struct_FIFD4OBMD9VWlACOsEb4SC;
+} struct_W7bGe9hrFlvilVo92SnI2F;
 
 #endif
 
@@ -110,19 +110,19 @@ typedef struct {
 
 #endif
 
-#ifndef _DEFINED_TYPEDEF_FOR_struct_ugpof3UgEA54frSa7owjeE_
-#define _DEFINED_TYPEDEF_FOR_struct_ugpof3UgEA54frSa7owjeE_
+#ifndef _DEFINED_TYPEDEF_FOR_struct_yZ6rlkvAXRMRqZrgDo63T_
+#define _DEFINED_TYPEDEF_FOR_struct_yZ6rlkvAXRMRqZrgDo63T_
 
 typedef struct {
   struct_O2L20z72exSZsAYx6iSa3F Workspace;
-  struct_FIFD4OBMD9VWlACOsEb4SC Noise;
+  struct_W7bGe9hrFlvilVo92SnI2F Noise;
   struct_UqjEawrvuS8Txm2V5QOEXC Freeze;
   real_T Sample_time;
   real_T Thrust_lim[3];
   struct_m5RSTwsTQK5soBPAz6vCR Observer;
   struct_yOlW1NNwA91Ojwjtwi6OcE Model;
   struct_dG7PRX1V63dlz6vAPmePvC Guidance;
-} struct_ugpof3UgEA54frSa7owjeE;
+} struct_yZ6rlkvAXRMRqZrgDo63T;
 
 #endif
 
