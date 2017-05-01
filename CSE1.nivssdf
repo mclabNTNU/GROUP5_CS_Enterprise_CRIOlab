@@ -10,7 +10,7 @@
 				<String>CSE1</String>
 			</Property>
 			<Property Name="Version">
-				<String>1.0.0.307</String>
+				<String>1.0.0.323</String>
 			</Property>
 			<Property Name="Creator">
 				<String />
@@ -958,111 +958,6 @@
 							</DefaultValue>
 						</Channel>
 						<Channel Name="Square" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-					</Section>
-					<Section Name="Oqus" TypeGUID="35f2e757-0c29-4d89-97e9-6f9421cf693d">
-						<Description />
-						<Properties>
-							<Property Name="CD Status">
-								<U32>1</U32>
-							</Property>
-							<Property Name="Driver VI Exec Mode">
-								<U32>1</U32>
-							</Property>
-							<Property Name="Driver VI Path_0">
-								<DependentFile Type="To Common Doc Dir" Path="Custom Devices\Oqus\Oqus Engine - VxWorks.llb\Oqus RT Driver VI.vi">
-									<Version>1.0</Version>
-									<ForceDownload>false</ForceDownload>
-									<RTDestination>c:\ni-rt\NIVeriStand\Custom Devices\Oqus\Oqus Engine - VxWorks.llb\Oqus RT Driver VI.vi</RTDestination>
-									<SupportedTarget>VxWorks</SupportedTarget>
-									<MD5 />
-								</DependentFile>
-							</Property>
-							<Property Name="Driver VI Path_1">
-								<DependentFile Type="To Common Doc Dir" Path="Custom Devices\Oqus\Oqus Engine.llb\Oqus RT Driver VI.vi">
-									<Version>1.0</Version>
-									<ForceDownload>false</ForceDownload>
-									<RTDestination>c:\ni-rt\NIVeriStand\Custom Devices\Oqus\Oqus Engine.llb\Oqus RT Driver VI.vi</RTDestination>
-									<SupportedTarget>PharLap &amp; Windows</SupportedTarget>
-									<MD5 />
-								</DependentFile>
-							</Property>
-							<Property Name="Version">
-								<String>1.0</String>
-							</Property>
-						</Properties>
-						<Errors />
-						<Channel Name="Framecnt" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Error" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="X" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Y" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Z" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Roll" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Pictch" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Yaw" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
-							<Description />
-							<Properties />
-							<Errors />
-							<DefaultValue>
-								<Elem>0</Elem>
-							</DefaultValue>
-						</Channel>
-						<Channel Name="Residual" TypeGUID="03D3BB99-1485-13A6-561D1F898F032919" RowDim="1" ColDim="1" Units="" BitFields="1">
 							<Description />
 							<Properties />
 							<Errors />
@@ -5302,10 +5197,10 @@
 									<Double>10000</Double>
 								</Property>
 								<Property Name="DLL Size">
-									<I32>316581</I32>
+									<I32>318257</I32>
 								</Property>
 								<Property Name="DLL Timestamp">
-									<Double>3576470871.768909</Double>
+									<Double>3576479339.7806916</Double>
 								</Property>
 								<Property Name="Decimation">
 									<I32>1</I32>
@@ -5349,7 +5244,7 @@
 										<ForceDownload>false</ForceDownload>
 										<RTDestination>c:\ni-rt\system\ctrl_student_HIL.out</RTDestination>
 										<SupportedTarget>VxWorks</SupportedTarget>
-										<MD5>f8eaa552acc34309200a0e89ded38459</MD5>
+										<MD5>a1309cc57c75394816d4271c4a317823</MD5>
 									</DependentFile>
 								</Property>
 								<Property Name="GlobalParameterScopes">
@@ -6630,6 +6525,9 @@
 											<Property Name="Index">
 												<I32>1</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/x" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -6644,6 +6542,9 @@
 											</Property>
 											<Property Name="Index">
 												<I32>2</I32>
+											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/y" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -6660,6 +6561,9 @@
 											<Property Name="Index">
 												<I32>3</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/eta/psi" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -6674,6 +6578,9 @@
 											</Property>
 											<Property Name="Index">
 												<I32>5</I32>
+											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/r" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -6690,6 +6597,9 @@
 											<Property Name="Index">
 												<I32>6</I32>
 											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/u" />
+											</Property>
 										</Properties>
 										<Errors />
 										<DefaultValue>
@@ -6704,6 +6614,9 @@
 											</Property>
 											<Property Name="Index">
 												<I32>7</I32>
+											</Property>
+											<Property Name="DataSource">
+												<DataSourceNode Channel="Targets/Controller/Simulation Models/Models/CSE1_HIL_tau/Outports/nu/v" />
 											</Property>
 										</Properties>
 										<Errors />
@@ -6853,7 +6766,7 @@
 												<String>Sixaxis2force/alpha_VSP1</String>
 											</Property>
 											<Property Name="Index">
-												<I32>58</I32>
+												<I32>59</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6868,7 +6781,7 @@
 												<String>Sixaxis2force/alpha_VSP2</String>
 											</Property>
 											<Property Name="Index">
-												<I32>59</I32>
+												<I32>60</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6883,7 +6796,7 @@
 												<String>Sixaxis2force/omega_VSP1</String>
 											</Property>
 											<Property Name="Index">
-												<I32>60</I32>
+												<I32>61</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6898,7 +6811,7 @@
 												<String>Sixaxis2force/omega_VSP2</String>
 											</Property>
 											<Property Name="Index">
-												<I32>61</I32>
+												<I32>62</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6913,7 +6826,7 @@
 												<String>Sixaxis2force/u_BT</String>
 											</Property>
 											<Property Name="Index">
-												<I32>62</I32>
+												<I32>63</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6928,7 +6841,7 @@
 												<String>Sixaxis2force/u_VSP1</String>
 											</Property>
 											<Property Name="Index">
-												<I32>63</I32>
+												<I32>64</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6943,7 +6856,7 @@
 												<String>Sixaxis2force/u_VSP2</String>
 											</Property>
 											<Property Name="Index">
-												<I32>64</I32>
+												<I32>65</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6963,7 +6876,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/X_d</String>
 											</Property>
 											<Property Name="Index">
-												<I32>66</I32>
+												<I32>67</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6978,7 +6891,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/N_d</String>
 											</Property>
 											<Property Name="Index">
-												<I32>67</I32>
+												<I32>68</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -6993,7 +6906,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/Y_d</String>
 											</Property>
 											<Property Name="Index">
-												<I32>68</I32>
+												<I32>69</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7008,7 +6921,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/psi_0 </String>
 											</Property>
 											<Property Name="Index">
-												<I32>69</I32>
+												<I32>70</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7023,7 +6936,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/x_0</String>
 											</Property>
 											<Property Name="Index">
-												<I32>70</I32>
+												<I32>71</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7038,7 +6951,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/y_0</String>
 											</Property>
 											<Property Name="Index">
-												<I32>71</I32>
+												<I32>72</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7053,7 +6966,7 @@
 												<String>tau to CSE mocell (only use for HIL testing)/integrator reset model</String>
 											</Property>
 											<Property Name="Index">
-												<I32>72</I32>
+												<I32>73</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7397,7 +7310,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7412,7 +7325,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7427,7 +7340,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7442,7 +7355,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7457,7 +7370,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7472,7 +7385,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7487,7 +7400,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7502,7 +7415,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7517,7 +7430,7 @@
 													<String>Luenberger Observer/obs out</String>
 												</Property>
 												<Property Name="Index">
-													<I32>73</I32>
+													<I32>74</I32>
 												</Property>
 											</Properties>
 											<Errors />
@@ -7748,7 +7661,7 @@
 												<String>Signal Dropout detection/Dropout_detected</String>
 											</Property>
 											<Property Name="Index">
-												<I32>74</I32>
+												<I32>75</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7943,7 +7856,7 @@
 												<String>eta_meas</String>
 											</Property>
 											<Property Name="Index">
-												<I32>65</I32>
+												<I32>58</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7958,7 +7871,7 @@
 												<String>eta_meas</String>
 											</Property>
 											<Property Name="Index">
-												<I32>65</I32>
+												<I32>58</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7973,7 +7886,7 @@
 												<String>eta_meas</String>
 											</Property>
 											<Property Name="Index">
-												<I32>65</I32>
+												<I32>58</I32>
 											</Property>
 										</Properties>
 										<Errors />
@@ -7982,6 +7895,21 @@
 										</DefaultValue>
 									</Channel>
 								</Section>
+								<Channel Name="dropout" TypeGUID="03D3B995-1485-13A6-56ABA0860ADF91DF" RowDim="1" ColDim="1" Units="" BitFields="5">
+									<Description />
+									<Properties>
+										<Property Name="Model Path">
+											<String>dropout</String>
+										</Property>
+										<Property Name="Index">
+											<I32>66</I32>
+										</Property>
+									</Properties>
+									<Errors />
+									<DefaultValue>
+										<Elem>0</Elem>
+									</DefaultValue>
+								</Channel>
 							</Section>
 							<Section Name="Parameters" TypeGUID="03D3BB0C-1485-13A6-56E10CEFF755E7D3">
 								<Description />

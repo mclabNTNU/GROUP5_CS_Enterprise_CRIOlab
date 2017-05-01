@@ -57,6 +57,7 @@
 <outport> id = "-1" name = "eta_d" width = "3" datatype = "30"</outport>
 <outport> id = "-1" name = "eta_model" width = "3" datatype = "32"</outport>
 <outport> id = "-1" name = "nu_model" width = "3" datatype = "32"</outport>
+<outport> id = "-1" name = "eta_meas" width = "3" datatype = "32"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP1" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/alpha_VSP2" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/omega_VSP1" width = "1" datatype = "0"</outport>
@@ -64,7 +65,7 @@
 <outport> id = "-1" name = "Sixaxis2force/u_BT" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/u_VSP1" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "Sixaxis2force/u_VSP2" width = "1" datatype = "0"</outport>
-<outport> id = "-1" name = "eta_meas" width = "3" datatype = "32"</outport>
+<outport> id = "-1" name = "dropout" width = "1" datatype = "0"</outport>
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/X_d" width = "1" datatype = "25"</outport>
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/N_d" width = "1" datatype = "25"</outport>
 <outport> id = "-1" name = "tau to CSE mocell (only use for HIL testing)/Y_d" width = "1" datatype = "25"</outport>

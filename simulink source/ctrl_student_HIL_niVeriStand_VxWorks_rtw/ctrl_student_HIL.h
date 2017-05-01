@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.278
+ * Model version              : 1.282
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon May 01 10:07:39 2017
+ * C source code generated on : Mon May 01 12:28:46 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -822,23 +822,23 @@
 /* Block signals (auto storage) */
 typedef struct {
   real_T Noisepower;                   /* '<S3>/Noise power ' */
-  real_T WhiteNoise;                   /* '<S36>/White Noise' */
-  real_T WhiteNoise_j;                 /* '<S37>/White Noise' */
-  real_T WhiteNoise_b;                 /* '<S35>/White Noise' */
+  real_T WhiteNoise;                   /* '<S37>/White Noise' */
+  real_T WhiteNoise_j;                 /* '<S38>/White Noise' */
+  real_T WhiteNoise_b;                 /* '<S36>/White Noise' */
   real_T x_in;                         /* '<S8>/x_in' */
   real_T y_in;                         /* '<S8>/y_in' */
   real_T psi_in;                       /* '<S8>/psi_in' */
   real_T TmpSignalConversionAteta_modelI[3];/* '<Root>/from model' */
-  real_T Hold[3];                      /* '<S31>/Hold' */
+  real_T Hold[3];                      /* '<S32>/Hold' */
   real_T Enablenoise;                  /* '<S3>/Enable noise' */
   real_T r_in;                         /* '<S8>/r_in' */
   real_T u_in;                         /* '<S8>/u_in' */
   real_T v_in;                         /* '<S8>/v_in' */
-  real_T Clock;                        /* '<S28>/Clock' */
-  real_T RandomNumber;                 /* '<S28>/Random Number' */
-  real_T Freezethreshold;              /* '<S28>/Freeze threshold' */
-  real_T Enabledropout;                /* '<S26>/Enable dropout' */
-  real_T Switch_f[3];                  /* '<S26>/Switch' */
+  real_T Clock;                        /* '<S29>/Clock' */
+  real_T RandomNumber;                 /* '<S29>/Random Number' */
+  real_T Freezethreshold;              /* '<S29>/Freeze threshold' */
+  real_T Enabledropout;                /* '<S27>/Enable dropout' */
+  real_T Switch_f[3];                  /* '<S27>/Switch' */
   real_T Model_reset;                  /* '<Root>/Model_reset' */
   real_T Integrator[9];                /* '<S2>/Integrator' */
   real_T K_p[9];                       /* '<S13>/K_p' */
@@ -884,8 +884,8 @@ typedef struct {
   real_T alpha_VSP;                    /* '<S5>/MATLAB Function1' */
   real_T u_BT;                         /* '<S5>/MATLAB Function1' */
   real_T dropout;                      /* '<S4>/Detect droput' */
-  real_T output[3];                    /* '<S31>/MATLAB Function1' */
-  real_T count;                        /* '<S30>/MATLAB Function' */
+  real_T output[3];                    /* '<S32>/MATLAB Function1' */
+  real_T count;                        /* '<S31>/MATLAB Function' */
   real_T x_hat_dot[9];                 /* '<S2>/Observer' */
   real_T s_dot;                        /* '<S14>/update law' */
   real_T U_s;                          /* '<S14>/update law' */
@@ -897,22 +897,22 @@ typedef struct {
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
-  real_T counter_PreviousInput;        /* '<S30>/counter' */
+  real_T counter_PreviousInput;        /* '<S31>/counter' */
   real_T Noisepower_DWORK1;            /* '<S3>/Noise power ' */
-  real_T NextOutput;                   /* '<S36>/White Noise' */
-  real_T NextOutput_f;                 /* '<S37>/White Noise' */
-  real_T NextOutput_m;                 /* '<S35>/White Noise' */
+  real_T NextOutput;                   /* '<S37>/White Noise' */
+  real_T NextOutput_f;                 /* '<S38>/White Noise' */
+  real_T NextOutput_m;                 /* '<S36>/White Noise' */
   real_T x_in_DWORK1;                  /* '<S8>/x_in' */
   real_T y_in_DWORK1;                  /* '<S8>/y_in' */
   real_T psi_in_DWORK1;                /* '<S8>/psi_in' */
-  real_T Hold_PreviousInput[3];        /* '<S31>/Hold' */
+  real_T Hold_PreviousInput[3];        /* '<S32>/Hold' */
   real_T Enablenoise_DWORK1;           /* '<S3>/Enable noise' */
   real_T r_in_DWORK1;                  /* '<S8>/r_in' */
   real_T u_in_DWORK1;                  /* '<S8>/u_in' */
   real_T v_in_DWORK1;                  /* '<S8>/v_in' */
-  real_T NextOutput_k;                 /* '<S28>/Random Number' */
-  real_T Freezethreshold_DWORK1;       /* '<S28>/Freeze threshold' */
-  real_T Enabledropout_DWORK1;         /* '<S26>/Enable dropout' */
+  real_T NextOutput_k;                 /* '<S29>/Random Number' */
+  real_T Freezethreshold_DWORK1;       /* '<S29>/Freeze threshold' */
+  real_T Enabledropout_DWORK1;         /* '<S27>/Enable dropout' */
   real_T Model_reset_DWORK1;           /* '<Root>/Model_reset' */
   real_T K_p_DWORK1[9];                /* '<S13>/K_p' */
   real_T ellipsoid_r_DWORK1[2];        /* '<S14>/ellipsoid_r' */
@@ -962,6 +962,7 @@ typedef struct {
   real_T eta_d_DWORK1[3];              /* '<Root>/eta_d' */
   real_T eta_model_DWORK1[3];          /* '<Root>/eta_model' */
   real_T nu_model_DWORK1[3];           /* '<Root>/nu_model' */
+  real_T eta_meas_DWORK1[3];           /* '<Root>/eta_meas' */
   real_T alpha_VSP1_DWORK1;            /* '<S5>/alpha_VSP1' */
   real_T alpha_VSP2_DWORK1;            /* '<S5>/alpha_VSP2' */
   real_T omega_VSP1_DWORK1;            /* '<S5>/omega_VSP1' */
@@ -969,7 +970,7 @@ typedef struct {
   real_T u_BT_DWORK1;                  /* '<S5>/u_BT' */
   real_T u_VSP1_DWORK1;                /* '<S5>/u_VSP1' */
   real_T u_VSP2_DWORK1;                /* '<S5>/u_VSP2' */
-  real_T eta_meas_DWORK1[3];           /* '<Root>/eta_meas' */
+  real_T dropout_DWORK1;               /* '<Root>/dropout' */
   real_T X_d_DWORK1;                   /* '<S11>/X_d' */
   real_T N_d_DWORK1;                   /* '<S11>/N_d' */
   real_T Y_d_DWORK1;                   /* '<S11>/Y_d' */
@@ -983,19 +984,19 @@ typedef struct {
   real_T obsout_DWORK1[9];             /* '<S2>/obs out' */
   real_T Dropout_detected_DWORK1;      /* '<S4>/Dropout_detected' */
   real_T eta_old[3];                   /* '<S4>/Detect droput' */
-  real_T eta[3];                       /* '<S28>/Freeze signal' */
-  real_T t_1;                          /* '<S28>/Freeze signal' */
+  real_T eta[3];                       /* '<S29>/Freeze signal' */
+  real_T t_1;                          /* '<S29>/Freeze signal' */
   real_T backwards;                    /* '<S14>/update law' */
   real_T psi_old;                      /* '<S14>/eta_d_ellipsoid' */
   int32_T NIVeriStandSignalProbe_DWORK2;/* '<Root>/NIVeriStandSignalProbe' */
-  uint32_T RandSeed;                   /* '<S36>/White Noise' */
-  uint32_T RandSeed_o;                 /* '<S37>/White Noise' */
-  uint32_T RandSeed_b;                 /* '<S35>/White Noise' */
-  uint32_T RandSeed_ow;                /* '<S28>/Random Number' */
-  uint32_T method;                     /* '<S28>/Freeze signal' */
-  uint32_T state;                      /* '<S28>/Freeze signal' */
-  uint32_T state_f[2];                 /* '<S28>/Freeze signal' */
-  uint32_T state_d[625];               /* '<S28>/Freeze signal' */
+  uint32_T RandSeed;                   /* '<S37>/White Noise' */
+  uint32_T RandSeed_o;                 /* '<S38>/White Noise' */
+  uint32_T RandSeed_b;                 /* '<S36>/White Noise' */
+  uint32_T RandSeed_ow;                /* '<S29>/Random Number' */
+  uint32_T method;                     /* '<S29>/Freeze signal' */
+  uint32_T state;                      /* '<S29>/Freeze signal' */
+  uint32_T state_f[2];                 /* '<S29>/Freeze signal' */
+  uint32_T state_d[625];               /* '<S29>/Freeze signal' */
   struct {
     int_T IcNeedsLoading;
   } Integrator_IWORK;                  /* '<S2>/Integrator' */
@@ -1008,8 +1009,8 @@ typedef struct {
   uint8_T r_in_DWORK2[17];             /* '<S8>/r_in' */
   uint8_T u_in_DWORK2[17];             /* '<S8>/u_in' */
   uint8_T v_in_DWORK2[17];             /* '<S8>/v_in' */
-  uint8_T Freezethreshold_DWORK2[17];  /* '<S28>/Freeze threshold' */
-  uint8_T Enabledropout_DWORK2[17];    /* '<S26>/Enable dropout' */
+  uint8_T Freezethreshold_DWORK2[17];  /* '<S29>/Freeze threshold' */
+  uint8_T Enabledropout_DWORK2[17];    /* '<S27>/Enable dropout' */
   uint8_T Model_reset_DWORK2[17];      /* '<Root>/Model_reset' */
   uint8_T K_p_DWORK2[17];              /* '<S13>/K_p' */
   uint8_T ellipsoid_r_DWORK2[17];      /* '<S14>/ellipsoid_r' */
@@ -1055,6 +1056,7 @@ typedef struct {
   uint8_T eta_d_DWORK2[17];            /* '<Root>/eta_d' */
   uint8_T eta_model_DWORK2[17];        /* '<Root>/eta_model' */
   uint8_T nu_model_DWORK2[17];         /* '<Root>/nu_model' */
+  uint8_T eta_meas_DWORK2[17];         /* '<Root>/eta_meas' */
   uint8_T alpha_VSP1_DWORK2[17];       /* '<S5>/alpha_VSP1' */
   uint8_T alpha_VSP2_DWORK2[17];       /* '<S5>/alpha_VSP2' */
   uint8_T omega_VSP1_DWORK2[17];       /* '<S5>/omega_VSP1' */
@@ -1062,7 +1064,7 @@ typedef struct {
   uint8_T u_BT_DWORK2[17];             /* '<S5>/u_BT' */
   uint8_T u_VSP1_DWORK2[17];           /* '<S5>/u_VSP1' */
   uint8_T u_VSP2_DWORK2[17];           /* '<S5>/u_VSP2' */
-  uint8_T eta_meas_DWORK2[17];         /* '<Root>/eta_meas' */
+  uint8_T dropout_DWORK2[17];          /* '<Root>/dropout' */
   uint8_T X_d_DWORK2[17];              /* '<S11>/X_d' */
   uint8_T N_d_DWORK2[17];              /* '<S11>/N_d' */
   uint8_T Y_d_DWORK2[17];              /* '<S11>/Y_d' */
@@ -1078,8 +1080,8 @@ typedef struct {
   uint8_T NIVeriStandSignalProbe_DWORK1[17];/* '<Root>/NIVeriStandSignalProbe' */
   uint8_T NIVeriStandSignalProbe_DWORK3[60];/* '<Root>/NIVeriStandSignalProbe' */
   boolean_T eta_old_not_empty;         /* '<S4>/Detect droput' */
-  boolean_T eta_not_empty;             /* '<S28>/Freeze signal' */
-  boolean_T state_not_empty;           /* '<S28>/Freeze signal' */
+  boolean_T eta_not_empty;             /* '<S29>/Freeze signal' */
+  boolean_T state_not_empty;           /* '<S29>/Freeze signal' */
   boolean_T psi_old_not_empty;         /* '<S14>/eta_d_ellipsoid' */
 } DW_ctrl_student_HIL_T;
 
@@ -1140,7 +1142,7 @@ struct P_ctrl_student_HIL_T_ {
                                         * Referenced by:
                                         *   '<S10>/Gain1'
                                         *   '<S11>/Saturation1'
-                                        *   '<S28>/Constant1'
+                                        *   '<S29>/Constant1'
                                         */
   real_T Gain2_Gain;                   /* Expression: -1
                                         * Referenced by: '<S10>/Gain2'
@@ -1155,10 +1157,10 @@ struct P_ctrl_student_HIL_T_ {
                                         * Referenced by: '<S3>/Constant'
                                         */
   real_T Stepsize_Value;               /* Expression: 0.01
-                                        * Referenced by: '<S27>/Step size'
+                                        * Referenced by: '<S28>/Step size'
                                         */
   real_T counter_X0;                   /* Expression: 0
-                                        * Referenced by: '<S30>/counter'
+                                        * Referenced by: '<S31>/counter'
                                         */
   real_T Noisepower_P1;                /* Expression: width
                                         * Referenced by: '<S3>/Noise power '
@@ -1179,34 +1181,34 @@ struct P_ctrl_student_HIL_T_ {
                                         * Referenced by: '<S3>/Noise power '
                                         */
   real_T WhiteNoise_Mean;              /* Expression: 0
-                                        * Referenced by: '<S36>/White Noise'
+                                        * Referenced by: '<S37>/White Noise'
                                         */
   real_T WhiteNoise_StdDev;            /* Computed Parameter: WhiteNoise_StdDev
-                                        * Referenced by: '<S36>/White Noise'
+                                        * Referenced by: '<S37>/White Noise'
                                         */
   real_T WhiteNoise_Seed;              /* Expression: 9024
-                                        * Referenced by: '<S36>/White Noise'
+                                        * Referenced by: '<S37>/White Noise'
                                         */
   real_T WhiteNoise_Mean_m;            /* Expression: 0
-                                        * Referenced by: '<S37>/White Noise'
+                                        * Referenced by: '<S38>/White Noise'
                                         */
   real_T WhiteNoise_StdDev_p;          /* Computed Parameter: WhiteNoise_StdDev_p
-                                        * Referenced by: '<S37>/White Noise'
+                                        * Referenced by: '<S38>/White Noise'
                                         */
   real_T WhiteNoise_Seed_o;            /* Expression: 123
-                                        * Referenced by: '<S37>/White Noise'
+                                        * Referenced by: '<S38>/White Noise'
                                         */
   real_T Gain_Gain;                    /* Expression: 1/10
                                         * Referenced by: '<S3>/Gain'
                                         */
   real_T WhiteNoise_Mean_h;            /* Expression: 0
-                                        * Referenced by: '<S35>/White Noise'
+                                        * Referenced by: '<S36>/White Noise'
                                         */
   real_T WhiteNoise_StdDev_h;          /* Computed Parameter: WhiteNoise_StdDev_h
-                                        * Referenced by: '<S35>/White Noise'
+                                        * Referenced by: '<S36>/White Noise'
                                         */
   real_T WhiteNoise_Seed_c;            /* Expression: 9025
-                                        * Referenced by: '<S35>/White Noise'
+                                        * Referenced by: '<S36>/White Noise'
                                         */
   real_T x_in_P1;                      /* Expression: width
                                         * Referenced by: '<S8>/x_in'
@@ -1263,7 +1265,7 @@ struct P_ctrl_student_HIL_T_ {
                                         * Referenced by: '<S8>/psi_in'
                                         */
   real_T Hold_X0;                      /* Expression: 0
-                                        * Referenced by: '<S31>/Hold'
+                                        * Referenced by: '<S32>/Hold'
                                         */
   real_T Enablenoise_P1;               /* Expression: width
                                         * Referenced by: '<S3>/Enable noise'
@@ -1338,52 +1340,52 @@ struct P_ctrl_student_HIL_T_ {
                                         * Referenced by: '<S8>/v_in'
                                         */
   real_T RandomNumber_Mean;            /* Expression: 0
-                                        * Referenced by: '<S28>/Random Number'
+                                        * Referenced by: '<S29>/Random Number'
                                         */
   real_T RandomNumber_StdDev;          /* Computed Parameter: RandomNumber_StdDev
-                                        * Referenced by: '<S28>/Random Number'
+                                        * Referenced by: '<S29>/Random Number'
                                         */
   real_T RandomNumber_Seed;            /* Expression: ceil(abs(5*round(abs(now*1e6 - fix(now*1e6))*1e5)))
-                                        * Referenced by: '<S28>/Random Number'
+                                        * Referenced by: '<S29>/Random Number'
                                         */
   real_T Freezethreshold_P1;           /* Expression: width
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Freezethreshold_P2;           /* Expression: dtype
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Freezethreshold_P3;           /* Expression: portnum
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Freezethreshold_P4;           /* Expression: stime
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Freezethreshold_P5;           /* Expression: stype
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Freezethreshold_P6;           /* Expression: btype
-                                        * Referenced by: '<S28>/Freeze threshold'
+                                        * Referenced by: '<S29>/Freeze threshold'
                                         */
   real_T Enabledropout_P1;             /* Expression: width
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Enabledropout_P2;             /* Expression: dtype
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Enabledropout_P3;             /* Expression: portnum
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Enabledropout_P4;             /* Expression: stime
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Enabledropout_P5;             /* Expression: stype
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Enabledropout_P6;             /* Expression: btype
-                                        * Referenced by: '<S26>/Enable dropout'
+                                        * Referenced by: '<S27>/Enable dropout'
                                         */
   real_T Switch_Threshold;             /* Expression: 0
-                                        * Referenced by: '<S26>/Switch'
+                                        * Referenced by: '<S27>/Switch'
                                         */
   real_T Constant_Value_c[6];          /* Expression: zeros(6,1)
                                         * Referenced by: '<S2>/Constant'
@@ -2204,6 +2206,24 @@ struct P_ctrl_student_HIL_T_ {
   real_T nu_model_P6;                  /* Expression: btype
                                         * Referenced by: '<Root>/nu_model'
                                         */
+  real_T eta_meas_P1;                  /* Expression: width
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
+  real_T eta_meas_P2;                  /* Expression: dtype
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
+  real_T eta_meas_P3;                  /* Expression: portnum
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
+  real_T eta_meas_P4;                  /* Expression: stime
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
+  real_T eta_meas_P5;                  /* Expression: stype
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
+  real_T eta_meas_P6;                  /* Expression: btype
+                                        * Referenced by: '<Root>/eta_meas'
+                                        */
   real_T InverseofT_Value[9];          /* Expression: inv([1 0 0; 0 1 1; 0 -0.4575 0.3875])
                                         * Referenced by: '<S6>/Inverse of T'
                                         */
@@ -2336,23 +2356,23 @@ struct P_ctrl_student_HIL_T_ {
   real_T u_VSP2_P6;                    /* Expression: btype
                                         * Referenced by: '<S5>/u_VSP2'
                                         */
-  real_T eta_meas_P1;                  /* Expression: width
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P1;                   /* Expression: width
+                                        * Referenced by: '<Root>/dropout'
                                         */
-  real_T eta_meas_P2;                  /* Expression: dtype
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P2;                   /* Expression: dtype
+                                        * Referenced by: '<Root>/dropout'
                                         */
-  real_T eta_meas_P3;                  /* Expression: portnum
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P3;                   /* Expression: portnum
+                                        * Referenced by: '<Root>/dropout'
                                         */
-  real_T eta_meas_P4;                  /* Expression: stime
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P4;                   /* Expression: stime
+                                        * Referenced by: '<Root>/dropout'
                                         */
-  real_T eta_meas_P5;                  /* Expression: stype
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P5;                   /* Expression: stype
+                                        * Referenced by: '<Root>/dropout'
                                         */
-  real_T eta_meas_P6;                  /* Expression: btype
-                                        * Referenced by: '<Root>/eta_meas'
+  real_T dropout_P6;                   /* Expression: btype
+                                        * Referenced by: '<Root>/dropout'
                                         */
   real_T X_d_P1;                       /* Expression: width
                                         * Referenced by: '<S11>/X_d'
@@ -2766,34 +2786,35 @@ extern RT_MODEL_ctrl_student_HIL_T *const ctrl_student_HIL_M;
  * '<S19>'  : 'ctrl_student_HIL/Guidance and control/Control/z_1'
  * '<S20>'  : 'ctrl_student_HIL/Guidance and control/Control/z_1_dot'
  * '<S21>'  : 'ctrl_student_HIL/Guidance and control/Control/z_2'
- * '<S22>'  : 'ctrl_student_HIL/Guidance and control/Guidance/eta_d_ellipsoid'
- * '<S23>'  : 'ctrl_student_HIL/Guidance and control/Guidance/eta_d_straightline'
- * '<S24>'  : 'ctrl_student_HIL/Guidance and control/Guidance/update law'
- * '<S25>'  : 'ctrl_student_HIL/Luenberger Observer/Observer'
- * '<S26>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation'
- * '<S27>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator'
- * '<S28>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation/Freeze Signal '
- * '<S29>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal'
- * '<S30>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Downsample	signal'
- * '<S31>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Sample & hold'
- * '<S32>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator'
- * '<S33>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Downsample	signal/MATLAB Function'
- * '<S34>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Sample & hold/MATLAB Function1'
- * '<S35>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise psi'
- * '<S36>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise x'
- * '<S37>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise y'
- * '<S38>'  : 'ctrl_student_HIL/Signal Dropout detection/Detect droput'
- * '<S39>'  : 'ctrl_student_HIL/Sixaxis2force/MATLAB Function1'
- * '<S40>'  : 'ctrl_student_HIL/Thrust Allocation/MATLAB Function'
- * '<S41>'  : 'ctrl_student_HIL/Workspace saturation1/MATLAB Function'
- * '<S42>'  : 'ctrl_student_HIL/from ship/MATLAB Function'
- * '<S43>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation1'
- * '<S44>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation2'
- * '<S45>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation4'
- * '<S46>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Limited allocation: VSP only  in surge and BT only in yaw'
- * '<S47>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship'
- * '<S48>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/control limit checking'
- * '<S49>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/u'
+ * '<S22>'  : 'ctrl_student_HIL/Guidance and control/Guidance/MATLAB Function'
+ * '<S23>'  : 'ctrl_student_HIL/Guidance and control/Guidance/eta_d_ellipsoid'
+ * '<S24>'  : 'ctrl_student_HIL/Guidance and control/Guidance/eta_d_straightline'
+ * '<S25>'  : 'ctrl_student_HIL/Guidance and control/Guidance/update law'
+ * '<S26>'  : 'ctrl_student_HIL/Luenberger Observer/Observer'
+ * '<S27>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation'
+ * '<S28>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator'
+ * '<S29>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation/Freeze Signal '
+ * '<S30>'  : 'ctrl_student_HIL/Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal'
+ * '<S31>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Downsample	signal'
+ * '<S32>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Sample & hold'
+ * '<S33>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator'
+ * '<S34>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Downsample	signal/MATLAB Function'
+ * '<S35>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/Sample & hold/MATLAB Function1'
+ * '<S36>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise psi'
+ * '<S37>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise x'
+ * '<S38>'  : 'ctrl_student_HIL/Noise and dropout generation/Noise generator/noise generator/Band-limited white noise y'
+ * '<S39>'  : 'ctrl_student_HIL/Signal Dropout detection/Detect droput'
+ * '<S40>'  : 'ctrl_student_HIL/Sixaxis2force/MATLAB Function1'
+ * '<S41>'  : 'ctrl_student_HIL/Thrust Allocation/MATLAB Function'
+ * '<S42>'  : 'ctrl_student_HIL/Workspace saturation1/MATLAB Function'
+ * '<S43>'  : 'ctrl_student_HIL/from ship/MATLAB Function'
+ * '<S44>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation1'
+ * '<S45>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation2'
+ * '<S46>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Full thrust allocation4'
+ * '<S47>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/Limited allocation: VSP only  in surge and BT only in yaw'
+ * '<S48>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship'
+ * '<S49>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/control limit checking'
+ * '<S50>'  : 'ctrl_student_HIL/tau to real ship (only use in MCLab)/To thruster of real ship/u'
  */
 #endif                                 /* RTW_HEADER_ctrl_student_HIL_h_ */
 

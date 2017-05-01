@@ -7,9 +7,9 @@
  *
  * Code generation for model "ctrl_student_HIL".
  *
- * Model version              : 1.278
+ * Model version              : 1.282
  * Simulink Coder version : 8.8 (R2015a) 09-Feb-2015
- * C source code generated on : Mon May 01 10:07:39 2017
+ * C source code generated on : Mon May 01 12:28:46 2017
  *
  * Target selection: NIVeriStand_VxWorks.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -156,7 +156,7 @@ real_T rt_nrand_Upu32_Yd_f_pw_snf(uint32_T *u)
   return y;
 }
 
-/* Function for MATLAB Function: '<S28>/Freeze signal' */
+/* Function for MATLAB Function: '<S29>/Freeze signal' */
 static void ctrl_stude_twister_state_vector(uint32_T mt[625], real_T seed)
 {
   uint32_T r;
@@ -180,7 +180,7 @@ static void ctrl_stude_twister_state_vector(uint32_T mt[625], real_T seed)
   mt[624] = 624U;
 }
 
-/* Function for MATLAB Function: '<S28>/Freeze signal' */
+/* Function for MATLAB Function: '<S29>/Freeze signal' */
 static real_T ctrl_student_eml_rand_mt19937ar(uint32_T state[625])
 {
   real_T r;
@@ -309,7 +309,7 @@ static real_T ctrl_student_eml_rand_mt19937ar(uint32_T state[625])
   return r;
 }
 
-/* Function for MATLAB Function: '<S28>/Freeze signal' */
+/* Function for MATLAB Function: '<S29>/Freeze signal' */
 static real_T ctrl_student_HIL_rand(void)
 {
   real_T r;
@@ -446,35 +446,35 @@ void ctrl_student_HIL_output(void)
   }
 
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
-    /* MATLAB Function: '<S30>/MATLAB Function' incorporates:
-     *  Constant: '<S27>/Step size'
+    /* MATLAB Function: '<S31>/MATLAB Function' incorporates:
+     *  Constant: '<S28>/Step size'
      *  Constant: '<S3>/Constant'
-     *  Memory: '<S30>/counter'
+     *  Memory: '<S31>/counter'
      */
-    /* MATLAB Function 'Noise and dropout generation/Noise generator/Downsample	signal/MATLAB Function': '<S33>:1' */
-    /* '<S33>:1:3' */
+    /* MATLAB Function 'Noise and dropout generation/Noise generator/Downsample	signal/MATLAB Function': '<S34>:1' */
+    /* '<S34>:1:3' */
     if ((ctrl_student_HIL_DW.counter_PreviousInput + 1.0) *
         ctrl_student_HIL_P.Stepsize_Value >= 1.0 /
         ctrl_student_HIL_P.Constant_Value) {
-      /* '<S33>:1:4' */
-      /* '<S33>:1:5' */
+      /* '<S34>:1:4' */
+      /* '<S34>:1:5' */
       ctrl_student_HIL_B.count = 0.0;
     } else {
-      /* '<S33>:1:7' */
+      /* '<S34>:1:7' */
       ctrl_student_HIL_B.count = ctrl_student_HIL_DW.counter_PreviousInput + 1.0;
     }
 
-    /* End of MATLAB Function: '<S30>/MATLAB Function' */
+    /* End of MATLAB Function: '<S31>/MATLAB Function' */
   }
 
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
-    /* RandomNumber: '<S36>/White Noise' */
+    /* RandomNumber: '<S37>/White Noise' */
     ctrl_student_HIL_B.WhiteNoise = ctrl_student_HIL_DW.NextOutput;
 
-    /* RandomNumber: '<S37>/White Noise' */
+    /* RandomNumber: '<S38>/White Noise' */
     ctrl_student_HIL_B.WhiteNoise_j = ctrl_student_HIL_DW.NextOutput_f;
 
-    /* RandomNumber: '<S35>/White Noise' */
+    /* RandomNumber: '<S36>/White Noise' */
     ctrl_student_HIL_B.WhiteNoise_b = ctrl_student_HIL_DW.NextOutput_m;
   }
 
@@ -486,30 +486,30 @@ void ctrl_student_HIL_output(void)
   ctrl_student_HIL_B.TmpSignalConversionAteta_modelI[2] =
     ctrl_student_HIL_B.psi_in;
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
-    /* Memory: '<S31>/Hold' */
+    /* Memory: '<S32>/Hold' */
     ctrl_student_HIL_B.Hold[0] = ctrl_student_HIL_DW.Hold_PreviousInput[0];
     ctrl_student_HIL_B.Hold[1] = ctrl_student_HIL_DW.Hold_PreviousInput[1];
     ctrl_student_HIL_B.Hold[2] = ctrl_student_HIL_DW.Hold_PreviousInput[2];
   }
 
-  /* MATLAB Function: '<S31>/MATLAB Function1' incorporates:
-   *  Constant: '<S27>/Step size'
+  /* MATLAB Function: '<S32>/MATLAB Function1' incorporates:
+   *  Constant: '<S28>/Step size'
    *  Gain: '<S3>/Gain'
-   *  Product: '<S35>/Divide'
-   *  Product: '<S35>/Product'
    *  Product: '<S36>/Divide'
    *  Product: '<S36>/Product'
    *  Product: '<S37>/Divide'
    *  Product: '<S37>/Product'
-   *  Sqrt: '<S35>/Sqrt'
+   *  Product: '<S38>/Divide'
+   *  Product: '<S38>/Product'
    *  Sqrt: '<S36>/Sqrt'
    *  Sqrt: '<S37>/Sqrt'
-   *  Sum: '<S27>/Sum'
+   *  Sqrt: '<S38>/Sqrt'
+   *  Sum: '<S28>/Sum'
    */
-  /* MATLAB Function 'Noise and dropout generation/Noise generator/Sample & hold/MATLAB Function1': '<S34>:1' */
+  /* MATLAB Function 'Noise and dropout generation/Noise generator/Sample & hold/MATLAB Function1': '<S35>:1' */
   if (ctrl_student_HIL_B.count == 0.0) {
-    /* '<S34>:1:4' */
-    /* '<S34>:1:5' */
+    /* '<S35>:1:4' */
+    /* '<S35>:1:5' */
     ctrl_student_HIL_B.output[0] = sqrt(ctrl_student_HIL_B.Noisepower /
       ctrl_student_HIL_P.Stepsize_Value) * ctrl_student_HIL_B.WhiteNoise +
       ctrl_student_HIL_B.TmpSignalConversionAteta_modelI[0];
@@ -521,17 +521,17 @@ void ctrl_student_HIL_output(void)
       ctrl_student_HIL_B.WhiteNoise_b +
       ctrl_student_HIL_B.TmpSignalConversionAteta_modelI[2];
   } else {
-    /* '<S34>:1:7' */
+    /* '<S35>:1:7' */
     ctrl_student_HIL_B.output[0] = ctrl_student_HIL_B.Hold[0];
     ctrl_student_HIL_B.output[1] = ctrl_student_HIL_B.Hold[1];
     ctrl_student_HIL_B.output[2] = ctrl_student_HIL_B.Hold[2];
   }
 
-  /* End of MATLAB Function: '<S31>/MATLAB Function1' */
+  /* End of MATLAB Function: '<S32>/MATLAB Function1' */
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
   }
 
-  /* Switch: '<S27>/Switch' */
+  /* Switch: '<S28>/Switch' */
   if (ctrl_student_HIL_B.Enablenoise != 0.0) {
     Switch[0] = ctrl_student_HIL_B.output[0];
     Switch[1] = ctrl_student_HIL_B.output[1];
@@ -542,25 +542,25 @@ void ctrl_student_HIL_output(void)
     Switch[2] = ctrl_student_HIL_B.TmpSignalConversionAteta_modelI[2];
   }
 
-  /* End of Switch: '<S27>/Switch' */
+  /* End of Switch: '<S28>/Switch' */
 
-  /* Clock: '<S28>/Clock' */
+  /* Clock: '<S29>/Clock' */
   ctrl_student_HIL_B.Clock = ctrl_student_HIL_M->Timing.t[0];
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
-    /* RandomNumber: '<S28>/Random Number' */
+    /* RandomNumber: '<S29>/Random Number' */
     ctrl_student_HIL_B.RandomNumber = ctrl_student_HIL_DW.NextOutput_k;
   }
 
-  /* MATLAB Function: '<S28>/Freeze signal' incorporates:
-   *  Constant: '<S28>/Constant1'
+  /* MATLAB Function: '<S29>/Freeze signal' incorporates:
+   *  Constant: '<S29>/Constant1'
    */
   N = ctrl_student_HIL_B.Clock;
   psi_d_s_s = ctrl_student_HIL_P.Par.Freeze.length;
 
-  /* MATLAB Function 'Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal': '<S29>:1' */
+  /* MATLAB Function 'Noise and dropout generation/Dropout generation/Freeze Signal /Freeze signal': '<S30>:1' */
   if (!ctrl_student_HIL_DW.eta_not_empty) {
-    /* '<S29>:1:3' */
-    /* '<S29>:1:4' */
+    /* '<S30>:1:3' */
+    /* '<S30>:1:4' */
     ctrl_student_HIL_DW.eta[0] = Switch[0];
     ctrl_student_HIL_DW.eta[1] = Switch[1];
     ctrl_student_HIL_DW.eta[2] = Switch[2];
@@ -568,24 +568,24 @@ void ctrl_student_HIL_output(void)
   }
 
   if (ctrl_student_HIL_B.RandomNumber > ctrl_student_HIL_B.Freezethreshold) {
-    /* '<S29>:1:8' */
-    /* '<S29>:1:9' */
+    /* '<S30>:1:8' */
+    /* '<S30>:1:9' */
     ctrl_student_HIL_DW.t_1 = (0.5 * ctrl_student_HIL_rand() + 0.5) * psi_d_s_s
       + N;
   }
 
   if (ctrl_student_HIL_B.Clock >= ctrl_student_HIL_DW.t_1) {
-    /* '<S29>:1:11' */
-    /* '<S29>:1:12' */
+    /* '<S30>:1:11' */
+    /* '<S30>:1:12' */
     ctrl_student_HIL_DW.eta[0] = Switch[0];
     ctrl_student_HIL_DW.eta[1] = Switch[1];
     ctrl_student_HIL_DW.eta[2] = Switch[2];
   }
 
-  /* '<S29>:1:15' */
+  /* '<S30>:1:15' */
 
-  /* Switch: '<S26>/Switch' incorporates:
-   *  MATLAB Function: '<S28>/Freeze signal'
+  /* Switch: '<S27>/Switch' incorporates:
+   *  MATLAB Function: '<S29>/Freeze signal'
    */
   if (ctrl_student_HIL_B.Enabledropout > ctrl_student_HIL_P.Switch_Threshold) {
     ctrl_student_HIL_B.Switch_f[0] = ctrl_student_HIL_DW.eta[0];
@@ -597,7 +597,7 @@ void ctrl_student_HIL_output(void)
     ctrl_student_HIL_B.Switch_f[2] = Switch[2];
   }
 
-  /* End of Switch: '<S26>/Switch' */
+  /* End of Switch: '<S27>/Switch' */
 
   /* Integrator: '<S2>/Integrator' */
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
@@ -648,24 +648,24 @@ void ctrl_student_HIL_output(void)
   ctrl_student_HIL_B.Integrator1 = ctrl_student_HIL_X.Integrator1_CSTATE;
 
   /* MATLAB Function: '<S14>/eta_d_ellipsoid' */
-  /* MATLAB Function 'Guidance and control/Guidance/eta_d_ellipsoid': '<S22>:1' */
+  /* MATLAB Function 'Guidance and control/Guidance/eta_d_ellipsoid': '<S23>:1' */
   if (!ctrl_student_HIL_DW.psi_old_not_empty) {
-    /* '<S22>:1:3' */
-    /* '<S22>:1:4' */
+    /* '<S23>:1:3' */
+    /* '<S23>:1:4' */
     ctrl_student_HIL_DW.psi_old_not_empty = true;
 
-    /* '<S22>:1:5' */
+    /* '<S23>:1:5' */
     ctrl_student_HIL_DW.psi_old = ctrl_student_HIL_B.ellipsoid_eta_0[2];
   }
 
   /* % eta_d */
-  /* '<S22>:1:8' */
-  /* '<S22>:1:9' */
+  /* '<S23>:1:8' */
+  /* '<S23>:1:9' */
   if (ctrl_student_HIL_B.ellipsoid_constant_heading_on_o != 0.0) {
-    /* '<S22>:1:12' */
+    /* '<S23>:1:12' */
     psi_d = ctrl_student_HIL_B.ellipsoid_heading;
   } else {
-    /* '<S22>:1:14' */
+    /* '<S23>:1:14' */
     psi_d = rt_atan2d_snf(ctrl_student_HIL_B.ellipsoid_r[1] * cos
                           (ctrl_student_HIL_B.Integrator1),
                           -ctrl_student_HIL_B.ellipsoid_r[0] * sin
@@ -673,51 +673,51 @@ void ctrl_student_HIL_output(void)
 
     /*      psi_d = atan(r(2)*cos(s)/(-r(1)*sin(s))); */
     if (psi_d < ctrl_student_HIL_DW.psi_old - 3.1415926535897931) {
-      /* '<S22>:1:16' */
-      /* '<S22>:1:17' */
+      /* '<S23>:1:16' */
+      /* '<S23>:1:17' */
       psi_d += 6.2831853071795862;
     }
 
     if (psi_d > ctrl_student_HIL_DW.psi_old + 3.1415926535897931) {
-      /* '<S22>:1:19' */
-      /* '<S22>:1:20' */
+      /* '<S23>:1:19' */
+      /* '<S23>:1:20' */
       psi_d += 6.2831853071795862;
     }
 
-    /* '<S22>:1:22' */
+    /* '<S23>:1:22' */
     ctrl_student_HIL_DW.psi_old = psi_d;
   }
 
-  /* '<S22>:1:24' */
+  /* '<S23>:1:24' */
   /* % eta_d_s */
-  /* '<S22>:1:27' */
-  /* '<S22>:1:28' */
-  /* '<S22>:1:29' */
+  /* '<S23>:1:27' */
+  /* '<S23>:1:28' */
+  /* '<S23>:1:29' */
   N = 0.0;
   if (ctrl_student_HIL_B.ellipsoid_constant_heading_on_o != 0.0) {
-    /* '<S22>:1:31' */
+    /* '<S23>:1:31' */
     psi_d_s = 0.0;
   } else {
-    /* '<S22>:1:33' */
+    /* '<S23>:1:33' */
     psi_d_s_s = ctrl_student_HIL_B.ellipsoid_r[0] * sin
       (ctrl_student_HIL_B.Integrator1);
     N = ctrl_student_HIL_B.ellipsoid_r[1] * cos(ctrl_student_HIL_B.Integrator1);
     N = psi_d_s_s * psi_d_s_s + N * N;
 
-    /* '<S22>:1:34' */
+    /* '<S23>:1:34' */
     psi_d_s = ctrl_student_HIL_B.ellipsoid_r[0] *
       ctrl_student_HIL_B.ellipsoid_r[1] / N;
   }
 
-  /* '<S22>:1:36' */
+  /* '<S23>:1:36' */
   /* % eta_d_s_s */
-  /* '<S22>:1:39' */
-  /* '<S22>:1:40' */
+  /* '<S23>:1:39' */
+  /* '<S23>:1:40' */
   if (ctrl_student_HIL_B.ellipsoid_constant_heading_on_o != 0.0) {
-    /* '<S22>:1:42' */
+    /* '<S23>:1:42' */
     psi_d_s_s = 0.0;
   } else {
-    /* '<S22>:1:44' */
+    /* '<S23>:1:44' */
     psi_d_s_s = 2.0 * ctrl_student_HIL_B.ellipsoid_r[0] *
       ctrl_student_HIL_B.ellipsoid_r[1] * sin(ctrl_student_HIL_B.Integrator1) *
       cos(ctrl_student_HIL_B.Integrator1) * (ctrl_student_HIL_B.ellipsoid_r[1] *
@@ -725,29 +725,29 @@ void ctrl_student_HIL_output(void)
       ctrl_student_HIL_B.ellipsoid_r[0]) / (N * N);
   }
 
-  /* '<S22>:1:46' */
+  /* '<S23>:1:46' */
 
   /* Switch: '<S14>/Switch' incorporates:
    *  MATLAB Function: '<S14>/eta_d_ellipsoid'
    *  MATLAB Function: '<S14>/eta_d_straightline'
    */
-  /* MATLAB Function 'Guidance and control/Guidance/eta_d_straightline': '<S23>:1' */
+  /* MATLAB Function 'Guidance and control/Guidance/eta_d_straightline': '<S24>:1' */
   /* % eta_d */
-  /* '<S23>:1:3' */
-  /* '<S23>:1:4' */
-  /* '<S23>:1:5' */
-  /* '<S23>:1:6' */
+  /* '<S24>:1:3' */
+  /* '<S24>:1:4' */
+  /* '<S24>:1:5' */
+  /* '<S24>:1:6' */
   /* eta_d = [x_d; y_d; pi/4]; */
   /* % eta_d_s */
-  /* '<S23>:1:10' */
-  /* '<S23>:1:11' */
-  /* '<S23>:1:12' */
-  /* '<S23>:1:13' */
+  /* '<S24>:1:10' */
+  /* '<S24>:1:11' */
+  /* '<S24>:1:12' */
+  /* '<S24>:1:13' */
   /* % eta_d_s_s */
-  /* '<S23>:1:16' */
-  /* '<S23>:1:17' */
-  /* '<S23>:1:18' */
-  /* '<S23>:1:19' */
+  /* '<S24>:1:16' */
+  /* '<S24>:1:17' */
+  /* '<S24>:1:18' */
+  /* '<S24>:1:19' */
   if (ctrl_student_HIL_B.switch_straight_ellipsoid != 0.0) {
     ctrl_student_HIL_B.Switch_j[0] = ctrl_student_HIL_B.ellipsoid_r[0] * cos
       (ctrl_student_HIL_B.Integrator1) + ctrl_student_HIL_B.ellipsoid_c[0];
@@ -814,9 +814,13 @@ void ctrl_student_HIL_output(void)
 
   /* End of MATLAB Function: '<S13>/z_1' */
 
-  /* MATLAB Function: '<S14>/update law' */
-  /* MATLAB Function 'Guidance and control/Guidance/update law': '<S24>:1' */
-  /* '<S24>:1:8' */
+  /* MATLAB Function: '<S14>/update law' incorporates:
+   *  MATLAB Function: '<S14>/MATLAB Function'
+   */
+  /* MATLAB Function 'Guidance and control/Guidance/MATLAB Function': '<S22>:1' */
+  /* '<S22>:1:4' */
+  /* MATLAB Function 'Guidance and control/Guidance/update law': '<S25>:1' */
+  /* '<S25>:1:8' */
   psi_d_s_s = 2.2250738585072014E-308;
   psi_d_s = fabs(ctrl_student_HIL_B.Switch_j[3]);
   if (psi_d_s > 2.2250738585072014E-308) {
@@ -838,35 +842,39 @@ void ctrl_student_HIL_output(void)
   }
 
   N = psi_d_s_s * sqrt(N);
-  N = fabs(ctrl_student_HIL_B.u_ref) / N;
+  N = fabs((sin(6.2831853071795862 * ctrl_student_HIL_B.Integrator1 -
+                1.5707963267948966) + 1.01) * (ctrl_student_HIL_B.u_ref / 5.0)) /
+    N;
+  if (ctrl_student_HIL_B.switch_straight_ellipsoid != 0.0) {
+    /*     %% stop at end position or continue backwards */
+    if (((ctrl_student_HIL_B.Integrator1 >= 1.0) ||
+         (ctrl_student_HIL_DW.backwards != 0.0)) &&
+        (!(ctrl_student_HIL_B.stop_at_pos != 0.0))) {
+      /* '<S25>:1:11' */
+      /* '<S25>:1:12' */
+      ctrl_student_HIL_DW.backwards = 1.0;
 
-  /* % stop at end position or continue backwards */
-  if (((ctrl_student_HIL_B.Integrator1 >= 1.0) || (ctrl_student_HIL_DW.backwards
-        != 0.0)) && (!(ctrl_student_HIL_B.stop_at_pos != 0.0))) {
-    /* '<S24>:1:10' */
-    /* '<S24>:1:11' */
-    ctrl_student_HIL_DW.backwards = 1.0;
+      /* '<S25>:1:13' */
+      N = -N;
+      if (ctrl_student_HIL_B.Integrator1 <= 0.0) {
+        /* '<S25>:1:14' */
+        /* '<S25>:1:15' */
+        ctrl_student_HIL_DW.backwards = 0.0;
+      }
+    }
 
-    /* '<S24>:1:12' */
-    N = -N;
-    if (ctrl_student_HIL_B.Integrator1 <= 0.0) {
-      /* '<S24>:1:13' */
-      /* '<S24>:1:14' */
-      ctrl_student_HIL_DW.backwards = 0.0;
+    if ((ctrl_student_HIL_B.stop_at_pos != 0.0) &&
+        (ctrl_student_HIL_B.Integrator1 >= 1.0)) {
+      /* '<S25>:1:18' */
+      /* '<S25>:1:19' */
+      N = 0.0;
+
+      /* s_dot = 0; */
     }
   }
 
-  if ((ctrl_student_HIL_B.stop_at_pos != 0.0) && (ctrl_student_HIL_B.Integrator1
-       >= 1.0)) {
-    /* '<S24>:1:17' */
-    /* '<S24>:1:18' */
-    N = 0.0;
-
-    /* s_dot = 0; */
-  }
-
-  /* '<S24>:1:21' */
-  /* '<S24>:1:22' */
+  /* '<S25>:1:23' */
+  /* '<S25>:1:24' */
   psi_d_s = 2.2250738585072014E-308;
   psi_d = fabs(ctrl_student_HIL_B.Switch_j[3]);
   if (psi_d > 2.2250738585072014E-308) {
@@ -1206,8 +1214,8 @@ void ctrl_student_HIL_output(void)
   /* End of Switch: '<Root>/Switch' */
 
   /* MATLAB Function: '<S7>/MATLAB Function' */
-  /* MATLAB Function 'Workspace saturation1/MATLAB Function': '<S41>:1' */
-  /* '<S41>:1:3' */
+  /* MATLAB Function 'Workspace saturation1/MATLAB Function': '<S42>:1' */
+  /* '<S42>:1:3' */
   R[0] = cos(ctrl_student_HIL_B.Integrator[2]);
   R[3] = sin(ctrl_student_HIL_B.Integrator[2]);
   R[6] = 0.0;
@@ -1218,67 +1226,67 @@ void ctrl_student_HIL_output(void)
   R[5] = 0.0;
   R[8] = 1.0;
 
-  /* '<S41>:1:5' */
+  /* '<S42>:1:5' */
   for (ixstart = 0; ixstart < 3; ixstart++) {
     tau_NED[ixstart] = R[ixstart + 6] * Switch[2] + (R[ixstart + 3] * Switch[1]
       + R[ixstart] * Switch[0]);
   }
 
-  /* '<S41>:1:6' */
+  /* '<S42>:1:6' */
   psi_d = tau_NED[0];
   psi_d_s = tau_NED[1];
 
-  /* '<S41>:1:7' */
+  /* '<S42>:1:7' */
   /* check if x is above limits */
   if (ctrl_student_HIL_B.Integrator[0] > ctrl_student_HIL_B.x_max) {
-    /* '<S41>:1:10' */
+    /* '<S42>:1:10' */
     /* x is above of the limit */
-    /* '<S41>:1:12' */
+    /* '<S42>:1:12' */
     N = (ctrl_student_HIL_B.Integrator[0] - ctrl_student_HIL_B.x_max) *
       ctrl_student_HIL_B.scale;
 
-    /* '<S41>:1:13' */
+    /* '<S42>:1:13' */
     psi_d = (1.0 - N) * tau_NED[0] + -N;
   }
 
   /* check if x is below limits */
   if (ctrl_student_HIL_B.Integrator[0] < ctrl_student_HIL_B.x_min) {
-    /* '<S41>:1:16' */
+    /* '<S42>:1:16' */
     /* x is below of the limit */
-    /* '<S41>:1:18' */
+    /* '<S42>:1:18' */
     N = (ctrl_student_HIL_B.Integrator[0] - ctrl_student_HIL_B.x_min) *
       ctrl_student_HIL_B.scale;
 
-    /* '<S41>:1:19' */
+    /* '<S42>:1:19' */
     psi_d = (1.0 + N) * tau_NED[0] + -N;
   }
 
   /* check if y is above limits */
   if (ctrl_student_HIL_B.Integrator[1] > ctrl_student_HIL_B.y_MAX) {
-    /* '<S41>:1:22' */
+    /* '<S42>:1:22' */
     /* x is above of the limit */
-    /* '<S41>:1:24' */
+    /* '<S42>:1:24' */
     N = (ctrl_student_HIL_B.Integrator[1] - ctrl_student_HIL_B.y_MAX) *
       ctrl_student_HIL_B.scale;
 
-    /* '<S41>:1:25' */
+    /* '<S42>:1:25' */
     psi_d_s = (1.0 - N) * tau_NED[1] + -N;
   }
 
   /* check if y is above limits */
   if (ctrl_student_HIL_B.Integrator[1] < -ctrl_student_HIL_B.y_MAX) {
-    /* '<S41>:1:28' */
+    /* '<S42>:1:28' */
     /* x is above of the limit */
-    /* '<S41>:1:30' */
+    /* '<S42>:1:30' */
     N = (ctrl_student_HIL_B.Integrator[1] - (-ctrl_student_HIL_B.y_MAX)) *
       ctrl_student_HIL_B.scale;
 
-    /* '<S41>:1:31' */
+    /* '<S42>:1:31' */
     psi_d_s = (1.0 + N) * tau_NED[1] + -N;
   }
 
   /* Switch: '<S7>/Switch1' */
-  /* '<S41>:1:33' */
+  /* '<S42>:1:33' */
   if (ctrl_student_HIL_B.Enable_W_sat != 0.0) {
     /* MATLAB Function: '<S7>/MATLAB Function' incorporates:
      *  Saturate: '<S7>/Saturation'
@@ -1334,8 +1342,8 @@ void ctrl_student_HIL_output(void)
   /* MATLAB Function: '<S6>/MATLAB Function' incorporates:
    *  Constant: '<S6>/Inverse of T'
    */
-  /* MATLAB Function 'Thrust Allocation/MATLAB Function': '<S40>:1' */
-  /* '<S40>:1:4' */
+  /* MATLAB Function 'Thrust Allocation/MATLAB Function': '<S41>:1' */
+  /* '<S41>:1:4' */
   for (ixstart = 0; ixstart < 3; ixstart++) {
     Switch[ixstart] = ctrl_student_HIL_P.InverseofT_Value[ixstart + 6] *
       ctrl_student_HIL_B.Switch1[2] +
@@ -1348,8 +1356,8 @@ void ctrl_student_HIL_output(void)
   /* End of MATLAB Function: '<S6>/MATLAB Function' */
 
   /* MATLAB Function: '<S5>/MATLAB Function1' */
-  /* MATLAB Function 'Sixaxis2force/MATLAB Function1': '<S39>:1' */
-  /* '<S39>:1:2' */
+  /* MATLAB Function 'Sixaxis2force/MATLAB Function1': '<S40>:1' */
+  /* '<S40>:1:2' */
   N = sqrt(Switch[0] * Switch[0] + Switch[1] * Switch[1]);
   ixstart = 1;
   if (rtIsNaN(N)) {
@@ -1363,15 +1371,54 @@ void ctrl_student_HIL_output(void)
 
   ctrl_student_HIL_B.u_VSP = N;
 
-  /* '<S39>:1:3' */
+  /* '<S40>:1:3' */
   ctrl_student_HIL_B.alpha_VSP = rt_atan2d_snf(Switch[1], Switch[0]);
 
-  /* '<S39>:1:4' */
+  /* '<S40>:1:4' */
   ctrl_student_HIL_B.u_BT = Switch[2];
 
   /* End of MATLAB Function: '<S5>/MATLAB Function1' */
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
   }
+
+  /* MATLAB Function: '<S4>/Detect droput' */
+  /* MATLAB Function 'Signal Dropout detection/Detect droput': '<S39>:1' */
+  if (!ctrl_student_HIL_DW.eta_old_not_empty) {
+    /* '<S39>:1:3' */
+    /* '<S39>:1:4' */
+    ctrl_student_HIL_DW.eta_old[0] = ctrl_student_HIL_B.Switch_f[0];
+    ctrl_student_HIL_DW.eta_old[1] = ctrl_student_HIL_B.Switch_f[1];
+    ctrl_student_HIL_DW.eta_old[2] = ctrl_student_HIL_B.Switch_f[2];
+    ctrl_student_HIL_DW.eta_old_not_empty = true;
+  }
+
+  y = false;
+  ixstart = 0;
+  exitg1 = false;
+  while ((!exitg1) && (ixstart < 3)) {
+    if (!!(ctrl_student_HIL_B.Switch_f[ixstart] -
+           ctrl_student_HIL_DW.eta_old[ixstart] == 0.0)) {
+      y = true;
+      exitg1 = true;
+    } else {
+      ixstart++;
+    }
+  }
+
+  if (y) {
+    /* '<S39>:1:7' */
+    ctrl_student_HIL_B.dropout = 1.0;
+  } else {
+    /* '<S39>:1:9' */
+    ctrl_student_HIL_B.dropout = 0.0;
+  }
+
+  /* '<S39>:1:11' */
+  ctrl_student_HIL_DW.eta_old[0] = ctrl_student_HIL_B.Switch_f[0];
+  ctrl_student_HIL_DW.eta_old[1] = ctrl_student_HIL_B.Switch_f[1];
+  ctrl_student_HIL_DW.eta_old[2] = ctrl_student_HIL_B.Switch_f[2];
+
+  /* End of MATLAB Function: '<S4>/Detect droput' */
 
   /* Saturate: '<S11>/Saturation1' */
   if (ctrl_student_HIL_B.Switch1[0] > ctrl_student_HIL_P.Par.Thrust_lim[0]) {
@@ -1405,58 +1452,19 @@ void ctrl_student_HIL_output(void)
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
   }
 
-  /* MATLAB Function: '<S4>/Detect droput' */
-  /* MATLAB Function 'Signal Dropout detection/Detect droput': '<S38>:1' */
-  if (!ctrl_student_HIL_DW.eta_old_not_empty) {
-    /* '<S38>:1:3' */
-    /* '<S38>:1:4' */
-    ctrl_student_HIL_DW.eta_old[0] = ctrl_student_HIL_B.Switch_f[0];
-    ctrl_student_HIL_DW.eta_old[1] = ctrl_student_HIL_B.Switch_f[1];
-    ctrl_student_HIL_DW.eta_old[2] = ctrl_student_HIL_B.Switch_f[2];
-    ctrl_student_HIL_DW.eta_old_not_empty = true;
-  }
-
-  y = false;
-  ixstart = 0;
-  exitg1 = false;
-  while ((!exitg1) && (ixstart < 3)) {
-    if (!!(ctrl_student_HIL_B.Switch_f[ixstart] -
-           ctrl_student_HIL_DW.eta_old[ixstart] == 0.0)) {
-      y = true;
-      exitg1 = true;
-    } else {
-      ixstart++;
-    }
-  }
-
-  if (y) {
-    /* '<S38>:1:7' */
-    ctrl_student_HIL_B.dropout = 1.0;
-  } else {
-    /* '<S38>:1:9' */
-    ctrl_student_HIL_B.dropout = 0.0;
-  }
-
-  /* '<S38>:1:11' */
-  ctrl_student_HIL_DW.eta_old[0] = ctrl_student_HIL_B.Switch_f[0];
-  ctrl_student_HIL_DW.eta_old[1] = ctrl_student_HIL_B.Switch_f[1];
-  ctrl_student_HIL_DW.eta_old[2] = ctrl_student_HIL_B.Switch_f[2];
-
-  /* End of MATLAB Function: '<S4>/Detect droput' */
-
   /* MATLAB Function: '<S2>/Observer' */
-  /* MATLAB Function 'Luenberger Observer/Observer': '<S25>:1' */
+  /* MATLAB Function 'Luenberger Observer/Observer': '<S26>:1' */
   /* % eta bar */
-  /* '<S25>:1:5' */
-  /* '<S25>:1:6' */
+  /* '<S26>:1:5' */
+  /* '<S26>:1:6' */
   Switch[0] = ctrl_student_HIL_B.Switch_f[0] - ctrl_student_HIL_B.Integrator[0];
   Switch[1] = ctrl_student_HIL_B.Switch_f[1] - ctrl_student_HIL_B.Integrator[1];
   Switch[2] = ctrl_student_HIL_B.Switch_f[2] - ctrl_student_HIL_B.Integrator[2];
 
-  /* '<S25>:1:8' */
-  /* '<S25>:1:9' */
+  /* '<S26>:1:8' */
+  /* '<S26>:1:9' */
   /* Rotation matrix */
-  /* '<S25>:1:11' */
+  /* '<S26>:1:11' */
   R[0] = cos(ctrl_student_HIL_B.Integrator[2]);
   R[3] = -sin(ctrl_student_HIL_B.Integrator[2]);
   R[6] = 0.0;
@@ -1469,39 +1477,39 @@ void ctrl_student_HIL_output(void)
 
   /* % Damping coefficients */
   /*  Comments at the end of the lines indicate the old values used. */
-  /* '<S25>:1:17' */
-  /* '<S25>:1:21' */
+  /* '<S26>:1:17' */
+  /* '<S26>:1:21' */
   /*  Y_r */
   /*  Y_rr */
   /*  Y_rv, Y_vr */
-  /* '<S25>:1:27' */
+  /* '<S26>:1:27' */
   /*  N_r */
   /*  N_rr */
   /*  N_rv, N_vr */
   /* % Assembly of the damping matrix */
-  /* '<S25>:1:33' */
-  /* '<S25>:1:34' */
-  /* '<S25>:1:35' */
+  /* '<S26>:1:33' */
+  /* '<S26>:1:34' */
+  /* '<S26>:1:35' */
   /*  using abs(r) */
-  /* '<S25>:1:37' */
-  /* '<S25>:1:38' */
-  /* '<S25>:1:39' */
-  /* '<S25>:1:41' */
+  /* '<S26>:1:37' */
+  /* '<S26>:1:38' */
+  /* '<S26>:1:39' */
+  /* '<S26>:1:41' */
   /* % Dropout check */
   if (ctrl_student_HIL_B.dropout == 1.0) {
-    /* '<S25>:1:46' */
-    /* '<S25>:1:47' */
+    /* '<S26>:1:46' */
+    /* '<S26>:1:47' */
     Switch[0] = 0.0;
     Switch[1] = 0.0;
     Switch[2] = 0.0;
   }
 
   /* % x_dot equations */
-  /* '<S25>:1:51' */
+  /* '<S26>:1:51' */
   /* nu_hat_dot = M_inv*(-D*nu_hat + R'*(b_hat + L_2*eta_bar) + tau); */
-  /* '<S25>:1:53' */
-  /* '<S25>:1:54' */
-  /* '<S25>:1:55' */
+  /* '<S26>:1:53' */
+  /* '<S26>:1:54' */
+  /* '<S26>:1:55' */
   for (ixstart = 0; ixstart < 3; ixstart++) {
     R_0[ixstart] = R[ixstart + 6] * ctrl_student_HIL_B.Integrator[5] +
       (R[ixstart + 3] * ctrl_student_HIL_B.Integrator[4] + R[ixstart] *
@@ -1621,30 +1629,30 @@ void ctrl_student_HIL_update(void)
 {
   real_T *lastU;
   if (rtmIsMajorTimeStep(ctrl_student_HIL_M)) {
-    /* Update for Memory: '<S30>/counter' */
+    /* Update for Memory: '<S31>/counter' */
     ctrl_student_HIL_DW.counter_PreviousInput = ctrl_student_HIL_B.count;
 
-    /* Update for RandomNumber: '<S36>/White Noise' */
+    /* Update for RandomNumber: '<S37>/White Noise' */
     ctrl_student_HIL_DW.NextOutput = rt_nrand_Upu32_Yd_f_pw_snf
       (&ctrl_student_HIL_DW.RandSeed) * ctrl_student_HIL_P.WhiteNoise_StdDev +
       ctrl_student_HIL_P.WhiteNoise_Mean;
 
-    /* Update for RandomNumber: '<S37>/White Noise' */
+    /* Update for RandomNumber: '<S38>/White Noise' */
     ctrl_student_HIL_DW.NextOutput_f = rt_nrand_Upu32_Yd_f_pw_snf
       (&ctrl_student_HIL_DW.RandSeed_o) * ctrl_student_HIL_P.WhiteNoise_StdDev_p
       + ctrl_student_HIL_P.WhiteNoise_Mean_m;
 
-    /* Update for RandomNumber: '<S35>/White Noise' */
+    /* Update for RandomNumber: '<S36>/White Noise' */
     ctrl_student_HIL_DW.NextOutput_m = rt_nrand_Upu32_Yd_f_pw_snf
       (&ctrl_student_HIL_DW.RandSeed_b) * ctrl_student_HIL_P.WhiteNoise_StdDev_h
       + ctrl_student_HIL_P.WhiteNoise_Mean_h;
 
-    /* Update for Memory: '<S31>/Hold' */
+    /* Update for Memory: '<S32>/Hold' */
     ctrl_student_HIL_DW.Hold_PreviousInput[0] = ctrl_student_HIL_B.output[0];
     ctrl_student_HIL_DW.Hold_PreviousInput[1] = ctrl_student_HIL_B.output[1];
     ctrl_student_HIL_DW.Hold_PreviousInput[2] = ctrl_student_HIL_B.output[2];
 
-    /* Update for RandomNumber: '<S28>/Random Number' */
+    /* Update for RandomNumber: '<S29>/Random Number' */
     ctrl_student_HIL_DW.NextOutput_k = rt_nrand_Upu32_Yd_f_pw_snf
       (&ctrl_student_HIL_DW.RandSeed_ow) *
       ctrl_student_HIL_P.RandomNumber_StdDev +
@@ -1749,10 +1757,10 @@ void ctrl_student_HIL_initialize(void)
     int32_T t;
     real_T tmp;
 
-    /* InitializeConditions for Memory: '<S30>/counter' */
+    /* InitializeConditions for Memory: '<S31>/counter' */
     ctrl_student_HIL_DW.counter_PreviousInput = ctrl_student_HIL_P.counter_X0;
 
-    /* InitializeConditions for RandomNumber: '<S36>/White Noise' */
+    /* InitializeConditions for RandomNumber: '<S37>/White Noise' */
     tmp = floor(ctrl_student_HIL_P.WhiteNoise_Seed);
     if (rtIsNaN(tmp) || rtIsInf(tmp)) {
       tmp = 0.0;
@@ -1777,9 +1785,9 @@ void ctrl_student_HIL_initialize(void)
       (&ctrl_student_HIL_DW.RandSeed) * ctrl_student_HIL_P.WhiteNoise_StdDev +
       ctrl_student_HIL_P.WhiteNoise_Mean;
 
-    /* End of InitializeConditions for RandomNumber: '<S36>/White Noise' */
+    /* End of InitializeConditions for RandomNumber: '<S37>/White Noise' */
 
-    /* InitializeConditions for RandomNumber: '<S37>/White Noise' */
+    /* InitializeConditions for RandomNumber: '<S38>/White Noise' */
     tmp = floor(ctrl_student_HIL_P.WhiteNoise_Seed_o);
     if (rtIsNaN(tmp) || rtIsInf(tmp)) {
       tmp = 0.0;
@@ -1804,9 +1812,9 @@ void ctrl_student_HIL_initialize(void)
       (&ctrl_student_HIL_DW.RandSeed_o) * ctrl_student_HIL_P.WhiteNoise_StdDev_p
       + ctrl_student_HIL_P.WhiteNoise_Mean_m;
 
-    /* End of InitializeConditions for RandomNumber: '<S37>/White Noise' */
+    /* End of InitializeConditions for RandomNumber: '<S38>/White Noise' */
 
-    /* InitializeConditions for RandomNumber: '<S35>/White Noise' */
+    /* InitializeConditions for RandomNumber: '<S36>/White Noise' */
     tmp = floor(ctrl_student_HIL_P.WhiteNoise_Seed_c);
     if (rtIsNaN(tmp) || rtIsInf(tmp)) {
       tmp = 0.0;
@@ -1831,14 +1839,14 @@ void ctrl_student_HIL_initialize(void)
       (&ctrl_student_HIL_DW.RandSeed_b) * ctrl_student_HIL_P.WhiteNoise_StdDev_h
       + ctrl_student_HIL_P.WhiteNoise_Mean_h;
 
-    /* End of InitializeConditions for RandomNumber: '<S35>/White Noise' */
+    /* End of InitializeConditions for RandomNumber: '<S36>/White Noise' */
 
-    /* InitializeConditions for Memory: '<S31>/Hold' */
+    /* InitializeConditions for Memory: '<S32>/Hold' */
     ctrl_student_HIL_DW.Hold_PreviousInput[0] = ctrl_student_HIL_P.Hold_X0;
     ctrl_student_HIL_DW.Hold_PreviousInput[1] = ctrl_student_HIL_P.Hold_X0;
     ctrl_student_HIL_DW.Hold_PreviousInput[2] = ctrl_student_HIL_P.Hold_X0;
 
-    /* InitializeConditions for RandomNumber: '<S28>/Random Number' */
+    /* InitializeConditions for RandomNumber: '<S29>/Random Number' */
     tmp = floor(ctrl_student_HIL_P.RandomNumber_Seed);
     if (rtIsNaN(tmp) || rtIsInf(tmp)) {
       tmp = 0.0;
@@ -1864,9 +1872,9 @@ void ctrl_student_HIL_initialize(void)
       ctrl_student_HIL_P.RandomNumber_StdDev +
       ctrl_student_HIL_P.RandomNumber_Mean;
 
-    /* End of InitializeConditions for RandomNumber: '<S28>/Random Number' */
+    /* End of InitializeConditions for RandomNumber: '<S29>/Random Number' */
 
-    /* InitializeConditions for MATLAB Function: '<S28>/Freeze signal' */
+    /* InitializeConditions for MATLAB Function: '<S29>/Freeze signal' */
     ctrl_student_HIL_DW.eta_not_empty = false;
     ctrl_student_HIL_DW.state_not_empty = false;
     ctrl_student_HIL_DW.method = 7U;
@@ -2114,9 +2122,9 @@ RT_MODEL_ctrl_student_HIL_T *ctrl_student_HIL(void)
   ctrl_student_HIL_M->Sizes.numU = (0);/* Number of model inputs */
   ctrl_student_HIL_M->Sizes.sysDirFeedThru = (0);/* The model is not direct feedthrough */
   ctrl_student_HIL_M->Sizes.numSampTimes = (2);/* Number of sample times */
-  ctrl_student_HIL_M->Sizes.numBlocks = (155);/* Number of blocks */
+  ctrl_student_HIL_M->Sizes.numBlocks = (158);/* Number of blocks */
   ctrl_student_HIL_M->Sizes.numBlockIO = (74);/* Number of block outputs */
-  ctrl_student_HIL_M->Sizes.numBlockPrms = (502);/* Sum of parameter "widths" */
+  ctrl_student_HIL_M->Sizes.numBlockPrms = (508);/* Sum of parameter "widths" */
   return ctrl_student_HIL_M;
 }
 
@@ -2821,7 +2829,7 @@ long NumInputPorts(void)
   return 83;
 }
 
-double ni_extout[66];
+double ni_extout[67];
 void SetExternalOutputs(double* data, int* TaskSampleHit)
 {
   int index = 0, count = 0;
@@ -2957,6 +2965,18 @@ void SetExternalOutputs(double* data, int* TaskSampleHit)
     index += 3;
   }
 
+  // eta_meas: Virtual Signal # 0
+  if (TaskSampleHit[0]) {              // sample and hold
+    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,0,
+      32,0);
+    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,1,
+      32,0);
+    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,2,
+      32,0);
+  } else {
+    index += 3;
+  }
+
   // Sixaxis2force/alpha_VSP1: Virtual Signal # 0
   if (TaskSampleHit[0]) {              // sample and hold
     ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.alpha_VSP,0,
@@ -3010,16 +3030,12 @@ void SetExternalOutputs(double* data, int* TaskSampleHit)
     index += 1;
   }
 
-  // eta_meas: Virtual Signal # 0
+  // dropout: Virtual Signal # 0
   if (TaskSampleHit[0]) {              // sample and hold
-    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,0,
-      32,0);
-    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,1,
-      32,0);
-    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,2,
-      32,0);
+    ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.dropout,0,0,
+      0);
   } else {
-    index += 3;
+    index += 1;
   }
 
   // tau to CSE mocell (only use for HIL testing)/X_d: Virtual Signal # 0
@@ -3102,7 +3118,7 @@ void SetExternalOutputs(double* data, int* TaskSampleHit)
 
 long NumOutputPorts(void)
 {
-  return 66;
+  return 67;
 }
 
 int NI_InitExternalOutputs()
@@ -3182,6 +3198,14 @@ int NI_InitExternalOutputs()
   ni_extout[index++] = NIRT_GetValueByDataType
     (&ctrl_student_HIL_B.TmpSignalConversionAtnu_modelIn,2,32,0);
 
+  // eta_meas: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,0,32,
+    0);
+  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,1,32,
+    0);
+  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,2,32,
+    0);
+
   // Sixaxis2force/alpha_VSP1: Virtual Signal # 0
   ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.alpha_VSP,0,0,
     0);
@@ -3207,13 +3231,8 @@ int NI_InitExternalOutputs()
   // Sixaxis2force/u_VSP2: Virtual Signal # 0
   ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.u_VSP,0,0,0);
 
-  // eta_meas: Virtual Signal # 0
-  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,0,32,
-    0);
-  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,1,32,
-    0);
-  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Switch_f,2,32,
-    0);
+  // dropout: Virtual Signal # 0
+  ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.dropout,0,0,0);
 
   // tau to CSE mocell (only use for HIL testing)/X_d: Virtual Signal # 0
   ni_extout[index++] = NIRT_GetValueByDataType(&ctrl_student_HIL_B.Saturation1,0,
@@ -4055,7 +4074,7 @@ static int NI_SigDimList[] DataSection(".NIVS.sigdimlist") =
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, };
 
-static long NI_ExtListSize DataSection(".NIVS.extlistsize") = 75;
+static long NI_ExtListSize DataSection(".NIVS.extlistsize") = 76;
 static NI_ExternalIO NI_ExtList[] DataSection(".NIVS.extlist") =
 {
   { 0, "Noise and dropout generation/Noise power ", 0, EXT_IN, 1, 1, 1 },
@@ -4179,46 +4198,48 @@ static NI_ExternalIO NI_ExtList[] DataSection(".NIVS.extlist") =
 
   { 12, "nu_model", 1, EXT_OUT, 3, 3, 1 },
 
-  { 13, "Sixaxis2force/alpha_VSP1", 0, EXT_OUT, 1, 1, 1 },
+  { 13, "eta_meas", 0, EXT_OUT, 3, 3, 1 },
 
-  { 14, "Sixaxis2force/alpha_VSP2", 0, EXT_OUT, 1, 1, 1 },
+  { 14, "Sixaxis2force/alpha_VSP1", 0, EXT_OUT, 1, 1, 1 },
 
-  { 15, "Sixaxis2force/omega_VSP1", 1, EXT_OUT, 1, 1, 1 },
+  { 15, "Sixaxis2force/alpha_VSP2", 0, EXT_OUT, 1, 1, 1 },
 
-  { 16, "Sixaxis2force/omega_VSP2", 1, EXT_OUT, 1, 1, 1 },
+  { 16, "Sixaxis2force/omega_VSP1", 1, EXT_OUT, 1, 1, 1 },
 
-  { 17, "Sixaxis2force/u_BT", 0, EXT_OUT, 1, 1, 1 },
+  { 17, "Sixaxis2force/omega_VSP2", 1, EXT_OUT, 1, 1, 1 },
 
-  { 18, "Sixaxis2force/u_VSP1", 0, EXT_OUT, 1, 1, 1 },
+  { 18, "Sixaxis2force/u_BT", 0, EXT_OUT, 1, 1, 1 },
 
-  { 19, "Sixaxis2force/u_VSP2", 0, EXT_OUT, 1, 1, 1 },
+  { 19, "Sixaxis2force/u_VSP1", 0, EXT_OUT, 1, 1, 1 },
 
-  { 20, "eta_meas", 0, EXT_OUT, 3, 3, 1 },
+  { 20, "Sixaxis2force/u_VSP2", 0, EXT_OUT, 1, 1, 1 },
 
-  { 21, "tau to CSE mocell (only use for HIL testing)/X_d", 0, EXT_OUT, 1, 1, 1
+  { 21, "dropout", 0, EXT_OUT, 1, 1, 1 },
+
+  { 22, "tau to CSE mocell (only use for HIL testing)/X_d", 0, EXT_OUT, 1, 1, 1
   },
 
-  { 22, "tau to CSE mocell (only use for HIL testing)/N_d", 0, EXT_OUT, 1, 1, 1
+  { 23, "tau to CSE mocell (only use for HIL testing)/N_d", 0, EXT_OUT, 1, 1, 1
   },
 
-  { 23, "tau to CSE mocell (only use for HIL testing)/Y_d", 0, EXT_OUT, 1, 1, 1
+  { 24, "tau to CSE mocell (only use for HIL testing)/Y_d", 0, EXT_OUT, 1, 1, 1
   },
 
-  { 24, "tau to CSE mocell (only use for HIL testing)/psi_0 ", 1, EXT_OUT, 1, 1,
+  { 25, "tau to CSE mocell (only use for HIL testing)/psi_0 ", 1, EXT_OUT, 1, 1,
     1 },
 
-  { 25, "tau to CSE mocell (only use for HIL testing)/x_0", 1, EXT_OUT, 1, 1, 1
+  { 26, "tau to CSE mocell (only use for HIL testing)/x_0", 1, EXT_OUT, 1, 1, 1
   },
 
-  { 26, "tau to CSE mocell (only use for HIL testing)/y_0", 1, EXT_OUT, 1, 1, 1
+  { 27, "tau to CSE mocell (only use for HIL testing)/y_0", 1, EXT_OUT, 1, 1, 1
   },
 
-  { 27, "tau to CSE mocell (only use for HIL testing)/integrator reset model", 0,
+  { 28, "tau to CSE mocell (only use for HIL testing)/integrator reset model", 0,
     EXT_OUT, 1, 1, 1 },
 
-  { 28, "Luenberger Observer/obs out", 0, EXT_OUT, 9, 9, 1 },
+  { 29, "Luenberger Observer/obs out", 0, EXT_OUT, 9, 9, 1 },
 
-  { 29, "Signal Dropout detection/Dropout_detected", 0, EXT_OUT, 1, 1, 1 },
+  { 30, "Signal Dropout detection/Dropout_detected", 0, EXT_OUT, 1, 1, 1 },
 
   { -1, "", 0, 0, 0, 0, 0 }
 };
@@ -4236,8 +4257,8 @@ NI_Task NI_TaskList[] DataSection(".NIVS.tasklist") =
 int NI_NumTasks DataSection(".NIVS.numtasks") = 1;
 static char* NI_CompiledModelName DataSection(".NIVS.compiledmodelname") =
   "ctrl_student_hil";
-static char* NI_CompiledModelVersion = "1.278";
-static char* NI_CompiledModelDateTime = "Mon May 01 10:07:39 2017";
+static char* NI_CompiledModelVersion = "1.282";
+static char* NI_CompiledModelDateTime = "Mon May 01 12:28:45 2017";
 static char* NI_builder DataSection(".NIVS.builder") =
   "NI VeriStand 2014.0.0.82 (2014) RTW Build";
 static char* NI_BuilderVersion DataSection(".NIVS.builderversion") =
@@ -4799,7 +4820,7 @@ DLL_EXPORT long NIRT_GetSimState(long* numContStates, char* contStatesNames,
   if (numContStates && numDiscStates && numClockTicks) {
     if (*numContStates < 0 || *numDiscStates < 0 || *numClockTicks < 0) {
       *numContStates = 10;
-      *numDiscStates = 2161;
+      *numDiscStates = 2179;
       *numClockTicks = NUMST - TID01EQ;
       return NI_OK;
     }
@@ -5152,6 +5173,18 @@ DLL_EXPORT long NIRT_GetSimState(long* numContStates, char* contStatesNames,
     strcpy(discStatesNames + (idx++ * 100),
            "&ctrl_student_HIL_DW.nu_model_DWORK1");
     discStates[idx] = NIRT_GetValueByDataType
+      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 0, 32, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 1, 32, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType
+      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 2, 32, 0);
+    strcpy(discStatesNames + (idx++ * 100),
+           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
+    discStates[idx] = NIRT_GetValueByDataType
       (&ctrl_student_HIL_DW.alpha_VSP1_DWORK1, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
            "&ctrl_student_HIL_DW.alpha_VSP1_DWORK1");
@@ -5177,17 +5210,9 @@ DLL_EXPORT long NIRT_GetSimState(long* numContStates, char* contStatesNames,
       0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100), "&ctrl_student_HIL_DW.u_VSP2_DWORK1");
     discStates[idx] = NIRT_GetValueByDataType
-      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 0, 32, 0);
+      (&ctrl_student_HIL_DW.dropout_DWORK1, 0, 0, 0);
     strcpy(discStatesNames + (idx++ * 100),
-           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 1, 32, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
-    discStates[idx] = NIRT_GetValueByDataType
-      (&ctrl_student_HIL_DW.eta_meas_DWORK1, 2, 32, 0);
-    strcpy(discStatesNames + (idx++ * 100),
-           "&ctrl_student_HIL_DW.eta_meas_DWORK1");
+           "&ctrl_student_HIL_DW.dropout_DWORK1");
     discStates[idx] = NIRT_GetValueByDataType(&ctrl_student_HIL_DW.X_d_DWORK1, 0,
       0, 0);
     strcpy(discStatesNames + (idx++ * 100), "&ctrl_student_HIL_DW.X_d_DWORK1");
@@ -5673,6 +5698,13 @@ DLL_EXPORT long NIRT_GetSimState(long* numContStates, char* contStatesNames,
 
     for (count = 0; count < 17; count++) {
       discStates[idx] = NIRT_GetValueByDataType
+        (&ctrl_student_HIL_DW.eta_meas_DWORK2, count, 38, 0);
+      strcpy(discStatesNames + (idx++ * 100),
+             "&ctrl_student_HIL_DW.eta_meas_DWORK2");
+    }
+
+    for (count = 0; count < 17; count++) {
+      discStates[idx] = NIRT_GetValueByDataType
         (&ctrl_student_HIL_DW.alpha_VSP1_DWORK2, count, 38, 0);
       strcpy(discStatesNames + (idx++ * 100),
              "&ctrl_student_HIL_DW.alpha_VSP1_DWORK2");
@@ -5721,9 +5753,9 @@ DLL_EXPORT long NIRT_GetSimState(long* numContStates, char* contStatesNames,
 
     for (count = 0; count < 17; count++) {
       discStates[idx] = NIRT_GetValueByDataType
-        (&ctrl_student_HIL_DW.eta_meas_DWORK2, count, 38, 0);
+        (&ctrl_student_HIL_DW.dropout_DWORK2, count, 38, 0);
       strcpy(discStatesNames + (idx++ * 100),
-             "&ctrl_student_HIL_DW.eta_meas_DWORK2");
+             "&ctrl_student_HIL_DW.dropout_DWORK2");
     }
 
     for (count = 0; count < 17; count++) {
@@ -6046,6 +6078,12 @@ DLL_EXPORT long NIRT_SetSimState(double* contStates, double* discStates, long
       discStates[idx++], 32, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.nu_model_DWORK1, 2,
       discStates[idx++], 32, 0);
+    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 0,
+      discStates[idx++], 32, 0);
+    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 1,
+      discStates[idx++], 32, 0);
+    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 2,
+      discStates[idx++], 32, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.alpha_VSP1_DWORK1, 0,
       discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.alpha_VSP2_DWORK1, 0,
@@ -6060,12 +6098,8 @@ DLL_EXPORT long NIRT_SetSimState(double* contStates, double* discStates, long
       discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.u_VSP2_DWORK1, 0,
       discStates[idx++], 0, 0);
-    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 0,
-      discStates[idx++], 32, 0);
-    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 1,
-      discStates[idx++], 32, 0);
-    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK1, 2,
-      discStates[idx++], 32, 0);
+    NIRT_SetValueByDataType(&ctrl_student_HIL_DW.dropout_DWORK1, 0,
+      discStates[idx++], 0, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.X_d_DWORK1, 0, discStates[idx++],
       0, 0);
     NIRT_SetValueByDataType(&ctrl_student_HIL_DW.N_d_DWORK1, 0, discStates[idx++],
@@ -6422,6 +6456,11 @@ DLL_EXPORT long NIRT_SetSimState(double* contStates, double* discStates, long
     }
 
     for (count = 0; count < 17; count++) {
+      NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK2, count,
+        discStates[idx++], 38, 0);
+    }
+
+    for (count = 0; count < 17; count++) {
       NIRT_SetValueByDataType(&ctrl_student_HIL_DW.alpha_VSP1_DWORK2, count,
         discStates[idx++], 38, 0);
     }
@@ -6457,7 +6496,7 @@ DLL_EXPORT long NIRT_SetSimState(double* contStates, double* discStates, long
     }
 
     for (count = 0; count < 17; count++) {
-      NIRT_SetValueByDataType(&ctrl_student_HIL_DW.eta_meas_DWORK2, count,
+      NIRT_SetValueByDataType(&ctrl_student_HIL_DW.dropout_DWORK2, count,
         discStates[idx++], 38, 0);
     }
 
